@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { useState } from "react";
 import { lightTheme, darkTheme } from "../../theme";
 import { Button } from "@/shared/components/Button/Button";
-
+import { Sun, Moon } from "lucide-react";
 interface Props {
   children: ReactNode;
 }
@@ -25,8 +25,8 @@ export function AppThemeProvider({ children }: Props) {
           right: 20,
         }}
       >
-        <Button onClick={toggleTheme}>
-          {themeMode === "light" ? "Dark Mode" : "Light Mode"}
+        <Button variant="circle" onClick={toggleTheme}>
+          {themeMode === "light" ? <Moon size={20} /> : <Sun size={20} />}
         </Button>
       </div>
     </ThemeProvider>

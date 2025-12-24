@@ -1,25 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700;800;900&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --font-family: 'Quicksand', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight: 400;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --bg-color: #242424;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700;800;900&display=swap');
-
-* {
-  font-family: 'Quicksand', sans-serif;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
-
 
 html,
 body {
@@ -27,21 +32,19 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Quicksand', sans-serif;
-
 }
 
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 
 a:hover {
   color: #535bf2;
 }
 
-
 h1 {
-  font-size: 3.2em;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.1;
 }

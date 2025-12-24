@@ -31,10 +31,19 @@ export const Header = styled.header`
 
 export const NavButtons = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: ${({ theme }) => theme.spacing.md};
+  width: 100%;
+  padding: ${({ theme }) => theme.spacing.md};
+
+  overflow: visible;
+
+  @media (max-width: 480px) {
+    gap: ${({ theme }) => theme.spacing.sm};
+    padding: ${({ theme }) => theme.spacing.sm};
+  }
 `;
 
 export const Section = styled.section`

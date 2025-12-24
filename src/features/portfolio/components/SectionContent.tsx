@@ -1,9 +1,36 @@
 import React from "react";
 import type { PortfolioSection, Project } from "../types";
+import { Timeline } from "@/shared/components/Timeline/Timeline";
 
 interface Props {
   section: PortfolioSection | null;
 }
+
+const jornadaData = [
+  {
+    date: "2010",
+    title: "Início da Carreira",
+    description: "Primeiros passos no suporte técnico e infraestrutura de TI.",
+  },
+  {
+    date: "2015",
+    title: "Gerência de Projetos",
+    description:
+      "Promoção para liderança de equipes e implementação de metodologias ágeis.",
+  },
+  {
+    date: "2023",
+    title: "Buu Agenda & React",
+    description:
+      "Foco total no ecossistema JavaScript e lançamento do Buu Agenda.",
+  },
+  {
+    date: "2025",
+    title: "Design Systems",
+    description:
+      "Arquitetando componentes escaláveis com Styled Components e TypeScript.",
+  },
+];
 
 const projects: Project[] = [
   { name: "Buu Agenda", link: "https://github.com/seu-usuario/buu-agenda" },
@@ -16,13 +43,7 @@ const projects: Project[] = [
 export const SectionContent: React.FC<Props> = ({ section }) => {
   switch (section) {
     case "Jornada":
-      return (
-        <ul>
-          <li>2010 - Início da carreira em TI</li>
-          <li>2015 - Promoção a gerente de projetos</li>
-          <li>2023 - Desenvolvimento do Buu Agenda</li>
-        </ul>
-      );
+      return <Timeline items={jornadaData} />;
     case "Certificações":
       return (
         <ul>

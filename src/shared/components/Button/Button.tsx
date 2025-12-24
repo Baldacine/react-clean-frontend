@@ -9,8 +9,8 @@ export function Button({
   ...rest
 }: ButtonProps) {
   return (
-    <StyledButton variant={variant} disabled={disabled || isLoading} {...rest}>
-      {isLoading ? "Loading..." : children}
+    <StyledButton $variant={variant} disabled={disabled || isLoading} {...rest}>
+      {children}
     </StyledButton>
   );
 }
