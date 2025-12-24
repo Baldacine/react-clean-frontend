@@ -16,18 +16,18 @@ export const Portfolio: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const sections: PortfolioSection[] = [
-    "Jornada",
-    "Certificações",
+    "Journey",
+    "Certifications",
     "Use Cases",
-    "Premiações",
+    "Awards",
     "Hobbies",
   ];
 
   const sectionIcons: Record<PortfolioSection, React.ReactNode> = {
-    Jornada: <Briefcase size={32} />,
-    Certificações: <GraduationCap size={32} />,
+    Journey: <Briefcase size={32} />,
+    Certifications: <GraduationCap size={32} />,
     "Use Cases": <Code size={32} />,
-    Premiações: <Trophy size={32} />,
+    Awards: <Trophy size={32} />,
     Hobbies: <Gamepad2 size={32} />,
   };
 
@@ -48,10 +48,10 @@ export const Portfolio: React.FC = () => {
         <h1>Wanderson Baldacine</h1>
         <p>
           <strong>Software Engineer | React & TypeScript Specialist.</strong>
-          Focado na criação de interfaces performáticas e escaláveis. Criador do{" "}
-          <strong>Buu Agenda</strong>, combinando sólido conhecimento em
-          arquitetura Front-end com uma visão estratégica de Gerenciamento de
-          Projetos para entregar soluções de alto impacto.
+          Dedicated to building high-performance, scalable web interfaces.
+          Creator of <strong>Buu Agenda</strong>, merging deep Frontend
+          Architecture expertise with strategic Project Management to deliver
+          high-impact digital solutions.
         </p>
       </Header>
 
@@ -61,7 +61,7 @@ export const Portfolio: React.FC = () => {
             key={s}
             variant={section === s ? "primary" : "outline"}
             isLoading={loadingSection === s}
-            disabled={loadingSection === s}
+            disabled={!!loadingSection}
             icon={sectionIcons[s]}
             title={s}
             onClick={() => handleSectionChange(s)}
@@ -83,8 +83,12 @@ export const Portfolio: React.FC = () => {
         maxWidth={800}
         height="90vh"
         footer={
-          <Button variant="outline" onClick={() => setIsModalOpen(false)}>
-            Fechar
+          <Button
+            variant="outline"
+            size="small"
+            onClick={() => setIsModalOpen(false)}
+          >
+            Close
           </Button>
         }
       >

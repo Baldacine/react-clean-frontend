@@ -1,8 +1,8 @@
 export type PortfolioSection =
-    | "Jornada"
-    | "Certificações"
+    | "Journey"
+    | "Certifications"
     | "Use Cases"
-    | "Premiações"
+    | "Awards"
     | "Hobbies";
 
 export interface Project {

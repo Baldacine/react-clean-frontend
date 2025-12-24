@@ -1,18 +1,36 @@
 import styled, { type DefaultTheme } from 'styled-components';
-import type { ButtonVariant } from './types';
+import type { ButtonVariant, ButtonSize } from './types';
+
+const buttonSizes: Record<ButtonSize, (theme: DefaultTheme) => string> = {
+    small: (theme) => `
+    height: 32px;
+    padding: 0 ${theme.spacing.sm};
+    font-size: 0.875rem;
+  `,
+    medium: (theme) => `
+    height: 48px;
+    padding: 0 ${theme.spacing.md};
+    font-size: 1rem;
+  `,
+    large: (theme) => `
+    height: 56px;
+    padding: 0 ${theme.spacing.lg || '24px'};
+    font-size: 1.125rem;
+  `,
+};
 
 const buttonVariants: Record<ButtonVariant, (theme: DefaultTheme) => string> = {
-  primary: (theme) => `
+    primary: (theme) => `
         background: ${theme.colors.primary};
         color: ${theme.colors.white};
         &:hover:not(:disabled) { background: ${theme.colors.primaryDark}; }
     `,
-  secondary: (theme) => `
+    secondary: (theme) => `
         background: ${theme.colors.secondary};
         color: ${theme.colors.white};
         &:hover:not(:disabled) { background: ${theme.colors.secondaryDark}; }
     `,
-  outline: (theme) => `
+    outline: (theme) => `
         background: transparent;
         color: ${theme.colors.primary};
         border: 1px solid ${theme.colors.primary};
@@ -21,13 +39,13 @@ const buttonVariants: Record<ButtonVariant, (theme: DefaultTheme) => string> = {
             color: ${theme.colors.white};
         }
     `,
-  circle: (theme) => `
+    circle: (theme) => `
         background: transparent;
         color: ${theme.colors.primary};
         border: 1px solid ${theme.colors.gray300};
         border-radius: 50%;
-        width: 48px; /* Mesma altura padrão para ser um círculo perfeito */
         padding: 0;
+        aspect-ratio: 1 / 1; 
         &:hover:not(:disabled) {
             background: ${theme.colors.gray100};
             border-color: ${theme.colors.primary};
@@ -35,26 +53,22 @@ const buttonVariants: Record<ButtonVariant, (theme: DefaultTheme) => string> = {
     `,
 };
 
-export const StyledButton = styled.button<{ $variant: ButtonVariant }>`
+export const StyledButton = styled.button<{ $variant: ButtonVariant; $size: ButtonSize }>`
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: ${({ theme }) => theme.spacing.sm};
-
-    height: 48px;
-    padding: 0 ${({ theme }) => theme.spacing.md};
-
+    
     font-family: ${({ theme }) => theme.typography.fontFamily};
-    font-size: clamp(1rem, 2.5vw, 1.2rem); 
     font-weight: ${({ theme }) => theme.typography.fontWeights.medium};
-
     border-radius: ${({ theme }) => theme.borderRadius.md};
     border: none;
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.2s ease;
 
-    /* Aplicação da variante com transient prop $variant */
+    ${({ $size, theme }) => buttonSizes[$size](theme)};
+
     ${({ $variant, theme }) => buttonVariants[$variant](theme)};
 
     &:focus-visible {
@@ -68,6 +82,6 @@ export const StyledButton = styled.button<{ $variant: ButtonVariant }>`
     }
 
     &:active:not(:disabled) {
-        transform: scale(0.95);
+        transform: scale(0.96);
     }
 `;

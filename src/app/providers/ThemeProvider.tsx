@@ -25,7 +25,7 @@ export function AppThemeProvider({ children }: Props) {
           right: 20,
         }}
       >
-        <Button variant="circle" onClick={toggleTheme}>
+        <Button variant="circle" size="small" onClick={toggleTheme}>
           {themeMode === "light" ? <Moon size={20} /> : <Sun size={20} />}
         </Button>
       </div>
