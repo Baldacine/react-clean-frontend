@@ -39,8 +39,13 @@
             ],
             "use_cases": {
                 "view_project": "Ver Proyecto",
-                "buu_desc": "Sistema Full-stack con 99.9% de uptime en React/Node.",
-                "other_desc": "Dashboards estratégicos y KPIs en tiempo real."
+                "buu_desc": "Sistema de programación Full-stack con 99.9% de tiempo de actividad, creado con React y Node.js.",
+                "other_desc": "Dashboards estratégicos y KPIs en tiempo real.",
+                "featured_title": "Proyectos Destacados",
+                "github_activity": "Actividad Reciente en GitHub",
+                "error": "No se pudieron cargar los repositorios.",
+                "retry": "Reintentar",
+                "no_description": "Sin descripción disponible."
             },
             "awards": [
                 "Mejor Proyecto TI del Año (2022)",

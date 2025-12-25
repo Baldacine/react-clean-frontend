@@ -39,8 +39,13 @@
             ],
             "use_cases": {
                 "view_project": "View Project",
-                "buu_desc": "Full-stack system with 99.9% uptime in React/Node.",
-                "other_desc": "Strategic dashboards and real-time KPIs."
+                "buu_desc": "Full-stack scheduling system with 99.9% uptime, built with React and Node.js.",
+                "other_desc": "Strategic dashboards and real-time KPIs.",
+                "featured_title": "Featured Projects",
+                "github_activity": "Recent GitHub Activity",
+                "error": "Could not load repositories.",
+                "retry": "Try again",
+                "no_description": "No description available."
             },
             "awards": [
                 "Best IT Project of the Year (2022)",
