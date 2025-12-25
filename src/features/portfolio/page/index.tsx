@@ -71,7 +71,10 @@ export const Portfolio: React.FC = () => {
             variant="circle"
             size="small"
             onClick={() =>
-              window.open("https://linkedin.com/in/seu-perfil", "_blank")
+              window.open(
+                "https://www.linkedin.com/in/wandersonbaldacine",
+                "_blank"
+              )
             }
           >
             <Linkedin size={15} />
@@ -81,7 +84,7 @@ export const Portfolio: React.FC = () => {
             variant="circle"
             size="small"
             onClick={() =>
-              (window.location.href = "mailto:seu-email@exemplo.com")
+              (window.location.href = "mailto:wandersonse0@gmail.com")
             }
           >
             <Mail size={15} />
@@ -90,7 +93,9 @@ export const Portfolio: React.FC = () => {
           <Button
             variant="circle"
             size="small"
-            onClick={() => window.open("https://seu-site.com", "_blank")}
+            onClick={() =>
+              window.open("https://buuapp.com.br/home.html", "_blank")
+            }
           >
             <Globe size={15} />
           </Button>
