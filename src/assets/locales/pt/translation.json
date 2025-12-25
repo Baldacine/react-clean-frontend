@@ -1,0 +1,57 @@
+{
+    "header": {
+        "title": "Meu Portfólio",
+        "toggleTheme": "Alternar Tema",
+        "changeLanguage": "Mudar Idioma"
+    },
+    "common": {
+        "loading": "Carregando..."
+    },
+    "portfolio": {
+        "description": "<strong>Engenheiro de Software | Especialista em React & TypeScript.</strong> Dedicado a construir interfaces web de alta performance e escaláveis. Criador da <strong>Buu Agenda</strong>, unindo expertise em Arquitetura Frontend com Gestão Estratégica de Projetos para entregar soluções digitais de alto impacto.",
+        "sections": {
+            "Journey": "Trajetória",
+            "Certifications": "Certificações",
+            "Use Cases": "Casos de Uso",
+            "Awards": "Prêmios",
+            "Hobbies": "Hobbies"
+        },
+        "modal": {
+            "close": "Fechar"
+        },
+        "sections_content": {
+            "journey": [
+                {
+                    "date": "2010",
+                    "title": "Início TI",
+                    "description": "Suporte e Infra."
+                },
+                {
+                    "date": "2023",
+                    "title": "Engenharia",
+                    "description": "Foco em React."
+                }
+            ],
+            "certifications": [
+                "PMP® - Project Management Professional",
+                "Certified Scrum Master® (CSM)",
+                "Arquitetura de Software e React Avançado"
+            ],
+            "use_cases": {
+                "view_project": "Ver Projeto",
+                "buu_desc": "Sistema Full-stack com 99.9% uptime em React/Node.",
+                "other_desc": "Dashboards estratégicos e KPIs em tempo real."
+            },
+            "awards": [
+                "Melhor Projeto de TI do Ano (2022)",
+                "Excelência em Inovação Digital"
+            ],
+            "hobbies": [
+                "Leitura Técnica",
+                "Jogos de Estratégia",
+                "Aprendizado Contínuo"
+            ],
+            "empty": "Selecione uma seção para explorar detalhes."
+        }
+    }
+}

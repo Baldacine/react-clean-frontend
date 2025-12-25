@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation, Trans } from "react-i18next";
 import type { PortfolioSection } from "../types";
 import { Card } from "@/shared/components/Card/Card";
 import { Container, Header, NavButtons } from "./styles";
@@ -7,8 +8,10 @@ import { Modal } from "@/shared/components/Modal/Modal";
 import { SectionContent } from "../components/SectionContent";
 import { Button } from "@/shared/components/Button/Button";
 import { Briefcase, Code, Gamepad2, GraduationCap, Trophy } from "lucide-react";
+import { Avatar } from "@/shared/components/Avatar/Avatar";
 
 export const Portfolio: React.FC = () => {
+  const { t } = useTranslation();
   const [section, setSection] = useState<PortfolioSection | null>(null);
   const [loadingSection, setLoadingSection] = useState<PortfolioSection | null>(
     null
@@ -33,7 +36,6 @@ export const Portfolio: React.FC = () => {
 
   const handleSectionChange = (s: PortfolioSection) => {
     setLoadingSection(s);
-
     setTimeout(() => {
       setSection(s);
       setLoadingSection(null);
@@ -44,14 +46,18 @@ export const Portfolio: React.FC = () => {
   return (
     <Container>
       <Header>
-        <img src={fotoPerfil} alt="Wanderson Baldacine" />
+        <Avatar
+          src={fotoPerfil}
+          alt="Wanderson Baldacine"
+          size={120}
+          shape="circle"
+        />
         <h1>Wanderson Baldacine</h1>
         <p>
-          <strong>Software Engineer | React & TypeScript Specialist.</strong>
-          Dedicated to building high-performance, scalable web interfaces.
-          Creator of <strong>Buu Agenda</strong>, merging deep Frontend
-          Architecture expertise with strategic Project Management to deliver
-          high-impact digital solutions.
+          <Trans
+            i18nKey="portfolio.description"
+            components={{ bold: <strong /> }}
+          />
         </p>
       </Header>
 
@@ -63,7 +69,7 @@ export const Portfolio: React.FC = () => {
             isLoading={loadingSection === s}
             disabled={!!loadingSection}
             icon={sectionIcons[s]}
-            title={s}
+            title={t(`portfolio.sections.${s}`)}
             onClick={() => handleSectionChange(s)}
             width="100%"
             minWidth="150px"
@@ -78,7 +84,7 @@ export const Portfolio: React.FC = () => {
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        title={section || ""}
+        title={section ? t(`portfolio.sections.${section}`) : ""}
         width="80vw"
         maxWidth={800}
         height="90vh"
@@ -88,7 +94,7 @@ export const Portfolio: React.FC = () => {
             size="small"
             onClick={() => setIsModalOpen(false)}
           >
-            Close
+            {t("portfolio.modal.close")}
           </Button>
         }
       >

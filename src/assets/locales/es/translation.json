@@ -1,0 +1,57 @@
+{
+    "header": {
+        "title": "Mi Portafolio",
+        "toggleTheme": "Cambiar Tema",
+        "changeLanguage": "Cambiar Idioma"
+    },
+    "common": {
+        "loading": "Cargando..."
+    },
+    "portfolio": {
+        "description": "<strong>Ingeniero de Software | Especialista en React y TypeScript.</strong> Dedicado a la creación de interfaces web escalables y de alto rendimiento. Creador de <strong>Buu Agenda</strong>, combinando una profunda experiencia en Arquitectura Frontend con Gestión Estratégica de Proyectos para ofrecer soluciones digitales de alto impacto.",
+        "sections": {
+            "Journey": "Trayectoria",
+            "Certifications": "Certificaciones",
+            "Use Cases": "Casos de Uso",
+            "Awards": "Premios",
+            "Hobbies": "Aficiones"
+        },
+        "modal": {
+            "close": "Cerrar"
+        },
+        "sections_content": {
+            "journey": [
+                {
+                    "date": "2010",
+                    "title": "Inicio TI",
+                    "description": "Soporte e Infra."
+                },
+                {
+                    "date": "2023",
+                    "title": "Ingeniería",
+                    "description": "Foco en React."
+                }
+            ],
+            "certifications": [
+                "PMP® - Project Management Professional",
+                "Certified Scrum Master® (CSM)",
+                "Arquitectura de Software y React Avanzado"
+            ],
+            "use_cases": {
+                "view_project": "Ver Proyecto",
+                "buu_desc": "Sistema Full-stack con 99.9% de uptime en React/Node.",
+                "other_desc": "Dashboards estratégicos y KPIs en tiempo real."
+            },
+            "awards": [
+                "Mejor Proyecto TI del Año (2022)",
+                "Premio a la Excelencia en Innovación"
+            ],
+            "hobbies": [
+                "Lectura Técnica",
+                "Juegos de Estrategia",
+                "Aprendizaje Continuo"
+            ],
+            "empty": "Seleccione una sección para explorar detalles."
+        }
+    }
+}

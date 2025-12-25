@@ -1,0 +1,57 @@
+{
+    "header": {
+        "title": "My Portfolio",
+        "toggleTheme": "Toggle Theme",
+        "changeLanguage": "Change Language"
+    },
+    "common": {
+        "loading": "Loading..."
+    },
+    "portfolio": {
+        "description": "<strong>Software Engineer | React & TypeScript Specialist.</strong> Dedicated to building high-performance, scalable web interfaces. Creator of <strong>Buu Agenda</strong>, merging deep Frontend Architecture expertise with strategic Project Management to deliver high-impact digital solutions.",
+        "sections": {
+            "Journey": "Journey",
+            "Certifications": "Certifications",
+            "Use Cases": "Use Cases",
+            "Awards": "Awards",
+            "Hobbies": "Hobbies"
+        },
+        "modal": {
+            "close": "Close"
+        },
+        "sections_content": {
+            "journey": [
+                {
+                    "date": "2010",
+                    "title": "IT Kickoff",
+                    "description": "Support & Infra."
+                },
+                {
+                    "date": "2023",
+                    "title": "Engineering",
+                    "description": "React focus."
+                }
+            ],
+            "certifications": [
+                "PMP® - Project Management Professional",
+                "Certified Scrum Master® (CSM)",
+                "Software Architecture & Advanced React"
+            ],
+            "use_cases": {
+                "view_project": "View Project",
+                "buu_desc": "Full-stack system with 99.9% uptime in React/Node.",
+                "other_desc": "Strategic dashboards and real-time KPIs."
+            },
+            "awards": [
+                "Best IT Project of the Year (2022)",
+                "Innovation Excellence Award"
+            ],
+            "hobbies": [
+                "Technical Reading",
+                "Strategy Games",
+                "Continuous Learning"
+            ],
+            "empty": "Select a section to explore details."
+        }
+    }
+}
