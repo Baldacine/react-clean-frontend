@@ -22,14 +22,24 @@
         "sections_content": {
             "journey": [
                 {
-                    "date": "2010",
-                    "title": "IT Kickoff",
-                    "description": "Support & Infra."
+                    "date": "Present",
+                    "title": "Frontend Developer (Project-Based)",
+                    "description": "Delivering frontend solutions using React, TypeScript, and Clean Architecture. Focused on maintainable code."
                 },
                 {
-                    "date": "2023",
-                    "title": "Engineering",
-                    "description": "React focus."
+                    "date": "2022 - 2024",
+                    "title": "Frontend Tech Lead",
+                    "description": "Led frontend development using React and TypeScript. Responsible for code reviews, architectural best practices, and collaborating with cross-functional Scrum teams."
+                },
+                {
+                    "date": "2021",
+                    "title": "Full-Stack Developer",
+                    "description": "Built full-stack features with a heavy focus on React.js, leveraging solid backend and database knowledge."
+                },
+                {
+                    "date": "2015 - 2020",
+                    "title": "Systems Developer",
+                    "description": "Developed enterprise applications using .NET MVC, JavaScript, and SQL Server. Implemented data solutions with Power BI."
                 }
             ],
             "certifications": [
@@ -38,7 +48,7 @@
                 "Software Architecture & Advanced React"
             ],
             "use_cases": {
-                "view_project": "View Project",
+                "view_project": "Live Demo",
                 "buu_desc": "Full-stack scheduling system with 99.9% uptime, built with React and Node.js.",
                 "other_desc": "Strategic dashboards and real-time KPIs.",
                 "featured_title": "Featured Projects",
@@ -48,13 +58,32 @@
                 "no_description": "No description available."
             },
             "awards": [
-                "Best IT Project of the Year (2022)",
-                "Innovation Excellence Award"
+                {
+                    "title": "2nd Place - Innovation Challenge",
+                    "description": "Achieved second place in the Aracruz/ES Innovation Challenge, developing creative and technical solutions to solve real-world regional problems.",
+                    "image": "/assets/premio_performance.png",
+                    "link": "https://aracruz.ifes.edu.br/noticias/17461-finalistas-do-desafio-de-inovacao-2025-sao-anunciados-pelo-ifes-campus-aracruz"
+                },
+                {
+                    "title": "4th Place - FAPES Innovation Program",
+                    "description": "Ranked among the top 4 out of 44 selected projects by the FAPES Innovation Program, validating technical feasibility and product impact potential.",
+                    "image": "/assets/capa-genesis.webp",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7402856128973438976/"
+                }
             ],
             "hobbies": [
-                "Technical Reading",
-                "Strategy Games",
-                "Continuous Learning"
+                {
+                    "title": "Electric Guitar",
+                    "description": "Playing guitar as a creative outlet, focusing on continuous practice and musical theory."
+                },
+                {
+                    "title": "Technical Reading",
+                    "description": "Staying updated with the latest trends in software architecture and frontend ecosystems."
+                },
+                {
+                    "title": "Continuous Learning",
+                    "description": "Passionate about discovering new technologies and improving problem-solving skills."
+                }
             ],
             "empty": "Select a section to explore details."
         }

@@ -22,14 +22,24 @@
         "sections_content": {
             "journey": [
                 {
-                    "date": "2010",
-                    "title": "Inicio TI",
-                    "description": "Soporte e Infra."
+                    "date": "Presente",
+                    "title": "Desarrollador Frontend (Basado en Proyectos)",
+                    "description": "Entrega de soluciones frontend utilizando React, TypeScript y Clean Architecture. Enfocado en código mantenible."
                 },
                 {
-                    "date": "2023",
-                    "title": "Ingeniería",
-                    "description": "Foco en React."
+                    "date": "2022 - 2024",
+                    "title": "Tech Lead Frontend",
+                    "description": "Liderazgo técnico en desarrollo frontend con React y TypeScript. Responsable de revisiones de código, mejores prácticas y metodología Scrum."
+                },
+                {
+                    "date": "2021",
+                    "title": "Desarrollador Full-Stack",
+                    "description": "Desarrollo de funcionalidades con énfasis en React.js, aplicando sólidos conocimientos en backend y bases de datos."
+                },
+                {
+                    "date": "2015 - 2020",
+                    "title": "Desarrollador de Sistemas",
+                    "description": "Desarrollo de aplicaciones empresariales utilizando .NET MVC, JavaScript y SQL Server. Implementación de soluciones de Power BI."
                 }
             ],
             "certifications": [
@@ -48,13 +58,32 @@
                 "no_description": "Sin descripción disponible."
             },
             "awards": [
-                "Mejor Proyecto TI del Año (2022)",
-                "Premio a la Excelencia en Innovación"
+                {
+                    "title": "2º Lugar - Desafío de Innovación",
+                    "description": "Logro del segundo lugar en el Desafío de Innovación en Aracruz/ES, desarrollando soluciones creativas y tecnológicas para problemas reales de la región.",
+                    "image": "/assets/premio_performance.png",
+                    "link": "https://aracruz.ifes.edu.br/noticias/17461-finalistas-do-desafio-de-inovacao-2025-sao-anunciados-pelo-ifes-campus-aracruz"
+                },
+                {
+                    "title": "4º Lugar - FAPES Innovación",
+                    "description": "Destacado entre los 44 proyectos seleccionados por el programa FAPES Innovación, validando la viabilidad técnica y el potencial de impacto de la solución.",
+                    "image": "/assets/capa-genesis.webp",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7402856128973438976/"
+                }
             ],
             "hobbies": [
-                "Lectura Técnica",
-                "Juegos de Estrategia",
-                "Aprendizaje Continuo"
+                {
+                    "title": "Guitarra Eléctrica",
+                    "description": "Tocar la guitarra como medio de expresión creativa, con enfoque en la práctica constante."
+                },
+                {
+                    "title": "Lectura Técnica",
+                    "description": "Mantenerse al día con las tendencias en arquitectura de software y ecosistemas frontend."
+                },
+                {
+                    "title": "Aprendizaje Continuo",
+                    "description": "Apasionado por descubrir nuevas tecnologías y mejorar habilidades de resolución de problemas."
+                }
             ],
             "empty": "Seleccione una sección para explorar detalles."
         }

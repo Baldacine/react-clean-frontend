@@ -8,4 +8,7 @@ export type PortfolioSection =
 export interface Project {
     name: string;
     link: string;
+    descKey: string;
+    iosLink: string;
+    androidLink: string;
 }

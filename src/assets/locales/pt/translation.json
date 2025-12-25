@@ -22,14 +22,24 @@
         "sections_content": {
             "journey": [
                 {
-                    "date": "2010",
-                    "title": "Início TI",
-                    "description": "Suporte e Infra."
+                    "date": "Presente",
+                    "title": "Desenvolvedor Frontend (Baseado em Projetos)",
+                    "description": "Entrega de soluções frontend utilizando React, TypeScript e Clean Architecture. Focado em código de fácil manutenção."
                 },
                 {
-                    "date": "2023",
-                    "title": "Engenharia",
-                    "description": "Foco em React."
+                    "date": "2022 - 2024",
+                    "title": "Tech Lead Frontend",
+                    "description": "Liderança técnica no desenvolvimento frontend com React e TypeScript. Responsável por code reviews, boas práticas e colaboração em times Scrum."
+                },
+                {
+                    "date": "2021",
+                    "title": "Desenvolvedor Full-Stack",
+                    "description": "Criação de funcionalidades com ênfase em React.js, utilizando sólidos conhecimentos de backend e banco de dados."
+                },
+                {
+                    "date": "2015 - 2020",
+                    "title": "Desenvolvedor de Sistemas",
+                    "description": "Desenvolvimento de aplicações corporativas utilizando .NET MVC, JavaScript e SQL Server. Implementação de soluções de Power BI."
                 }
             ],
             "certifications": [
@@ -38,7 +48,7 @@
                 "Arquitetura de Software e React Avançado"
             ],
             "use_cases": {
-                "view_project": "Ver Projeto",
+                "view_project": "Ver site",
                 "buu_desc": "Sistema de agendamento Full-stack com 99.9% de uptime, construído com React e Node.js.",
                 "other_desc": "Dashboards estratégicos e KPIs em tempo real.",
                 "featured_title": "Projetos em Destaque",
@@ -48,13 +58,32 @@
                 "no_description": "Sem descrição disponível."
             },
             "awards": [
-                "Melhor Projeto de TI do Ano (2022)",
-                "Excelência em Inovação Digital"
+                {
+                    "title": "2º Lugar - Desafio de Inovação",
+                    "description": "Conquista do segundo lugar no Desafio de Inovação em Aracruz/ES, desenvolvendo soluções criativas e tecnológicas para desafios reais da região.",
+                    "image": "/assets/premio_performance.png",
+                    "link": "https://aracruz.ifes.edu.br/noticias/17461-finalistas-do-desafio-de-inovacao-2025-sao-anunciados-pelo-ifes-campus-aracruz"
+                },
+                {
+                    "title": "4º Lugar - FAPES Inovação",
+                    "description": "Destaque entre os 44 projetos selecionados pelo programa FAPES Inovação do Espírito Santo, validando a viabilidade técnica e o potencial de impacto da solução desenvolvida.",
+                    "image": "/assets/capa-genesis.webp",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7402856128973438976/"
+                }
             ],
             "hobbies": [
-                "Leitura Técnica",
-                "Jogos de Estratégia",
-                "Aprendizado Contínuo"
+                {
+                    "title": "Guitarra Elétrica",
+                    "description": "Tocar guitarra como forma de expressão criativa, focando em prática constante e teoria musical."
+                },
+                {
+                    "title": "Leitura Técnica",
+                    "description": "Acompanhar as últimas tendências em arquitetura de software e ecossistemas frontend."
+                },
+                {
+                    "title": "Aprendizado Contínuo",
+                    "description": "Apaixonado por descobrir novas tecnologias e aprimorar a resolução de problemas."
+                }
             ],
             "empty": "Selecione uma seção para explorar detalhes."
         }
