@@ -20,10 +20,10 @@ describe("Portfolio Page", () => {
     render(<Portfolio />);
 
     const sections = [
-      "Skills",
+      "TechStack",
       "Journey",
       "Certifications",
-      "Use Cases",
+      "Projects",
       "Awards",
       "Hobbies",
     ];
@@ -38,11 +38,11 @@ describe("Portfolio Page", () => {
   it("should open the modal when a section card is clicked", async () => {
     render(<Portfolio />);
 
-    const skillsCard = screen.getByText("portfolio.sections.Skills");
-    fireEvent.click(skillsCard);
+    const TechStackCard = screen.getByText("portfolio.sections.TechStack");
+    fireEvent.click(TechStackCard);
 
     await waitFor(() => {
-      const modalTitles = screen.getAllByText("portfolio.sections.Skills");
+      const modalTitles = screen.getAllByText("portfolio.sections.TechStack");
       expect(modalTitles.length).toBeGreaterThan(1);
       expect(screen.getByText("portfolio.modal.close")).toBeInTheDocument();
     });

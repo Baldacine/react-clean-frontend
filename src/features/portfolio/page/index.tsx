@@ -29,19 +29,19 @@ export const Portfolio: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const sections: PortfolioSection[] = [
-    "Skills",
+    "TechStack",
     "Journey",
     "Certifications",
-    "Use Cases",
+    "Projects",
     "Awards",
     "Hobbies",
   ];
 
   const sectionIcons: Record<PortfolioSection, React.ReactNode> = {
-    Skills: <Wrench size={32} />,
+    TechStack: <Wrench size={32} />,
     Journey: <Briefcase size={32} />,
     Certifications: <GraduationCap size={32} />,
-    "Use Cases": <Code size={32} />,
+    "Projects": <Code size={32} />,
     Awards: <Trophy size={32} />,
     Hobbies: <Gamepad2 size={32} />,
   };

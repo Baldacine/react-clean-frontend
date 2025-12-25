@@ -79,28 +79,28 @@ export const SkillsSection = () => {
     {
       title: "Frontend",
       icon: <Layout size={18} />,
-      skills: t("portfolio.sections_content.skills.frontend", {
+      TechStack: t("portfolio.sections_content.TechStack.frontend", {
         returnObjects: true,
       }) as string[],
     },
     {
       title: "Backend",
       icon: <Code2 size={18} />,
-      skills: t("portfolio.sections_content.skills.backend", {
+      TechStack: t("portfolio.sections_content.TechStack.backend", {
         returnObjects: true,
       }) as string[],
     },
     {
       title: "Databases",
       icon: <Database size={18} />,
-      skills: t("portfolio.sections_content.skills.database", {
+      TechStack: t("portfolio.sections_content.TechStack.database", {
         returnObjects: true,
       }) as string[],
     },
     {
       title: "Data & BI",
       icon: <BarChart3 size={18} />,
-      skills: t("portfolio.sections_content.skills.data_analytics", {
+      TechStack: t("portfolio.sections_content.TechStack.data_analytics", {
         returnObjects: true,
       }) as string[],
     },
@@ -115,7 +115,7 @@ export const SkillsSection = () => {
             <span>{group.title}</span>
           </Header>
           <TagContainer>
-            {group.skills.map((skill, j) => (
+            {group.TechStack.map((skill, j) => (
               <SkillTag key={j}>{skill}</SkillTag>
             ))}
           </TagContainer>

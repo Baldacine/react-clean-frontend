@@ -8,12 +8,12 @@
         "loading": "Loading..."
     },
     "portfolio": {
-        "description": "<strong>React & TypeScript Specialist.</strong> Dedicated to building high-performance, scalable web interfaces. Creator of <strong>Buu Agenda</strong>, merging deep Frontend Architecture expertise with strategic Project Management to deliver high-impact digital solutions.",
+        "description": "<strong>Front-End specialized in React and TypeScript.</strong> Focused on building scalable, high-performance web and mobile interfaces. Hands-on experience delivering real-world products using React, React Native, REST APIs, and modern frontend architectures, working in Agile environments (Scrum and Kanban) and collaborating with cross-functional teams.",
         "sections": {
-            "Skills": "Skills",
+            "TechStack": "Tech Stack",
             "Journey": "Journey",
             "Certifications": "Certifications",
-            "Use Cases": "Use Cases",
+            "Projects": "Projects",
             "Awards": "Awards",
             "Hobbies": "Hobbies"
         },
@@ -21,7 +21,7 @@
             "close": "Close"
         },
         "sections_content": {
-            "skills": {
+            "TechStack": {
                 "frontend": [
                     "React",
                     "React Native",
@@ -132,7 +132,7 @@
                 },
                 {
                     "title": "Continuous Learning",
-                    "description": "Passionate about discovering new technologies and improving problem-solving skills."
+                    "description": "Passionate about discovering new technologies and improving problem-solving TechStack."
                 }
             ],
             "empty": "Select a section to explore details."

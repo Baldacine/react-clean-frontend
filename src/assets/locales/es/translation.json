@@ -8,12 +8,12 @@
         "loading": "Cargando..."
     },
     "portfolio": {
-        "description": "<strong>Especialista en React y TypeScript.</strong> Dedicado a la creación de interfaces web escalables y de alto rendimiento. Creador de <strong>Buu Agenda</strong>, combinando una profunda experiencia en Arquitectura Frontend con Gestión Estratégica de Proyectos para ofrecer soluciones digitales de alto impacto.",
+        "description": "<strong>Frontend especializado en React y TypeScript.</strong> Enfocado en la construcción de interfaces web y móviles escalables y de alto rendimiento. Experiencia práctica entregando productos reales utilizando React, React Native, APIs REST y arquitecturas modernas de frontend, trabajando en entornos ágiles (Scrum y Kanban) y colaborando con equipos multidisciplinarios.",
         "sections": {
-            "Skills": "Skills",
+            "TechStack": "Tech Stack",
             "Journey": "Trayectoria",
             "Certifications": "Certificaciones",
-            "Use Cases": "Casos de Uso",
+            "Projects": "Proyectos",
             "Awards": "Premios",
             "Hobbies": "Aficiones"
         },
@@ -21,7 +21,7 @@
             "close": "Cerrar"
         },
         "sections_content": {
-            "skills": {
+            "TechStack": {
                 "frontend": [
                     "React",
                     "React Native",

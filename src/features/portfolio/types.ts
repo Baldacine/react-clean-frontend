@@ -1,8 +1,8 @@
 export type PortfolioSection =
-    | "Skills"
+    | "TechStack"
     | "Journey"
     | "Certifications"
-    | "Use Cases"
+    | "Projects"
     | "Awards"
     | "Hobbies";
 

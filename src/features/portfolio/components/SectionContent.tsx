@@ -22,7 +22,7 @@ export const SectionContent: React.FC<Props> = ({ section }) => {
   const { t } = useTranslation();
 
   switch (section) {
-    case "Skills":
+    case "TechStack":
       return <SkillsSection />;
     case "Journey":
       return (
@@ -38,7 +38,7 @@ export const SectionContent: React.FC<Props> = ({ section }) => {
     case "Certifications":
       return <CertificationSection />;
 
-    case "Use Cases":
+    case "Projects":
       return <UseCaseSection />;
 
     case "Awards":
