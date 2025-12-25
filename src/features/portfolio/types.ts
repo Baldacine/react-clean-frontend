@@ -1,4 +1,5 @@
 export type PortfolioSection =
+    | "Skills"
     | "Journey"
     | "Certifications"
     | "Use Cases"

@@ -8,8 +8,9 @@
         "loading": "Carregando..."
     },
     "portfolio": {
-        "description": "<strong>Engenheiro de Software | Especialista em React & TypeScript.</strong> Dedicado a construir interfaces web de alta performance e escaláveis. Criador da <strong>Buu Agenda</strong>, unindo expertise em Arquitetura Frontend com Gestão Estratégica de Projetos para entregar soluções digitais de alto impacto.",
+        "description": "<strong>Especialista em React & TypeScript.</strong> Dedicado a construir interfaces web de alta performance e escaláveis. Criador da <strong>Buu Agenda</strong>, unindo expertise em Arquitetura Frontend com Gestão Estratégica de Projetos para entregar soluções digitais de alto impacto.",
         "sections": {
+            "Skills": "Skills",
             "Journey": "Trajetória",
             "Certifications": "Certificações",
             "Use Cases": "Casos de Uso",
@@ -20,6 +21,30 @@
             "close": "Fechar"
         },
         "sections_content": {
+            "skills": {
+                "frontend": [
+                    "React",
+                    "React Native",
+                    "TypeScript",
+                    "JavaScript",
+                    "Next.js"
+                ],
+                "backend": [
+                    ".NET",
+                    "Node.js",
+                    "C#"
+                ],
+                "database": [
+                    "SQL Server",
+                    "MySQL",
+                    "PostgreSQL",
+                    "MongoDB"
+                ],
+                "data_analytics": [
+                    "Power BI",
+                    "SQL Analytics"
+                ]
+            },
             "journey": [
                 {
                     "date": "Presente",
@@ -43,9 +68,34 @@
                 }
             ],
             "certifications": [
-                "PMP® - Project Management Professional",
-                "Certified Scrum Master® (CSM)",
-                "Arquitetura de Software e React Avançado"
+                {
+                    "title": "IA - Treinamento em Inteligência Artificial",
+                    "issuer": "Ka Solution",
+                    "date": "2021",
+                    "image": "/assets/iacert.png",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:6825026092001173504/"
+                },
+                {
+                    "title": "React & TypeScript Expert",
+                    "issuer": "B7Web",
+                    "date": "2021",
+                    "image": "/assets/1635776908928.jpeg",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:6860945638486622208/"
+                },
+                {
+                    "title": "Power BI Avançado",
+                    "issuer": "HM Treinamentos e Consultoria",
+                    "date": "2019",
+                    "image": "/assets/bi.png",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:6850737799470030848/"
+                },
+                {
+                    "title": "Intercâmbio - Curso de Inglês",
+                    "issuer": "Stafford House International",
+                    "date": "2018",
+                    "image": "/assets/stafford_house_international_logo.jpeg",
+                    "link": ""
+                }
             ],
             "use_cases": {
                 "view_project": "Ver site",

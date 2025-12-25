@@ -2,12 +2,22 @@ import React, { useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import type { PortfolioSection } from "../types";
 import { Card } from "@/shared/components/Card/Card";
-import { Container, Header, NavButtons } from "./styles";
+import { Container, Header, NavButtons, SocialActions } from "./styles";
 import fotoPerfil from "@/assets/foto.jpeg";
 import { Modal } from "@/shared/components/Modal/Modal";
 import { SectionContent } from "../components/SectionContent";
 import { Button } from "@/shared/components/Button/Button";
-import { Briefcase, Code, Gamepad2, GraduationCap, Trophy } from "lucide-react";
+import {
+  Briefcase,
+  Code,
+  Gamepad2,
+  Globe,
+  GraduationCap,
+  Linkedin,
+  Mail,
+  Trophy,
+  Wrench,
+} from "lucide-react";
 import { Avatar } from "@/shared/components/Avatar/Avatar";
 
 export const Portfolio: React.FC = () => {
@@ -19,6 +29,7 @@ export const Portfolio: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const sections: PortfolioSection[] = [
+    "Skills",
     "Journey",
     "Certifications",
     "Use Cases",
@@ -27,6 +38,7 @@ export const Portfolio: React.FC = () => {
   ];
 
   const sectionIcons: Record<PortfolioSection, React.ReactNode> = {
+    Skills: <Wrench size={32} />,
     Journey: <Briefcase size={32} />,
     Certifications: <GraduationCap size={32} />,
     "Use Cases": <Code size={32} />,
@@ -53,6 +65,36 @@ export const Portfolio: React.FC = () => {
           shape="circle"
         />
         <h1>Wanderson Baldacine</h1>
+
+        <SocialActions>
+          <Button
+            variant="circle"
+            size="small"
+            onClick={() =>
+              window.open("https://linkedin.com/in/seu-perfil", "_blank")
+            }
+          >
+            <Linkedin size={15} />
+          </Button>
+
+          <Button
+            variant="circle"
+            size="small"
+            onClick={() =>
+              (window.location.href = "mailto:seu-email@exemplo.com")
+            }
+          >
+            <Mail size={15} />
+          </Button>
+
+          <Button
+            variant="circle"
+            size="small"
+            onClick={() => window.open("https://seu-site.com", "_blank")}
+          >
+            <Globe size={15} />
+          </Button>
+        </SocialActions>
         <p>
           <Trans
             i18nKey="portfolio.description"

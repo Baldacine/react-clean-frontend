@@ -51,3 +51,10 @@ export const Section = styled.section`
   margin: 0 auto;
   padding: 1rem;
 `;
+
+export const SocialActions = styled.div`
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 10px 0;
+`;

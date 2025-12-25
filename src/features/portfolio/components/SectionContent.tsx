@@ -5,6 +5,8 @@ import { Timeline } from "@/shared/components/Timeline/Timeline";
 import { AwardsSection } from "./AwardsSection";
 import { HobbiesSection } from "./HobbiesSection";
 import { UseCaseSection } from "./UseCaseSection";
+import { SkillsSection } from "./SkillsSection";
+import { CertificationSection } from "./CertificationSection";
 
 interface Props {
   section: PortfolioSection | null;
@@ -19,18 +21,9 @@ export interface TimelineItem {
 export const SectionContent: React.FC<Props> = ({ section }) => {
   const { t } = useTranslation();
 
-  const renderSimpleList = (key: string) => {
-    const items = t(key, { returnObjects: true }) as string[];
-    return (
-      <ul>
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    );
-  };
-
   switch (section) {
+    case "Skills":
+      return <SkillsSection />;
     case "Journey":
       return (
         <Timeline
@@ -43,7 +36,7 @@ export const SectionContent: React.FC<Props> = ({ section }) => {
       );
 
     case "Certifications":
-      return renderSimpleList("portfolio.sections_content.certifications");
+      return <CertificationSection />;
 
     case "Use Cases":
       return <UseCaseSection />;

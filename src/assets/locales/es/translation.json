@@ -8,8 +8,9 @@
         "loading": "Cargando..."
     },
     "portfolio": {
-        "description": "<strong>Ingeniero de Software | Especialista en React y TypeScript.</strong> Dedicado a la creación de interfaces web escalables y de alto rendimiento. Creador de <strong>Buu Agenda</strong>, combinando una profunda experiencia en Arquitectura Frontend con Gestión Estratégica de Proyectos para ofrecer soluciones digitales de alto impacto.",
+        "description": "<strong>Especialista en React y TypeScript.</strong> Dedicado a la creación de interfaces web escalables y de alto rendimiento. Creador de <strong>Buu Agenda</strong>, combinando una profunda experiencia en Arquitectura Frontend con Gestión Estratégica de Proyectos para ofrecer soluciones digitales de alto impacto.",
         "sections": {
+            "Skills": "Skills",
             "Journey": "Trayectoria",
             "Certifications": "Certificaciones",
             "Use Cases": "Casos de Uso",
@@ -20,6 +21,30 @@
             "close": "Cerrar"
         },
         "sections_content": {
+            "skills": {
+                "frontend": [
+                    "React",
+                    "React Native",
+                    "TypeScript",
+                    "JavaScript",
+                    "Next.js"
+                ],
+                "backend": [
+                    ".NET",
+                    "Node.js",
+                    "C#"
+                ],
+                "database": [
+                    "SQL Server",
+                    "MySQL",
+                    "PostgreSQL",
+                    "MongoDB"
+                ],
+                "data_analytics": [
+                    "Power BI",
+                    "SQL Analytics"
+                ]
+            },
             "journey": [
                 {
                     "date": "Presente",
@@ -43,9 +68,34 @@
                 }
             ],
             "certifications": [
-                "PMP® - Project Management Professional",
-                "Certified Scrum Master® (CSM)",
-                "Arquitectura de Software y React Avanzado"
+                {
+                    "title": "IA - Capacitación en Inteligencia Artificial",
+                    "issuer": "Ka Solution",
+                    "date": "2021",
+                    "image": "/assets/iacert.png",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:6825026092001173504/"
+                },
+                {
+                    "title": "Experto en React & TypeScript",
+                    "issuer": "B7Web",
+                    "date": "2021",
+                    "image": "/assets/1635776908928.jpeg",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:6860945638486622208/"
+                },
+                {
+                    "title": "Power BI Avanzado",
+                    "issuer": "HM Capacitación y Consultoría",
+                    "date": "2019",
+                    "image": "/assets/bi.png",
+                    "link": "https://www.linkedin.com/feed/update/urn:li:activity:6850737799470030848/"
+                },
+                {
+                    "title": "Intercambio - Curso de Inglés",
+                    "issuer": "Stafford House International",
+                    "date": "2018",
+                    "image": "/assets/stafford_house_international_logo.jpeg",
+                    "link": ""
+                }
             ],
             "use_cases": {
                 "view_project": "Ver Proyecto",
