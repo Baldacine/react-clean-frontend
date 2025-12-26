@@ -6,16 +6,19 @@ export type PortfolioSection =
     | "Awards"
     | "Hobbies";
 
-export interface Project {
+export type Project = {
     name: string;
     link: string;
     descKey: string;
-    iosLink: string;
-    androidLink: string;
-}
-export interface ProfessionalExperience {
+    iosLink?: string;
+    androidLink?: string;
+    stacks?: string[];
+};
+
+export type ProfessionalExperience = {
     name: string;
     descKey: string;
-    androidLink: string;
+    androidLink?: string;
     role: string;
-}
+    stacks?: string[];
+};

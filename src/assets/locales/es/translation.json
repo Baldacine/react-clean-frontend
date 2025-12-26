@@ -28,12 +28,19 @@
                     "TypeScript",
                     "JavaScript",
                     "Next.js",
+                    "Jquery",
+                    "HTML",
+                    "CSS",
                     "Styled Components"
                 ],
                 "backend": [
                     ".NET",
                     "Node.js",
                     "C#"
+                ],
+                "test": [
+                    "Jest",
+                    "React Testing Library"
                 ],
                 "database": [
                     "SQL Server",
@@ -47,6 +54,7 @@
                 "others": [
                     "Scrum",
                     "Kanban",
+                    "Git",
                     "Docker"
                 ]
             },
@@ -104,13 +112,13 @@
             ],
             "use_cases": {
                 "view_project": "Ver Proyecto",
-                "buu_desc": "Sistema full-stack completo, desarrollado desde cero (Web y Mobile). Arquitectura robusta con React, React Native y Node.js sobre base de datos PostgreSQL. Responsable de todo el ciclo de vida, incluyendo la configuración de la infraestructura y automatización de despliegues (CI/CD) vía GitHub Actions, manteniendo un 99.9% de uptime.",
+                "buu_desc": "Plataforma de programación integral (web y móvil) diseñada desde cero, enfocada en citas en línea e integración con WhatsApp. Desarrollada con React, React Native, Node.js y PostgreSQL. Responsable de todo el ciclo de vida del producto, incluyendo frontend, backend, configuración de infraestructura y automatización de CI/CD con GitHub Actions, garantizando alta disponibilidad y confiabilidad.",
                 "other_desc": "Dashboards estratégicos y KPIs en tiempo real.",
                 "featured_title": "Proyectos Destacados",
                 "github_activity": "Actividad Reciente en GitHub",
                 "error": "No se pudieron cargar los repositorios.",
                 "retry": "Reintentar",
-                "no_description": "Sin descripción disponible."
+                "no_description": "Proyecto frontend construido con React y TypeScript, utilizando Styled Components y pruebas automatizadas con Jest y React Testing Library, enfocado en código limpio y componentes reutilizables."
             },
             "career": {
                 "title": "Experiencia en Proyectos Enterprise",

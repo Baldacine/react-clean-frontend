@@ -12,6 +12,19 @@ const projects: Project[] = [
     iosLink: "https://apps.apple.com/br/app/buu/id6749398692",
     androidLink:
       "https://play.google.com/store/apps/details?id=com.buu.online&hl=pt_BR",
+    stacks: [
+      "React Native",
+      "React",
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "Styled Components",
+      "GitHub",
+      "Payment integration (Mercado Pago, Stripe)",
+      "CI/CD",
+      "Postgres",
+      "WhatsApp API",
+    ],
   },
 ];
 
@@ -22,6 +35,15 @@ const professionalExperience: ProfessionalExperience[] = [
     androidLink:
       "https://play.google.com/store/search?q=medsempre&c=apps&hl=pt_BR",
     role: "Frontend Developer / Consultant",
+    stacks: [
+      "React Native",
+      "API REST",
+      "TypeScript",
+      "Styled Components",
+      "Azure DevOps",
+      "Kanban",
+      "Scrum",
+    ],
   },
   {
     name: "PPC Jurong",
@@ -29,8 +51,49 @@ const professionalExperience: ProfessionalExperience[] = [
     androidLink:
       "https://play.google.com/store/apps/details?id=com.globalsys.jurong_ppc_mobile&hl=pt_BR",
     role: "Frontend Developer / Consultant",
+    stacks: [
+      "React Native",
+      "API REST",
+      "TypeScript",
+      "Styled Components",
+      "GitHub",
+      "Azure DevOps",
+      "Metodologia Ágil",
+      "Kanban",
+    ],
   },
 ];
+
+const StackTags = ({ stacks }: { stacks?: string[] }) => {
+  if (!stacks?.length) return null;
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "6px",
+        marginTop: "6px",
+      }}
+    >
+      {stacks.map((stack) => (
+        <span
+          key={stack}
+          style={{
+            fontSize: "0.7rem",
+            padding: "4px 8px",
+            borderRadius: "999px",
+            background: "var(--primary-soft, rgba(0,0,0,0.05))",
+            color: "var(--primary)",
+            fontWeight: 500,
+          }}
+        >
+          {stack}
+        </span>
+      ))}
+    </div>
+  );
+};
 
 export const UseCaseSection = () => {
   const { t } = useTranslation();
@@ -83,6 +146,8 @@ export const UseCaseSection = () => {
               <p style={{ fontSize: "0.9rem", opacity: 0.8, margin: 0 }}>
                 {t(project.descKey)}
               </p>
+
+              <StackTags stacks={project.stacks} />
 
               {(project.iosLink || project.androidLink) && (
                 <div style={{ display: "flex", gap: "10px", marginTop: "4px" }}>
@@ -175,6 +240,8 @@ export const UseCaseSection = () => {
               <p style={{ fontSize: "0.85rem", opacity: 0.8 }}>
                 {t(project.descKey)}
               </p>
+
+              <StackTags stacks={project.stacks} />
             </RepoCard>
           ))}
         </div>

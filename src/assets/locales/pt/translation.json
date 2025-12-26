@@ -28,12 +28,19 @@
                     "TypeScript",
                     "JavaScript",
                     "Next.js",
+                    "Jquery",
+                    "HTML",
+                    "CSS",
                     "Styled Components"
                 ],
                 "backend": [
                     ".NET",
                     "Node.js",
                     "C#"
+                ],
+                "test": [
+                    "Jest",
+                    "React Testing Library"
                 ],
                 "database": [
                     "SQL Server",
@@ -47,7 +54,8 @@
                 "others": [
                     "Scrum",
                     "Kanban",
-                    "Git"
+                    "Git",
+                    "Docker"
                 ]
             },
             "journey": [
@@ -106,13 +114,13 @@
                 "title": "Experiência em Projetos Enterprise",
                 "subtitle": "Seleção de projetos relevantes em que colaborei durante a minha carreira.",
                 "view_project": "Ver site",
-                "buu_desc": "Sistema full-stack completo, desenvolvido do zero (Web e Mobile). Arquitetura robusta com React, React Native e Node.js sobre banco de dados PostgreSQL. Responsável por todo o ciclo de vida, incluindo a configuração da infraestrutura e automação de deploys (CI/CD) via GitHub Actions, mantendo 99.9% de uptime.",
+                "buu_desc": "Plataforma de agendamento completa, construída do zero (Web e Mobile), focada em agendamentos online com integração ao WhatsApp. Desenvolvida usando React, React Native, Node.js e PostgreSQL. Responsável por todo o ciclo de vida do produto, incluindo frontend, backend, configuração de infraestrutura e automação de CI/CD com GitHub Actions, garantindo alta disponibilidade e confiabilidade.",
                 "other_desc": "Dashboards estratégicos e KPIs em tempo real.",
                 "featured_title": "Projetos em Destaque",
                 "github_activity": "Atividade Recente no GitHub",
                 "error": "Não foi possível carregar os repositórios.",
                 "retry": "Tentar novamente",
-                "no_description": "Sem descrição disponível."
+                "no_description": "Projeto de front-end desenvolvido com React e TypeScript, utilizando Styled Components e testes automatizados com Jest e React Testing Library, com foco em código limpo e componentes reutilizáveis."
             },
             "career": {
                 "title": "Experiência em Projetos Enterprise",

@@ -11,7 +11,7 @@ import {
   Briefcase,
   Code,
   Gamepad2,
-  Globe,
+  Github,
   GraduationCap,
   Linkedin,
   Mail,
@@ -94,10 +94,13 @@ export const Portfolio: React.FC = () => {
             variant="circle"
             size="small"
             onClick={() =>
-              window.open("https://buuapp.com.br/home.html", "_blank")
+              window.open(
+                "https://github.com/Baldacine/react-clean-frontend",
+                "_blank"
+              )
             }
           >
-            <Globe size={15} />
+            <Github size={15} />
           </Button>
         </SocialActions>
         <p>

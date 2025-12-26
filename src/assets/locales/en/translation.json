@@ -28,12 +28,19 @@
                     "TypeScript",
                     "JavaScript",
                     "Next.js",
+                    "Jquery",
+                    "HTML",
+                    "CSS",
                     "Styled Components"
                 ],
                 "backend": [
                     ".NET",
                     "Node.js",
                     "C#"
+                ],
+                "test": [
+                    "Jest",
+                    "React Testing Library"
                 ],
                 "database": [
                     "SQL Server",
@@ -47,6 +54,7 @@
                 "others": [
                     "Scrum",
                     "Kanban",
+                    "Git",
                     "Docker"
                 ]
             },
@@ -104,13 +112,13 @@
             ],
             "use_cases": {
                 "view_project": "Live Demo",
-                "buu_desc": "Complete full-stack system built from the ground up (Web & Mobile). Robust architecture featuring React, React Native, and Node.js with a PostgreSQL database. Managed the entire product lifecycle, including infrastructure setup and automated deployments (CI/CD) using GitHub Actions, ensuring 99.9% uptime.",
+                "buu_desc": "Full-stack scheduling platform built from scratch (Web and Mobile) focused on online appointments with WhatsApp integration. Developed using React, React Native, Node.js, and PostgreSQL. Responsible for the entire product lifecycle, including frontend, backend, infrastructure setup, and CI/CD automation with GitHub Actions, ensuring high availability and reliability.",
                 "other_desc": "Strategic dashboards and real-time KPIs.",
                 "featured_title": "Featured Projects",
                 "github_activity": "Recent GitHub Activity",
                 "error": "Could not load repositories.",
                 "retry": "Try again",
-                "no_description": "No description available."
+                "no_description": "Frontend project built with React and TypeScript, using Styled Components and automated tests with Jest and React Testing Library, focused on clean code and reusable components."
             },
             "career": {
                 "title": "Enterprise Project Experience",

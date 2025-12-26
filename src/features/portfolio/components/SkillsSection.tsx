@@ -5,6 +5,7 @@ import {
   Layout,
   BarChart3,
   MoreHorizontal,
+  TestTube,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -93,6 +94,13 @@ export const SkillsSection = () => {
       title: "Backend",
       icon: <Code2 size={18} />,
       TechStack: t("portfolio.sections_content.TechStack.backend", {
+        returnObjects: true,
+      }) as string[],
+    },
+    {
+      title: "Testing",
+      icon: <TestTube size={18} />,
+      TechStack: t("portfolio.sections_content.TechStack.test", {
         returnObjects: true,
       }) as string[],
     },
