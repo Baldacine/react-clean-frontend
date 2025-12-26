@@ -27,7 +27,8 @@
                     "React Native",
                     "TypeScript",
                     "JavaScript",
-                    "Next.js"
+                    "Next.js",
+                    "Styled Components"
                 ],
                 "backend": [
                     ".NET",
@@ -41,8 +42,12 @@
                     "MongoDB"
                 ],
                 "data_analytics": [
-                    "Power BI",
-                    "SQL Analytics"
+                    "Power BI"
+                ],
+                "others": [
+                    "Scrum",
+                    "Kanban",
+                    "Docker"
                 ]
             },
             "journey": [
@@ -99,13 +104,19 @@
             ],
             "use_cases": {
                 "view_project": "Ver Proyecto",
-                "buu_desc": "Sistema de programación Full-stack con 99.9% de tiempo de actividad, creado con React y Node.js.",
+                "buu_desc": "Sistema full-stack completo, desarrollado desde cero (Web y Mobile). Arquitectura robusta con React, React Native y Node.js sobre base de datos PostgreSQL. Responsable de todo el ciclo de vida, incluyendo la configuración de la infraestructura y automatización de despliegues (CI/CD) vía GitHub Actions, manteniendo un 99.9% de uptime.",
                 "other_desc": "Dashboards estratégicos y KPIs en tiempo real.",
                 "featured_title": "Proyectos Destacados",
                 "github_activity": "Actividad Reciente en GitHub",
                 "error": "No se pudieron cargar los repositorios.",
                 "retry": "Reintentar",
                 "no_description": "Sin descripción disponible."
+            },
+            "career": {
+                "title": "Experiencia en Proyectos Enterprise",
+                "subtitle": "Selección de proyectos relevantes en los que he colaborado durante mi carrera.",
+                "medsempre_desc": "Aplicación móvil de salud para agendar citas y telemedicina, desarrollada con React Native e integrada con API RESTful.",
+                "ppc_desc": "Sistema de gestión de operaciones de astilleros con monitorización en tiempo real, desarrollado con React y .Net Core."
             },
             "awards": [
                 {

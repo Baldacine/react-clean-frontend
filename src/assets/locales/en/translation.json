@@ -27,7 +27,8 @@
                     "React Native",
                     "TypeScript",
                     "JavaScript",
-                    "Next.js"
+                    "Next.js",
+                    "Styled Components"
                 ],
                 "backend": [
                     ".NET",
@@ -41,8 +42,12 @@
                     "MongoDB"
                 ],
                 "data_analytics": [
-                    "Power BI",
-                    "SQL Analytics"
+                    "Power BI"
+                ],
+                "others": [
+                    "Scrum",
+                    "Kanban",
+                    "Docker"
                 ]
             },
             "journey": [
@@ -99,13 +104,19 @@
             ],
             "use_cases": {
                 "view_project": "Live Demo",
-                "buu_desc": "Full-stack scheduling system with 99.9% uptime, built with React and Node.js.",
+                "buu_desc": "Complete full-stack system built from the ground up (Web & Mobile). Robust architecture featuring React, React Native, and Node.js with a PostgreSQL database. Managed the entire product lifecycle, including infrastructure setup and automated deployments (CI/CD) using GitHub Actions, ensuring 99.9% uptime.",
                 "other_desc": "Strategic dashboards and real-time KPIs.",
                 "featured_title": "Featured Projects",
                 "github_activity": "Recent GitHub Activity",
                 "error": "Could not load repositories.",
                 "retry": "Try again",
                 "no_description": "No description available."
+            },
+            "career": {
+                "title": "Enterprise Project Experience",
+                "subtitle": "A selection of relevant projects I've contributed to throughout my career.",
+                "medsempre_desc": "Mobile health application for scheduling appointments and telemedicine, developed with React Native and integrated with RESTful APIs.",
+                "ppc_desc": "Shipyard operations management system with real-time monitoring, built with React and .Net Core"
             },
             "awards": [
                 {

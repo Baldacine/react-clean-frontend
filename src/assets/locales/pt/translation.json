@@ -27,7 +27,8 @@
                     "React Native",
                     "TypeScript",
                     "JavaScript",
-                    "Next.js"
+                    "Next.js",
+                    "Styled Components"
                 ],
                 "backend": [
                     ".NET",
@@ -41,8 +42,12 @@
                     "MongoDB"
                 ],
                 "data_analytics": [
-                    "Power BI",
-                    "SQL Analytics"
+                    "Power BI"
+                ],
+                "others": [
+                    "Scrum",
+                    "Kanban",
+                    "Git"
                 ]
             },
             "journey": [
@@ -98,14 +103,22 @@
                 }
             ],
             "use_cases": {
+                "title": "Experiência em Projetos Enterprise",
+                "subtitle": "Seleção de projetos relevantes em que colaborei durante a minha carreira.",
                 "view_project": "Ver site",
-                "buu_desc": "Sistema de agendamento Full-stack com 99.9% de uptime, construído com React e Node.js.",
+                "buu_desc": "Sistema full-stack completo, desenvolvido do zero (Web e Mobile). Arquitetura robusta com React, React Native e Node.js sobre banco de dados PostgreSQL. Responsável por todo o ciclo de vida, incluindo a configuração da infraestrutura e automação de deploys (CI/CD) via GitHub Actions, mantendo 99.9% de uptime.",
                 "other_desc": "Dashboards estratégicos e KPIs em tempo real.",
                 "featured_title": "Projetos em Destaque",
                 "github_activity": "Atividade Recente no GitHub",
                 "error": "Não foi possível carregar os repositórios.",
                 "retry": "Tentar novamente",
                 "no_description": "Sem descrição disponível."
+            },
+            "career": {
+                "title": "Experiência em Projetos Enterprise",
+                "subtitle": "Seleção de projetos relevantes em que colaborei durante a minha carreira.",
+                "medsempre_desc": "Aplicativo móvel de saúde para agendamento de consultas e telemedicina, desenvolvido com React Native e integrado a APIs RESTful.",
+                "ppc_desc": "Sistema de gerenciamento de operações shipyard com monitoramento em tempo real, construído com React e .Net Core"
             },
             "awards": [
                 {

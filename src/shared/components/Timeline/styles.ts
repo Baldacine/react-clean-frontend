@@ -15,17 +15,17 @@ export const TimelineStep = styled.div`
   &:not(:last-child)::after {
     content: "";
     position: absolute;
-    left: 11px; /* Metade da largura do Circle (24px/2) - ajuste fino */
-    top: 24px;
+    left: 10px; 
+    top: 20px;
     bottom: -${({ theme }) => theme.spacing.lg};
-    width: 2px;
+    width: 1px;
     background-color: ${({ theme }) => theme.colors.gray300};
   }
 `;
 
 export const Circle = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.primary};
   border: 4px solid ${({ theme }) => theme.colors.white};

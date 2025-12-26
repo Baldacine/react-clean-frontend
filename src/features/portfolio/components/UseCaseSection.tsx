@@ -1,8 +1,8 @@
 import { Apple, ExternalLink, Github, PlayCircle } from "lucide-react";
 import { Button } from "@/shared/components/Button/Button";
 import { useTranslation } from "react-i18next";
-import type { Project } from "../types";
-import { GithubStats } from "./GithubStats";
+import type { ProfessionalExperience, Project } from "../types";
+import { GithubStats, RepoCard, RepoCardHeader } from "./GithubStats";
 
 const projects: Project[] = [
   {
@@ -12,6 +12,23 @@ const projects: Project[] = [
     iosLink: "https://apps.apple.com/br/app/buu/id6749398692",
     androidLink:
       "https://play.google.com/store/apps/details?id=com.buu.online&hl=pt_BR",
+  },
+];
+
+const professionalExperience: ProfessionalExperience[] = [
+  {
+    name: "MedSempre",
+    descKey: "portfolio.sections_content.career.medsempre_desc",
+    androidLink:
+      "https://play.google.com/store/search?q=medsempre&c=apps&hl=pt_BR",
+    role: "Frontend Developer / Consultant",
+  },
+  {
+    name: "PPC Jurong",
+    descKey: "portfolio.sections_content.career.ppc_desc",
+    androidLink:
+      "https://play.google.com/store/apps/details?id=com.globalsys.jurong_ppc_mobile&hl=pt_BR",
+    role: "Frontend Developer / Consultant",
   },
 ];
 
@@ -112,6 +129,55 @@ export const UseCaseSection = () => {
           })}
         </h3>
         <GithubStats />
+      </section>
+
+      <section>
+        <h3 style={{ marginBottom: "16px", fontSize: "1.2rem" }}>
+          {t("portfolio.sections_content.career.title", {
+            defaultValue: "Enterprise Experience",
+          })}
+        </h3>
+        <p style={{ fontSize: "0.9rem", marginBottom: "16px", opacity: 0.7 }}>
+          {t("portfolio.sections_content.career.subtitle", {
+            defaultValue:
+              "Selected projects I've contributed to throughout my career.",
+          })}
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "20px",
+          }}
+        >
+          {professionalExperience.map((project) => (
+            <RepoCard key={project.name}>
+              <RepoCardHeader>
+                <strong>{project.name}</strong>
+                <div style={{ display: "flex", gap: "8px" }}>
+                  {project.androidLink && (
+                    <a href={project.androidLink} target="_blank">
+                      <ExternalLink size={16} />
+                    </a>
+                  )}
+                </div>
+              </RepoCardHeader>
+              <span
+                style={{
+                  fontSize: "0.75rem",
+                  color: "var(--primary)",
+                  fontWeight: "bold",
+                }}
+              >
+                {project.role}
+              </span>
+              <p style={{ fontSize: "0.85rem", opacity: 0.8 }}>
+                {t(project.descKey)}
+              </p>
+            </RepoCard>
+          ))}
+        </div>
       </section>
     </div>
   );

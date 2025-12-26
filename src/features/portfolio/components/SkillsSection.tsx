@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { Code2, Database, Layout, BarChart3 } from "lucide-react";
+import {
+  Code2,
+  Database,
+  Layout,
+  BarChart3,
+  MoreHorizontal,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Grid = styled.div`
@@ -101,6 +107,13 @@ export const SkillsSection = () => {
       title: "Data & BI",
       icon: <BarChart3 size={18} />,
       TechStack: t("portfolio.sections_content.TechStack.data_analytics", {
+        returnObjects: true,
+      }) as string[],
+    },
+    {
+      title: "Others",
+      icon: <MoreHorizontal size={18} />,
+      TechStack: t("portfolio.sections_content.TechStack.others", {
         returnObjects: true,
       }) as string[],
     },

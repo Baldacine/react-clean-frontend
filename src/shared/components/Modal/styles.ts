@@ -66,7 +66,7 @@ export const ModalHeader = styled.header`
 
 export const ModalBody = styled.div`
   padding: ${({ theme }) => theme.spacing.lg};
-  overflow-y: auto; /* Scroll apenas no conteúdo se for muito grande */
+  overflow-y: auto; 
   flex: 1;
   color: ${({ theme }) => theme.colors.text};
 `;

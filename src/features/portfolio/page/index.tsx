@@ -41,7 +41,7 @@ export const Portfolio: React.FC = () => {
     TechStack: <Wrench size={32} />,
     Journey: <Briefcase size={32} />,
     Certifications: <GraduationCap size={32} />,
-    "Projects": <Code size={32} />,
+    Projects: <Code size={32} />,
     Awards: <Trophy size={32} />,
     Hobbies: <Gamepad2 size={32} />,
   };
@@ -132,7 +132,7 @@ export const Portfolio: React.FC = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         title={section ? t(`portfolio.sections.${section}`) : ""}
-        width="80vw"
+        width="90vw"
         maxWidth={800}
         height="90vh"
         footer={

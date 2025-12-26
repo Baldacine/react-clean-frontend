@@ -9,9 +9,9 @@ export const Timeline: React.FC<TimelineProps> = ({ items }) => {
         <TimelineStep key={index}>
           <Circle />
           <Content>
-            <span>{item.date}</span>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
+            <span style={{ fontSize: "1rem" }}>{item.date}</span>
+            <h3 style={{ fontSize: "1.2rem" }}>{item.title}</h3>
+            <p style={{ fontSize: "0.9rem" }}>{item.description}</p>
           </Content>
         </TimelineStep>
       ))}

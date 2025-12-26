@@ -13,3 +13,9 @@ export interface Project {
     iosLink: string;
     androidLink: string;
 }
+export interface ProfessionalExperience {
+    name: string;
+    descKey: string;
+    androidLink: string;
+    role: string;
+}
