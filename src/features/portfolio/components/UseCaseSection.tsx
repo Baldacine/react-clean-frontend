@@ -64,8 +64,6 @@ const professionalExperience: ProfessionalExperience[] = [
   },
 ];
 
-/* ================= STYLES ================= */
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -153,8 +151,6 @@ const CardDescription = styled.p`
   font-size: 0.85rem;
   opacity: 0.8;
 `;
-
-/* ================= COMPONENTS ================= */
 
 const StackTags = ({ stacks }: { stacks?: string[] }) => {
   if (!stacks?.length) return null;
