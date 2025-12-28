@@ -8,7 +8,7 @@
         "loading": "Cargando..."
     },
     "portfolio": {
-        "description": "<strong>Frontend especializado en React y TypeScript.</strong> Enfocado en la construcción de interfaces web y móviles escalables y de alto rendimiento. Experiencia práctica entregando productos reales utilizando React, React Native, APIs REST y arquitecturas modernas de frontend, trabajando en entornos ágiles (Scrum y Kanban) y colaborando con equipos multidisciplinarios.",
+        "description": "<strong>Grado en Sistemas de Información</strong>, con experiencia profesional en el área de TI desde 2018. Front-End enfocado en la construcción de interfaces web y móviles escalables y de alto rendimiento utilizando React y React Native. Experiencia en la integración de aplicaciones frontend con APIs REST y arquitecturas modernas de frontend.",
         "sections": {
             "TechStack": "Tech Stack",
             "Journey": "Trayectoria",
@@ -27,6 +27,7 @@
                     "React Native",
                     "TypeScript",
                     "JavaScript",
+                    "TanStack Query",
                     "Next.js",
                     "Jquery",
                     "HTML",
@@ -107,6 +108,13 @@
                     "issuer": "Stafford House International",
                     "date": "2018",
                     "image": "/assets/stafford_house_international_logo.jpeg",
+                    "link": ""
+                },
+                {
+                    "title": "Grado en Sistemas de Información",
+                    "issuer": "Faculdade Hélio Rocha",
+                    "date": "2017 - 2020",
+                    "image": "/assets/622.webp",
                     "link": ""
                 }
             ],

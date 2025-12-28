@@ -36,8 +36,7 @@ const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid
-    ${({ theme }) => theme.colors.gray300 || "rgba(0, 0, 0, 0.05)"};
+  border: 1px solid ${({ theme }) => theme.colors.gray300};
   overflow: hidden;
 
   img {

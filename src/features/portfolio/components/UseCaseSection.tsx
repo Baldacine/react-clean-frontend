@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { Apple, ExternalLink, Github, PlayCircle } from "lucide-react";
 import { Button } from "@/shared/components/Button/Button";
 import { useTranslation } from "react-i18next";
@@ -58,40 +59,112 @@ const professionalExperience: ProfessionalExperience[] = [
       "Styled Components",
       "GitHub",
       "Azure DevOps",
-      "Metodologia Ágil",
       "Kanban",
     ],
   },
 ];
 
+/* ================= STYLES ================= */
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+`;
+
+const Section = styled.section``;
+
+const SectionTitle = styled.h3`
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+
+const ProjectList = styled.ul`
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
+const ProjectItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+const ProjectHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const ProjectDescription = styled.p`
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0;
+`;
+
+const StoreButtons = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+`;
+
+const StackWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+`;
+
+const StackTag = styled.span`
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-weight: 500;
+
+  background: ${({ theme }) =>
+    theme.colors.gray100 || "rgba(var(--primary-rgb), 0.15)"};
+`;
+
+const CareerSubtitle = styled.p`
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  opacity: 0.7;
+`;
+
+const CareerGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+`;
+
+const Role = styled.span`
+  font-size: 0.75rem;
+  color: ${({ theme }) => theme.colors.primary};
+  font-weight: bold;
+`;
+
+const CardDescription = styled.p`
+  font-size: 0.85rem;
+  opacity: 0.8;
+`;
+
+/* ================= COMPONENTS ================= */
+
 const StackTags = ({ stacks }: { stacks?: string[] }) => {
   if (!stacks?.length) return null;
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        gap: "6px",
-        marginTop: "6px",
-      }}
-    >
+    <StackWrapper>
       {stacks.map((stack) => (
-        <span
-          key={stack}
-          style={{
-            fontSize: "0.7rem",
-            padding: "4px 8px",
-            borderRadius: "999px",
-            background: "var(--primary-soft, rgba(0,0,0,0.05))",
-            color: "var(--primary)",
-            fontWeight: 500,
-          }}
-        >
-          {stack}
-        </span>
+        <StackTag key={stack}>{stack}</StackTag>
       ))}
-    </div>
+    </StackWrapper>
   );
 };
 
@@ -99,38 +172,18 @@ export const UseCaseSection = () => {
   const { t } = useTranslation();
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
-      <section>
-        <h3 style={{ marginBottom: "16px", fontSize: "1.2rem" }}>
+    <Wrapper>
+      <Section>
+        <SectionTitle>
           {t("portfolio.sections_content.use_cases.featured_title", {
             defaultValue: "Featured Projects",
           })}
-        </h3>
-        <ul
-          style={{
-            listStyle: "none",
-            padding: 0,
-            display: "flex",
-            flexDirection: "column",
-            gap: "16px",
-          }}
-        >
+        </SectionTitle>
+
+        <ProjectList>
           {projects.map((project) => (
-            <li
-              key={project.name}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "8px",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
+            <ProjectItem key={project.name}>
+              <ProjectHeader>
                 <strong>{project.name}</strong>
                 <Button
                   variant="outline"
@@ -139,18 +192,17 @@ export const UseCaseSection = () => {
                     window.open(project.link, "_blank", "noopener,noreferrer")
                   }
                 >
-                  <ExternalLink size={14} style={{ marginRight: "4px" }} />
+                  <ExternalLink size={14} />
                   {t("portfolio.sections_content.use_cases.view_project")}
                 </Button>
-              </div>
-              <p style={{ fontSize: "0.9rem", opacity: 0.8, margin: 0 }}>
-                {t(project.descKey)}
-              </p>
+              </ProjectHeader>
+
+              <ProjectDescription>{t(project.descKey)}</ProjectDescription>
 
               <StackTags stacks={project.stacks} />
 
               {(project.iosLink || project.androidLink) && (
-                <div style={{ display: "flex", gap: "10px", marginTop: "4px" }}>
+                <StoreButtons>
                   {project.iosLink && (
                     <Button
                       variant="primary"
@@ -161,6 +213,7 @@ export const UseCaseSection = () => {
                       App Store
                     </Button>
                   )}
+
                   {project.androidLink && (
                     <Button
                       variant="primary"
@@ -171,81 +224,63 @@ export const UseCaseSection = () => {
                       Google Play
                     </Button>
                   )}
-                </div>
+                </StoreButtons>
               )}
-            </li>
+            </ProjectItem>
           ))}
-        </ul>
-      </section>
+        </ProjectList>
+      </Section>
 
-      <section>
-        <h3
-          style={{
-            marginBottom: "8px",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            fontSize: "1.2rem",
-          }}
-        >
+      <Section>
+        <SectionTitle>
           <Github size={20} />
           {t("portfolio.sections_content.use_cases.github_activity", {
             defaultValue: "Recent GitHub Activity",
           })}
-        </h3>
-        <GithubStats />
-      </section>
+        </SectionTitle>
 
-      <section>
-        <h3 style={{ marginBottom: "16px", fontSize: "1.2rem" }}>
+        <GithubStats />
+      </Section>
+
+      <Section>
+        <SectionTitle>
           {t("portfolio.sections_content.career.title", {
             defaultValue: "Enterprise Experience",
           })}
-        </h3>
-        <p style={{ fontSize: "0.9rem", marginBottom: "16px", opacity: 0.7 }}>
+        </SectionTitle>
+
+        <CareerSubtitle>
           {t("portfolio.sections_content.career.subtitle", {
             defaultValue:
               "Selected projects I've contributed to throughout my career.",
           })}
-        </p>
+        </CareerSubtitle>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "20px",
-          }}
-        >
+        <CareerGrid>
           {professionalExperience.map((project) => (
             <RepoCard key={project.name}>
               <RepoCardHeader>
                 <strong>{project.name}</strong>
-                <div style={{ display: "flex", gap: "8px" }}>
-                  {project.androidLink && (
-                    <a href={project.androidLink} target="_blank">
-                      <ExternalLink size={16} />
-                    </a>
-                  )}
-                </div>
+                {project.androidLink && (
+                  <a
+                    href={project.androidLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink size={16} />
+                  </a>
+                )}
               </RepoCardHeader>
-              <span
-                style={{
-                  fontSize: "0.75rem",
-                  color: "var(--primary)",
-                  fontWeight: "bold",
-                }}
-              >
-                {project.role}
-              </span>
-              <p style={{ fontSize: "0.85rem", opacity: 0.8 }}>
-                {t(project.descKey)}
-              </p>
+
+              <Role>{project.role}</Role>
+
+              <CardDescription>{t(project.descKey)}</CardDescription>
 
               <StackTags stacks={project.stacks} />
             </RepoCard>
           ))}
-        </div>
-      </section>
-    </div>
+        </CareerGrid>
+      </Section>
+    </Wrapper>
   );
 };

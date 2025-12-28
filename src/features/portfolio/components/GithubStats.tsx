@@ -17,7 +17,7 @@ export const RepoCardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 8px; /* Pequeno ajuste de espaçamento */
+  margin-bottom: 8px;
 
   strong {
     color: ${({ theme }) => theme.colors.primary};

@@ -8,7 +8,7 @@
         "loading": "Loading..."
     },
     "portfolio": {
-        "description": "<strong>Front-End specialized in React and TypeScript.</strong> Focused on building scalable, high-performance web and mobile interfaces. Hands-on experience delivering real-world products using React, React Native, REST APIs, and modern frontend architectures, working in Agile environments (Scrum and Kanban) and collaborating with cross-functional teams.",
+        "description": "<strong>Degree in Information Systems </strong>, with professional experience in the IT field since 2018. Front-End focused specialized in building scalable, high-performance web and mobile interfaces using React and React Native. Experience integrating frontend applications with RESTful APIs and modern frontend architectures.",
         "sections": {
             "TechStack": "Tech Stack",
             "Journey": "Journey",
@@ -26,6 +26,7 @@
                     "React",
                     "React Native",
                     "TypeScript",
+                    "TanStack Query",
                     "JavaScript",
                     "Next.js",
                     "Jquery",
@@ -107,6 +108,13 @@
                     "issuer": "Stafford House International",
                     "date": "2018",
                     "image": "/assets/stafford_house_international_logo.jpeg",
+                    "link": ""
+                },
+                {
+                    "title": "Bachelor’s Degree in Information Systems",
+                    "issuer": "Faculdade Hélio Rocha",
+                    "date": "2017 - 2020",
+                    "image": "/assets/622.webp",
                     "link": ""
                 }
             ],

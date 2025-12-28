@@ -1,86 +1,78 @@
+import styled from "styled-components";
 import { Music, BookOpen, Brain, Mic2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+`;
+
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+
+  background: rgba(${({ theme }) => theme.colors.primary}, 0.03);
+  border-radius: 12px;
+  border: 1px solid ${({ theme }) => theme.colors.gray100};
+  transition: transform 0.2s ease;
+  cursor: default;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+`;
+
+const IconWrapper = styled.div`
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+`;
+
+const Title = styled.h4`
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+`;
+
+const Description = styled.p`
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+`;
+
 export const HobbiesSection = () => {
   const { t } = useTranslation();
+
   const hobbies = t("portfolio.sections_content.hobbies", {
     returnObjects: true,
   }) as { title: string; description: string }[];
 
   const getIcon = (title: string) => {
     const text = title.toLowerCase();
+
     if (text.match(/guitar|musica|música/)) return <Music size={24} />;
     if (text.match(/read|leitura|lectura/)) return <BookOpen size={24} />;
     if (text.match(/learn|aprendizado|aprendizaje/)) return <Brain size={24} />;
+
     return <Mic2 size={24} />;
   };
 
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-        gap: "16px",
-      }}
-    >
+    <Grid>
       {hobbies.map((hobby, index) => (
-        <div
-          key={index}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "12px",
-            padding: "20px",
-            background: "rgba(var(--primary-rgb), 0.03)",
-            borderRadius: "12px",
-            border: "1px solid rgba(var(--primary-rgb), 0.1)",
-            transition: "transform 0.2s ease",
-            cursor: "default",
-          }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.transform = "translateY(-4px)")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.transform = "translateY(0)")
-          }
-        >
-          <div
-            style={{
-              color: "var(--primary-color)",
-              background: "rgba(var(--primary-rgb), 0.1)",
-              width: "fit-content",
-              padding: "10px",
-              borderRadius: "10px",
-              display: "flex",
-            }}
-          >
-            {getIcon(hobby.title)}
-          </div>
+        <Card key={index}>
+          <IconWrapper>{getIcon(hobby.title)}</IconWrapper>
 
           <div>
-            <h4
-              style={{
-                margin: "0 0 6px 0",
-                fontSize: "1.05rem",
-                color: "var(--primary-color)",
-                fontWeight: "600",
-              }}
-            >
-              {hobby.title}
-            </h4>
-            <p
-              style={{
-                margin: 0,
-                fontSize: "0.85rem",
-                opacity: 0.7,
-                lineHeight: "1.5",
-              }}
-            >
-              {hobby.description}
-            </p>
+            <Title>{hobby.title}</Title>
+            <Description>{hobby.description}</Description>
           </div>
-        </div>
+        </Card>
       ))}
-    </div>
+    </Grid>
   );
 };
