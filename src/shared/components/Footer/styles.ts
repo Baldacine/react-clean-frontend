@@ -2,27 +2,28 @@ import styled from 'styled-components';
 
 
 export const FooterContainer = styled.footer`
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 60px; 
   
-  background-color: ${({ theme }) => theme.colors.gray100};
-  border-top: 1px solid ${({ theme }) => theme.colors.gray100};
+  background-color: ${({ theme }) => theme.colors.gray100}; 
+  border-top: 1px solid ${({ theme }) => theme.colors.gray100}; 
   
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
-  z-index: 999; 
+  padding: 0 1.5rem;
+  
+  /* Importante para não "esmagar" o footer em layouts flex */
+  flex-shrink: 0; 
+  
   transition: background-color 0.3s ease, border-color 0.3s ease;
 
   @media (max-width: 480px) {
     height: auto;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 0.5rem;
+    padding: 1rem;
+    text-align: center;
   }
 `;
 
