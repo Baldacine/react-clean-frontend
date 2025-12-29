@@ -5,13 +5,15 @@ const apiInstance = axios.create({
     baseURL: ENV.BASE_URL,
 });
 
-apiInstance.interceptors.request.use(async (config: InternalAxiosRequestConfig) => {
+export const externalApi = axios.create();
+
+apiInstance.interceptors.request.use((config: InternalAxiosRequestConfig) => {
     const token = localStorage.getItem('token');
+
     const isExternal = config.url?.startsWith('http');
 
     if (token && !isExternal) {
         config.headers.Authorization = `Bearer ${token}`;
-
         if (config.method === 'get') {
             config.params = { ...config.params, token };
         }

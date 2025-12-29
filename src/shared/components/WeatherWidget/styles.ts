@@ -32,7 +32,7 @@ export const WeatherWrapper = styled.div`
 
     .city {
       font-size: 0.7rem;
-      color: ${({ theme }) => theme.colors.gray300};
+      color: ${({ theme }) => theme.colors.gray500};
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -42,9 +42,5 @@ export const WeatherWrapper = styled.div`
     color: ${({ theme }) => theme.colors.primary};
   }
 
-  @media (max-width: 768px) {
-    .city {
-      display: none;
-    }
-  }
+
 `;

@@ -4,6 +4,9 @@
         "toggleTheme": "Toggle Theme",
         "changeLanguage": "Change Language"
     },
+    "footer": {
+        "rights": "All rights reserved."
+    },
     "common": {
         "loading": "Loading..."
     },

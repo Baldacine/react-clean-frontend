@@ -6,7 +6,6 @@ import { StyledHeader, HeaderActions } from "./styles";
 import type { HeaderProps } from "./types";
 import { useContext } from "react";
 import { UserContext } from "@/contexts/UserContext";
-import { WeatherWidget } from "../WeatherWidget/WeatherWidget";
 
 export function Header({ themeMode, toggleTheme }: HeaderProps) {
   const { i18n } = useTranslation();
@@ -23,7 +22,6 @@ export function Header({ themeMode, toggleTheme }: HeaderProps) {
       <h1>Olá, {state.name || "Visitante"}</h1>
 
       <HeaderActions>
-        <WeatherWidget />
         <Dropdown
           items={languageOptions}
           trigger={

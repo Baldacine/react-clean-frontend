@@ -27,7 +27,7 @@ export function AppThemeProvider({ children }: Props) {
   return (
     <ThemeProvider theme={themeMode === "light" ? lightTheme : darkTheme}>
       <Header themeMode={themeMode} toggleTheme={toggleTheme} />
-      <main>{children}</main>
+      {children}
     </ThemeProvider>
   );
 }

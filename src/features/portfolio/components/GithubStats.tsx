@@ -26,7 +26,7 @@ export const RepoCardHeader = styled.div`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.gray300};
+    color: ${({ theme }) => theme.colors.gray500};
     transition: color 0.2s;
     &:hover {
       color: ${({ theme }) => theme.colors.primary};
@@ -70,7 +70,7 @@ export const RepoCard = styled.div`
     align-items: center;
     margin-top: ${({ theme }) => theme.spacing.sm};
     font-size: 0.75rem;
-    color: ${({ theme }) => theme.colors.gray300};
+    color: ${({ theme }) => theme.colors.gray500};
 
     .stats {
       display: flex;

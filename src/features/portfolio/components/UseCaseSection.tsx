@@ -143,7 +143,7 @@ const CareerGrid = styled.div`
 
 const Role = styled.span`
   font-size: 0.75rem;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.text};
   font-weight: bold;
 `;
 

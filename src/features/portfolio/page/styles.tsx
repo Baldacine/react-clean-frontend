@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
   color: ${(props) => props.theme.colors.text};
-  min-height: 100vh;
   padding: 2rem;
 `;
 
@@ -36,7 +34,7 @@ export const NavButtons = styled.div`
   gap: ${({ theme }) => theme.spacing.md};
   width: 100%;
   padding: ${({ theme }) => theme.spacing.md};
-
+  margin-bottom: 60px;
   overflow: visible;
 
   @media (max-width: 480px) {
