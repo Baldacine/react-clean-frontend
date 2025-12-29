@@ -1,9 +1,9 @@
 import React, { type JSX } from "react";
 import { Cloud, Sun, CloudRain, CloudLightning } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useWeather } from "@/hooks/useWeather";
 import type { WeatherWidgetProps } from "./type";
 import * as S from "./styles";
-import { useTranslation } from "react-i18next";
 
 export const WeatherWidget: React.FC<WeatherWidgetProps> = ({ city }) => {
   const { i18n } = useTranslation();
