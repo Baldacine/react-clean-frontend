@@ -28,7 +28,6 @@ Follow the steps below to run the application in your local environment:
 ### 1. Clone the repository
 
 git clone [https://github.com/Baldacine/react-clean-frontend.git][def]
-cd your-repository
 
 ### 2. Install dependencies
 
