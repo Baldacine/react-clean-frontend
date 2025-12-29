@@ -1,4 +1,3 @@
-// src/hooks/useWeather.ts
 import { useQuery } from "@tanstack/react-query";
 import { weatherService } from "@/services/weatherService";
 import { useTranslation } from "react-i18next";
