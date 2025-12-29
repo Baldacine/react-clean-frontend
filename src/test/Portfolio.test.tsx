@@ -55,12 +55,15 @@ describe("Portfolio Page", () => {
 
     fireEvent.click(buttons[0]);
     expect(windowSpy).toHaveBeenCalledWith(
-      "https://linkedin.com/in/seu-perfil",
+      "https://www.linkedin.com/in/wandersonbaldacine",
       "_blank"
     );
 
     fireEvent.click(buttons[2]);
-    expect(windowSpy).toHaveBeenCalledWith("https://seu-site.com", "_blank");
+    expect(windowSpy).toHaveBeenCalledWith(
+      "https://www.linkedin.com/in/wandersonbaldacine",
+      "_blank"
+    );
   });
 
   it("should close the modal when the close button is clicked", async () => {

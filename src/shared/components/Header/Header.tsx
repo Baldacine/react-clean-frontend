@@ -4,9 +4,12 @@ import { Button } from "../Button/Button";
 import { Dropdown } from "../Dropdown/Dropdown"; // Import o novo componente
 import { StyledHeader, HeaderActions } from "./styles";
 import type { HeaderProps } from "./types";
+import { useContext } from "react";
+import { UserContext } from "@/contexts/UserContext";
 
 export function Header({ themeMode, toggleTheme }: HeaderProps) {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
+  const { state } = useContext(UserContext);
 
   const languageOptions = [
     { key: "pt", label: "Português", onClick: () => i18n.changeLanguage("pt") },
@@ -16,7 +19,7 @@ export function Header({ themeMode, toggleTheme }: HeaderProps) {
 
   return (
     <StyledHeader>
-      <h1>{t("header.title")}</h1>
+      <h1>Olá, {state.name || "Visitante"}</h1>
 
       <HeaderActions>
         <Dropdown
