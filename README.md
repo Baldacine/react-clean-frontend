@@ -37,12 +37,13 @@ npm install
 
 The project uses the OpenWeather API for the dynamic weather widget. Create a .env file in the root directory:
 
-VITE_WEATHER_API_KEY=your_api_key_here
-VITE_WEATHER_API_URL=[https://api.openweathermap.org/data/2.5](https://api.openweathermap.org/data/2.5)
-VITE_BASE_URL=<http://localhost:3000>
+**VITE_WEATHER_API_KEY**=your_api_key_here
+**VITE_WEATHER_API_URL**=[https://api.openweathermap.org/data/2.5][defurl]
+**VITE_BASE_URL**=<http://localhost:3000>
 
 ### 4. Environment Variables
 
 npm run dev
 
 [def]: https://github.com/Baldacine/react-clean-frontend.git
+[defurl]: https://api.openweathermap.org/data/2.5
