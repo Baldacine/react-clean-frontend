@@ -19,7 +19,6 @@ dist/
 .vscode/
 .DS_Store
 
-# Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -29,3 +28,4 @@ dist/
 *.njsproj
 *.sln
 *.sw?
+.env.local

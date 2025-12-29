@@ -1,12 +1,11 @@
+import { GithubService } from '@/services/githubService';
 import { useQuery } from '@tanstack/react-query';
-import { getGithubRepos } from '@/services/api/github';
-import type { GitHubRepo } from '@/@types/github';
 
 export const useGithubRepos = (username: string) => {
-    return useQuery<GitHubRepo[], Error>({
+    return useQuery({
         queryKey: ['github-repos', username],
-        queryFn: () => getGithubRepos(username),
-        staleTime: 1000 * 60 * 10,
+        queryFn: () => GithubService.getRepos(username),
         enabled: !!username,
+        staleTime: 1000 * 60 * 5,
     });
 };
