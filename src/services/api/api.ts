@@ -16,7 +16,6 @@ apiInstance.interceptors.request.use(async (config: InternalAxiosRequestConfig) 
             config.params = { ...config.params, token };
         }
     }
-
     return config;
 });
 
