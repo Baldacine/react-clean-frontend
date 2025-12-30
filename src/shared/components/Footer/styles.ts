@@ -12,8 +12,6 @@ export const FooterContainer = styled.footer`
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5rem;
-  
-  /* Importante para não "esmagar" o footer em layouts flex */
   flex-shrink: 0; 
   
   transition: background-color 0.3s ease, border-color 0.3s ease;

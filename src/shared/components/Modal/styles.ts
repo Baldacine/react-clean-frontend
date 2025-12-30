@@ -23,7 +23,7 @@ export const Overlay = styled.div`
   z-index: 1000;
   animation: ${fadeIn} 0.2s ease-out;
   backdrop-filter: blur(4px);
-  padding: ${({ theme }) => theme.spacing.md}; /* Margem de segurança para mobile */
+  padding: ${({ theme }) => theme.spacing.md};
 `;
 
 export const ModalContainer = styled.div<{
@@ -36,7 +36,6 @@ export const ModalContainer = styled.div<{
   display: flex;
   flex-direction: column;
   
-  /* Dimensões Dinâmicas */
   width: ${({ $width }) => (typeof $width === 'number' ? `${$width}px` : $width || '90%')};
   height: ${({ $height }) => (typeof $height === 'number' ? `${$height}px` : $height || 'auto')};
   max-width: ${({ $maxWidth }) => (typeof $maxWidth === 'number' ? `${$maxWidth}px` : $maxWidth || '500px')};
@@ -46,7 +45,7 @@ export const ModalContainer = styled.div<{
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   animation: ${slideUp} 0.3s ease-out;
   position: relative;
-  overflow: hidden; /* Garante que o header/footer respeitem o border-radius */
+  overflow: hidden;
 `;
 
 export const ModalHeader = styled.header`
@@ -77,7 +76,7 @@ export const ModalFooter = styled.footer`
   display: flex;
   justify-content: flex-end;
   gap: ${({ theme }) => theme.spacing.sm};
-  background: ${({ theme }) => theme.colors.gray100}33; /* Fundo levemente diferente */
+  background: ${({ theme }) => theme.colors.gray100}33;
 `;
 
 export const CloseButton = styled.button`

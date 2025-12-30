@@ -13,7 +13,6 @@ const customRender = (
   options?: Omit<RenderOptions, "wrapper">
 ) => render(ui, { wrapper: AllTheProviders, ...options });
 
-// Re-exporta tudo do testing-library para você não precisar importar de dois lugares
 export * from "@testing-library/react";
 
 export { customRender as render };

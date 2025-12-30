@@ -13,7 +13,7 @@ const TestComponent = () => {
         onClick={() =>
           dispatch({
             type: "setUser",
-            payload: { name: "React Test", token: "tk-999" },
+            payload: { name: "Visitante", token: "tk-999" },
           })
         }
       >
@@ -50,7 +50,25 @@ describe("UserProvider & Context", () => {
     const loginBtn = screen.getByText("Login");
     fireEvent.click(loginBtn);
 
-    expect(screen.getByTestId("user-name").textContent).toBe("React Test");
+    expect(screen.getByTestId("user-name").textContent).toBe("Visitante");
+
+    const storedUser = JSON.parse(localStorage.getItem("user") || "{}");
+    expect(storedUser.token).toBe("tk-999");
+  });
+
+  it("not should update state and localStorage on not correct login", () => {
+    render(
+      <UserProvider>
+        <TestComponent />
+      </UserProvider>
+    );
+
+    const loginBtn = screen.getByText("Login");
+    fireEvent.click(loginBtn);
+
+    expect(screen.getByTestId("user-name").textContent).not.toBe(
+      "React Vitest"
+    );
 
     const storedUser = JSON.parse(localStorage.getItem("user") || "{}");
     expect(storedUser.token).toBe("tk-999");

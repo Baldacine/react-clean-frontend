@@ -1,7 +1,9 @@
 import { Portfolio } from "@/features/portfolio/page";
 import { Footer } from "@/shared/components/Footer/Footer";
+import { Header } from "@/shared/components/Header/Header";
 import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
+import { useAppTheme } from "../providers/ThemeProvider";
 
 const LayoutWrapper = styled.div`
   display: flex;
@@ -18,14 +20,16 @@ const MainContent = styled.main`
 `;
 
 export function AppRoutes() {
+  const { themeMode, toggleTheme } = useAppTheme();
+
   return (
     <LayoutWrapper>
+      <Header themeMode={themeMode} toggleTheme={toggleTheme} />
       <MainContent>
         <Routes>
           <Route path="/" element={<Portfolio />} />
         </Routes>
       </MainContent>
-
       <Footer />
     </LayoutWrapper>
   );

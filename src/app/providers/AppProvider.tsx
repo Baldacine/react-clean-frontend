@@ -1,4 +1,4 @@
-import { AppThemeProvider } from "./ThemeProvider";
+import { AppThemeProvider } from "./AppThemeProvider";
 import { QueryProvider } from "./QueryProvider";
 import "@/utils/i18n";
 
