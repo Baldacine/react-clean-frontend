@@ -73,7 +73,7 @@ const Wrapper = styled.div`
 const Section = styled.section``;
 
 const SectionTitle = styled.h3`
-  font-size: 1.2rem;
+  font-size: ${({ theme }) => theme.typography.fontSizes.lg};
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -101,7 +101,7 @@ const ProjectHeader = styled.div`
 `;
 
 const ProjectDescription = styled.p`
-  font-size: 0.9rem;
+  font-size: ${({ theme }) => theme.typography.fontSizes.sm};
   opacity: 0.8;
   margin: 0;
 `;
@@ -120,17 +120,15 @@ const StackWrapper = styled.div`
 `;
 
 const StackTag = styled.span`
-  font-size: 0.7rem;
+  font-size: ${({ theme }) => theme.typography.fontSizes.xs};
   padding: 4px 8px;
   border-radius: 999px;
-  font-weight: 500;
-
-  background: ${({ theme }) =>
-    theme.colors.gray100 || "rgba(var(--primary-rgb), 0.15)"};
+  font-weight: ${({ theme }) => theme.typography.fontWeights.md};
+  background: ${({ theme }) => theme.colors.gray100};
 `;
 
 const CareerSubtitle = styled.p`
-  font-size: 0.9rem;
+  font-size: ${({ theme }) => theme.typography.fontSizes.sm};
   margin-bottom: 16px;
   opacity: 0.7;
 `;
@@ -142,13 +140,13 @@ const CareerGrid = styled.div`
 `;
 
 const Role = styled.span`
-  font-size: 0.75rem;
+  font-size: ${({ theme }) => theme.typography.fontSizes.xs};
   color: ${({ theme }) => theme.colors.text};
-  font-weight: bold;
+  font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
 `;
 
 const CardDescription = styled.p`
-  font-size: 0.85rem;
+  font-size: ${({ theme }) => theme.typography.fontSizes.xs};
   opacity: 0.8;
 `;
 

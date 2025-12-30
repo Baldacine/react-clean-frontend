@@ -16,7 +16,7 @@ export const StyledHeader = styled.header`
   transition: background-color 0.2s ease;
 
   h1 {
-    font-size: 1.25rem;
+    font-size: ${({ theme }) => theme.typography.fontSizes.lg};
     color: ${({ theme }) => theme.colors.primary};
     font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
   }

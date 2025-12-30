@@ -10,7 +10,7 @@ const Grid = styled.div`
 
 const CertCard = styled.div`
   border: 1px solid
-    ${({ theme }) => theme.colors.gray100 || "rgba(var(--primary-rgb), 0.15)"};
+    ${({ theme }) => theme.colors.gray100};
   border-radius: 12px;
   padding: 16px;
   display: flex;
@@ -55,13 +55,13 @@ const Content = styled.div`
 
 const CertTitle = styled.h4`
   margin: 0 0 6px 0;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.typography.fontSizes.sm};
+  font-weight: ${({ theme }) => theme.typography.fontWeights.semibold};
   line-height: 1.4;
 `;
 
 const CertInfo = styled.div`
-  font-size: 0.8rem;
+  font-size: ${({ theme }) => theme.typography.fontSizes.xs};
   opacity: 0.8;
   display: flex;
   flex-direction: column;
@@ -69,10 +69,10 @@ const CertInfo = styled.div`
 `;
 
 const IssuerBadge = styled.span`
-  font-weight: 700;
+  font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
   color: ${({ theme }) => theme.colors.primary};
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: ${({ theme }) => theme.typography.fontSizes.xs};
   letter-spacing: 0.5px;
   margin-bottom: 2px;
 `;

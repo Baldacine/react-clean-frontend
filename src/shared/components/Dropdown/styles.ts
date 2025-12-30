@@ -25,8 +25,8 @@ export const MenuItem = styled.li`
   align-items: center;
   gap: ${({ theme }) => theme.spacing.sm};
   padding: ${({ theme }) => `${theme.spacing.sm} ${theme.spacing.md}`};
-  font-size: 0.875rem;
-  color: ${({ theme }) => theme.colors.text || '#333'};
+  font-size: ${({ theme }) => theme.typography.fontSizes.sm};
+  color: ${({ theme }) => theme.colors.text};
   cursor: pointer;
   border-radius: ${({ theme }) => theme.borderRadius.sm};
   transition: background-color 0.2s;

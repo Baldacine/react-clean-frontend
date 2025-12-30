@@ -21,7 +21,7 @@ export const RepoCardHeader = styled.div`
 
   strong {
     color: ${({ theme }) => theme.colors.primary};
-    font-size: 1.1rem;
+    font-size: ${({ theme }) => theme.typography.fontSizes.md};
     font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
   }
 
@@ -53,7 +53,7 @@ export const RepoCard = styled.div`
   }
 
   p {
-    font-size: 0.875rem;
+    font-size: ${({ theme }) => theme.typography.fontSizes.sm};
     color: ${({ theme }) => theme.colors.text};
     opacity: 0.8;
     margin: 0;
@@ -69,7 +69,7 @@ export const RepoCard = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-top: ${({ theme }) => theme.spacing.sm};
-    font-size: 0.75rem;
+    font-size: ${({ theme }) => theme.typography.fontSizes.xs};
     color: ${({ theme }) => theme.colors.gray500};
 
     .stats {

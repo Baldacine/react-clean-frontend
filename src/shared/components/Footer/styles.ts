@@ -28,7 +28,7 @@ export const FooterContainer = styled.footer`
 `;
 
 export const Copyright = styled.span`
-  font-size: 0.875rem;
+  font-size: ${({ theme }) => theme.typography.fontSizes.sm};
   color: ${({ theme }) => theme.colors.gray500};
-  font-weight: 400;
+  font-weight: ${({ theme }) => theme.typography.fontWeights.medium};
 `;

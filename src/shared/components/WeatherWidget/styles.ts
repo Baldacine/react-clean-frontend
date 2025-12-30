@@ -25,13 +25,13 @@ export const WeatherWrapper = styled.div`
     }
 
     .temp {
-      font-size: 0.9rem;
+      font-size: ${({ theme }) => theme.typography.fontSizes.sm};
       font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
       color: ${({ theme }) => theme.colors.primary};
     }
 
     .city {
-      font-size: 0.7rem;
+      font-size: ${({ theme }) => theme.typography.fontSizes.xs};
       color: ${({ theme }) => theme.colors.gray500};
       text-transform: uppercase;
       letter-spacing: 0.5px;

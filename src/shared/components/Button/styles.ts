@@ -5,17 +5,20 @@ const buttonSizes: Record<ButtonSize, (theme: DefaultTheme) => string> = {
     small: (theme) => `
     height: 32px;
     padding: 0 ${theme.spacing.sm};
-    font-size: 0.875rem;
+    font-size: ${theme.typography.fontSizes.xs};
+    font-weight: ${theme.typography.fontWeights.semibold};
   `,
     medium: (theme) => `
     height: 48px;
     padding: 0 ${theme.spacing.md};
-    font-size: 1rem;
+    font-size:  ${theme.typography.fontSizes.sm};
+    font-weight: ${theme.typography.fontWeights.semibold};
   `,
     large: (theme) => `
     height: 56px;
     padding: 0 ${theme.spacing.lg || '24px'};
-    font-size: 1.125rem;
+    font-size:  ${theme.typography.fontSizes.md};
+    font-weight: ${theme.typography.fontWeights.semibold};
   `,
 };
 

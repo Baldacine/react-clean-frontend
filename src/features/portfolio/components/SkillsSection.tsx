@@ -25,9 +25,8 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: ${({ theme }) => theme.typography.fontWeights.semibold};
+  font-size: ${({ theme }) => theme.typography.fontSizes.md};
 
   svg {
     opacity: 0.8;
@@ -41,24 +40,19 @@ const SkillTag = styled.span`
   padding: 4px 12px;
 
   background: ${({ theme }) => theme.colors?.gray300};
-  border: 1px solid rgba(var(--primary-rgb), 0.15);
-
-  border-radius: 6px; /* Tag mais quadrada/moderna que o 'pill' anterior */
-  font-family: "Fira Code", "JetBrains Mono", monospace; /* Fonte técnica */
-  font-size: 0.75rem;
-  font-weight: 500;
+  border-radius: 6px;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+  font-size: ${({ theme }) => theme.typography.fontSizes.xs};
+  font-weight: ${({ theme }) => theme.typography?.fontWeights.medium};
   white-space: nowrap;
-
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 
   &:hover {
-    background: ${({ theme }) =>
-      theme.colors?.primary || "var(--primary-color)"};
-    color: #fff;
+    background: ${({ theme }) => theme.colors?.gray500};
+    color: ${({ theme }) => theme.colors?.white};
     border-color: transparent;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.2);
   }
 
   &::before {

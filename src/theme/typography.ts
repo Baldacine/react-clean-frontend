@@ -1,5 +1,5 @@
 export const typography = {
-    fontFamily: "'Inter', sans-serif",
+    fontFamily: "'Quicksand', sans-serif",
 
     fontSizes: {
         xs: '12px',

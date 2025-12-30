@@ -34,13 +34,13 @@ const IconWrapper = styled.div`
 
 const Title = styled.h4`
   margin: 0 0 6px 0;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.typography.fontSizes.md};
+  font-weight: ${({ theme }) => theme.typography.fontWeights.semibold};
 `;
 
 const Description = styled.p`
   margin: 0;
-  font-size: 0.85rem;
+  font-size: ${({ theme }) => theme.typography.fontSizes.md};
   line-height: 1.5;
 `;
 

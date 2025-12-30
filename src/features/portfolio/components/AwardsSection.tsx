@@ -52,7 +52,6 @@ const SecondPlaceBadge = styled.div`
 
   padding: 4px 12px;
   border-radius: 20px;
-  font-size: 0.75rem;
   font-weight: bold;
 
   display: flex;
@@ -69,12 +68,11 @@ const Content = styled.div`
 
 const Title = styled.h4`
   margin: 0 0 10px 0;
-  font-size: 1.1rem;
 `;
 
 const Description = styled.p`
   margin: 0 0 20px 0;
-  font-size: 0.85rem;
+  font-size: ${({ theme }) => theme.typography.fontSizes.sm};
   line-height: 1.6;
   flex: 1;
 `;

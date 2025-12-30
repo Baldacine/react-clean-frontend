@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = () => {
       <S.Copyright>
         © {currentYear} — {t("footer.rights")}
       </S.Copyright>
-      <WeatherWidget city="Vitoria,ES, BR" />
+      <WeatherWidget city="Aracruz, ES, BR" />
     </S.FooterContainer>
   );
 };
