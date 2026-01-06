@@ -95,6 +95,13 @@
                     "link": "https://www.linkedin.com/feed/update/urn:li:activity:6860945638486622208/"
                 },
                 {
+                    "title": "Graduação em Sistemas de Informação",
+                    "issuer": "Faculdade Hélio Rocha",
+                    "date": "2017 - 2020",
+                    "image": "/assets/622.webp",
+                    "link": ""
+                },
+                {
                     "title": "Power BI Avançado",
                     "issuer": "HM Treinamentos e Consultoria",
                     "date": "2019",
@@ -106,13 +113,6 @@
                     "issuer": "Stafford House International",
                     "date": "2018",
                     "image": "/assets/stafford_house_international_logo.jpeg",
-                    "link": ""
-                },
-                {
-                    "title": "Graduação em Sistemas de Informação",
-                    "issuer": "Faculdade Hélio Rocha",
-                    "date": "2017 - 2020",
-                    "image": "/assets/622.webp",
                     "link": ""
                 }
             ],
