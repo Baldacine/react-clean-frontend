@@ -64,17 +64,12 @@
             },
             "journey": [
                 {
-                    "date": "Present",
+                    "date": "2022 - Present",
                     "title": "Frontend Developer (Project-Based)",
                     "description": "Delivering frontend solutions using React, TypeScript, and Clean Architecture. Focused on maintainable code."
                 },
                 {
-                    "date": "2022 - 2024",
-                    "title": "Frontend Tech Lead",
-                    "description": "Led frontend development using React and TypeScript. Responsible for code reviews, architectural best practices, and collaborating with cross-functional Scrum teams."
-                },
-                {
-                    "date": "2021",
+                    "date": "2021 - 2022",
                     "title": "Full-Stack Developer",
                     "description": "Built full-stack features with a heavy focus on React.js, leveraging solid backend and database knowledge."
                 },
