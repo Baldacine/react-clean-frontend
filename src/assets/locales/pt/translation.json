@@ -30,12 +30,14 @@
                     "React Native",
                     "TypeScript",
                     "JavaScript",
-                    "TanStack Query",
+                    "React Query",
+                    "Zustand",
                     "Next.js",
                     "Jquery",
                     "HTML",
                     "CSS",
-                    "Styled Components"
+                    "Styled Components",
+                    "Tailwind"
                 ],
                 "backend": [
                     ".NET",
