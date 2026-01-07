@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import type { User, UserAction } from "@/@types/user";
-import { initialState } from "../reducers/UserReducer";
+import { initialState } from "@/reducers/UserReducer";
 
 type UserState = {
     user: User;

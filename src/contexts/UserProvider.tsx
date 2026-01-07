@@ -2,7 +2,7 @@ import { useCallback, type ReactNode, type Dispatch } from "react";
 import { UserContext } from "./UserContext";
 import { initialState } from "../reducers/UserReducer";
 import type { UserAction } from "@/@types/user";
-import { useUserStore } from "../stores/userStore";
+import { useUserStore } from "@/app/stores/userStore";
 
 interface UserProviderProps {
   children: ReactNode;
