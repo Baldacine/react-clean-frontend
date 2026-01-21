@@ -3,14 +3,13 @@ import { useTranslation, Trans } from "react-i18next";
 import type { PortfolioSection } from "../types";
 import { Card } from "@/shared/components/Card/Card";
 import { Container, Header, NavButtons, SocialActions } from "./styles";
-import fotoPerfil from "@/assets/foto.jpeg";
+import fotoPerfil from "@/assets/img/foto.jpeg";
 import { Modal } from "@/shared/components/Modal/Modal";
 import { SectionContent } from "../components/SectionContent";
 import { Button } from "@/shared/components/Button/Button";
 import {
   Briefcase,
   Code,
-  Gamepad2,
   Github,
   GraduationCap,
   Linkedin,
@@ -24,7 +23,7 @@ export const Portfolio: React.FC = () => {
   const { t } = useTranslation();
   const [section, setSection] = useState<PortfolioSection | null>(null);
   const [loadingSection, setLoadingSection] = useState<PortfolioSection | null>(
-    null
+    null,
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -34,7 +33,6 @@ export const Portfolio: React.FC = () => {
     "Certifications",
     "Projects",
     "Awards",
-    "Hobbies",
   ];
 
   const sectionIcons: Record<PortfolioSection, React.ReactNode> = {
@@ -43,7 +41,6 @@ export const Portfolio: React.FC = () => {
     Certifications: <GraduationCap size={32} />,
     Projects: <Code size={32} />,
     Awards: <Trophy size={32} />,
-    Hobbies: <Gamepad2 size={32} />,
   };
 
   const handleSectionChange = (s: PortfolioSection) => {
@@ -73,7 +70,7 @@ export const Portfolio: React.FC = () => {
             onClick={() =>
               window.open(
                 "https://www.linkedin.com/in/wandersonbaldacine",
-                "_blank"
+                "_blank",
               )
             }
           >
@@ -96,7 +93,7 @@ export const Portfolio: React.FC = () => {
             onClick={() =>
               window.open(
                 "https://github.com/Baldacine/react-clean-frontend",
-                "_blank"
+                "_blank",
               )
             }
           >

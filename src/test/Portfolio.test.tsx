@@ -25,12 +25,11 @@ describe("Portfolio Page", () => {
       "Certifications",
       "Projects",
       "Awards",
-      "Hobbies",
     ];
 
     sections.forEach((section) => {
       expect(
-        screen.getByText(`portfolio.sections.${section}`)
+        screen.getByText(`portfolio.sections.${section}`),
       ).toBeInTheDocument();
     });
   });
@@ -56,13 +55,13 @@ describe("Portfolio Page", () => {
     fireEvent.click(buttons[0]);
     expect(windowSpy).toHaveBeenCalledWith(
       "https://www.linkedin.com/in/wandersonbaldacine",
-      "_blank"
+      "_blank",
     );
 
     fireEvent.click(buttons[2]);
     expect(windowSpy).toHaveBeenCalledWith(
       "https://www.linkedin.com/in/wandersonbaldacine",
-      "_blank"
+      "_blank",
     );
   });
 
@@ -78,7 +77,7 @@ describe("Portfolio Page", () => {
 
     await waitFor(() => {
       expect(
-        screen.queryByText("portfolio.modal.close")
+        screen.queryByText("portfolio.modal.close"),
       ).not.toBeInTheDocument();
     });
   });

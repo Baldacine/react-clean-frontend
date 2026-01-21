@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import type { PortfolioSection } from "../types";
 import { Timeline } from "@/shared/components/Timeline/Timeline";
 import { AwardsSection } from "./AwardsSection";
-import { HobbiesSection } from "./HobbiesSection";
 import { UseCaseSection } from "./UseCaseSection";
 import { SkillsSection } from "./SkillsSection";
 import { CertificationSection } from "./CertificationSection";
@@ -43,9 +42,6 @@ export const SectionContent: React.FC<Props> = ({ section }) => {
 
     case "Awards":
       return <AwardsSection />;
-
-    case "Hobbies":
-      return <HobbiesSection />;
 
     default:
       return <p>{t("portfolio.sections_content.empty")}</p>;

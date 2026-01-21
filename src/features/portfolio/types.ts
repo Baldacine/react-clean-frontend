@@ -4,7 +4,6 @@ export type PortfolioSection =
     | "Certifications"
     | "Projects"
     | "Awards"
-    | "Hobbies";
 
 export type Project = {
     name: string;

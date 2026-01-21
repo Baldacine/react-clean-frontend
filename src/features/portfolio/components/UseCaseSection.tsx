@@ -35,7 +35,7 @@ const professionalExperience: ProfessionalExperience[] = [
     descKey: "portfolio.sections_content.career.medsempre_desc",
     androidLink:
       "https://play.google.com/store/search?q=medsempre&c=apps&hl=pt_BR",
-    role: "Frontend Developer / Consultant",
+    role: "Frontend Developer | Consultant",
     stacks: [
       "React Native",
       "API REST",
@@ -51,9 +51,46 @@ const professionalExperience: ProfessionalExperience[] = [
     descKey: "portfolio.sections_content.career.ppc_desc",
     androidLink:
       "https://play.google.com/store/apps/details?id=com.globalsys.jurong_ppc_mobile&hl=pt_BR",
-    role: "Frontend Developer / Consultant",
+    role: "Frontend Developer | Consultant",
     stacks: [
       "React Native",
+      "API REST",
+      "TypeScript",
+      "Styled Components",
+      "GitHub",
+      "Azure DevOps",
+      "Kanban",
+    ],
+  },
+  {
+    name: "SuperESP",
+    descKey: "portfolio.sections_content.career.superesp_dec",
+    androidLink:
+      "https://play.google.com/store/apps/details?id=br.com.globalsys.espiralapp",
+    role: "Tech Leader | Frontend Developer",
+    stacks: [
+      "React Native",
+      "API REST",
+      "TypeScript",
+      "Styled Components",
+      "GitHub",
+      "Azure DevOps",
+      "Kanban",
+    ],
+  },
+  {
+    name: "portfolio.sections_content.career.projects",
+    descKey: "portfolio.sections_content.career.other_dec",
+    androidLink:
+      "https://www.linkedin.com/in/wandersonbaldacine/details/projects/",
+    role: "Tech Leader | Full Stack | Consultant",
+    stacks: [
+      "React Native",
+      "React",
+      "Node.js",
+      ".NET",
+      "C#",
+      "Docker",
       "API REST",
       "TypeScript",
       "Styled Components",
@@ -162,6 +199,12 @@ const StackTags = ({ stacks }: { stacks?: string[] }) => {
   );
 };
 
+const getProjectName = (name: string, t: (key: string) => string): string => {
+  const isTranslationKey =
+    name === "portfolio.sections_content.career.projects";
+  return isTranslationKey ? t(name) : name;
+};
+
 export const UseCaseSection = () => {
   const { t } = useTranslation();
 
@@ -252,15 +295,16 @@ export const UseCaseSection = () => {
 
         <CareerGrid>
           {professionalExperience.map((project) => (
-            <RepoCard key={project.name}>
+            <RepoCard
+              key={project.name}
+              onClick={() => {
+                window.open(project.androidLink, "target_");
+              }}
+            >
               <RepoCardHeader>
-                <strong>{project.name}</strong>
+                <strong>{getProjectName(project.name, t)}</strong>
                 {project.androidLink && (
-                  <a
-                    href={project.androidLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a rel="noopener noreferrer">
                     <ExternalLink size={16} />
                   </a>
                 )}

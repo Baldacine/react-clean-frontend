@@ -2,7 +2,9 @@
     "header": {
         "title": "Meu Portfólio",
         "toggleTheme": "Alternar Tema",
-        "changeLanguage": "Mudar Idioma"
+        "changeLanguage": "Mudar Idioma",
+        "visitor": "Visitante",
+        "hello": "Olá"
     },
     "footer": {
         "rights": "Todos os direitos reservados."
@@ -11,14 +13,13 @@
         "loading": "Carregando..."
     },
     "portfolio": {
-        "description": "<strong>Graduação em Sistemas de Informação</strong>, com experiência profissional na área de TI desde 2018. Front-End com foco na construção de interfaces web e mobile escaláveis e de alta performance utilizando React e React Native. Experiência na integração de aplicações frontend com APIs REST e arquiteturas modernas de frontend.",
+        "description": "Desenvolvedor Frontend Sênior com mais de 7 anos de experiência na criação de aplicações web e mobile escaláveis ​​utilizando React, React Native e TypeScript. Sólida experiência em arquitetura frontend, otimização de performance e integração de APIs, com atuação em projetos corporativos, fintech e MVPs internacionais.",
         "sections": {
             "TechStack": "Tech Stack",
             "Journey": "Trajetória",
             "Certifications": "Certificações",
             "Projects": "Projetos",
-            "Awards": "Prêmios",
-            "Hobbies": "Hobbies"
+            "Awards": "Prêmios"
         },
         "modal": {
             "close": "Fechar"
@@ -67,7 +68,7 @@
             "journey": [
                 {
                     "date": "2022 - Presente",
-                    "title": "Desenvolvedor Frontend (Baseado em Projetos)",
+                    "title": "Desenvolvedor Frontend Sênior",
                     "description": "Entrega de soluções frontend utilizando React, TypeScript e Clean Architecture. Focado em código de fácil manutenção."
                 },
                 {
@@ -132,9 +133,12 @@
             },
             "career": {
                 "title": "Experiência em Projetos Enterprise",
+                "projects": "Projetos de Carreira",
                 "subtitle": "Seleção de projetos relevantes em que colaborei durante a minha carreira.",
                 "medsempre_desc": "Aplicativo móvel de saúde para agendamento de consultas e telemedicina, desenvolvido com React Native e integrado a APIs RESTful.",
-                "ppc_desc": "Sistema de gerenciamento de operações shipyard com monitoramento em tempo real, construído com React e .Net Core"
+                "ppc_desc": "Sistema de gerenciamento de operações shipyard com monitoramento em tempo real, construído com React e .Net Core",
+                "superesp_dec": "O SuperEsp é uma solução desenvolvida pela Espiral Engenharia para gestão de atividades operacionais montagem e desmontagem de andaimes e de segurança em campo.",
+                "other_dec": "Uma seleção de projetos profissionais desenvolvidos ao longo da minha carreira e compartilhados no LinkedIn. Esses trabalhos demonstram minha experiência com React, React Native e TypeScript, criando aplicações web e mobile escaláveis ​​e de alta qualidade, utilizadas em ambientes de produção reais."
             },
             "awards": [
                 {
@@ -148,20 +152,6 @@
                     "description": "Destaque entre os 44 projetos selecionados pelo programa FAPES Inovação do Espírito Santo, validando a viabilidade técnica e o potencial de impacto da solução desenvolvida.",
                     "image": "/assets/capa-genesis.webp",
                     "link": "https://www.linkedin.com/feed/update/urn:li:activity:7402856128973438976/"
-                }
-            ],
-            "hobbies": [
-                {
-                    "title": "Guitarra Elétrica",
-                    "description": "Tocar guitarra como forma de expressão criativa, focando em prática constante e teoria musical."
-                },
-                {
-                    "title": "Leitura Técnica",
-                    "description": "Acompanhar as últimas tendências em arquitetura de software e ecossistemas frontend."
-                },
-                {
-                    "title": "Aprendizado Contínuo",
-                    "description": "Apaixonado por descobrir novas tecnologias e aprimorar a resolução de problemas."
                 }
             ],
             "empty": "Selecione uma seção para explorar detalhes."

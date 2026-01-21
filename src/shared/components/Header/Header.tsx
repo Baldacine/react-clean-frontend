@@ -8,7 +8,7 @@ import { useContext, useEffect, useState } from "react";
 import { UserContext } from "@/contexts/UserContext";
 
 export function Header({ themeMode, toggleTheme }: HeaderProps) {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const { state } = useContext(UserContext);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -30,7 +30,9 @@ export function Header({ themeMode, toggleTheme }: HeaderProps) {
 
   return (
     <StyledHeader $isScrolled={isScrolled}>
-      <h1>Olá, {state.name || "Visitante"}</h1>
+      <h1>
+        {t("header.hello")}, {state.name || t("header.visitor")}
+      </h1>
       <HeaderActions>
         <Dropdown
           items={languageOptions}
