@@ -1,6 +1,6 @@
-import type { GitHubRepo } from '@/@types/github';
-import api from './api/api';
 import { ENV } from '@/config/env';
+import api from '@/services/api/api';
+import type { GitHubRepo } from '@/domain/entities/github';
 
 export const GithubService = {
     getRepos: async (username: string): Promise<GitHubRepo[]> => {

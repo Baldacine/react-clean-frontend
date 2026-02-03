@@ -1,4 +1,4 @@
-import { GithubService } from '@/services/githubService';
+import { GithubService } from '@/domain/services/githubService';
 import { useQuery } from '@tanstack/react-query';
 
 export const useGithubRepos = (username: string) => {

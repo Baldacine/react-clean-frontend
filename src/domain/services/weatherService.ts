@@ -1,5 +1,5 @@
 import { ENV } from "@/config/env";
-import { externalApi } from "./api/api";
+import { externalApi } from "@/services/api/api";
 
 export interface WeatherData {
     main: {

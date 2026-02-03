@@ -1,5 +1,5 @@
+import { weatherService } from "@/domain/services/weatherService";
 import { useQuery } from "@tanstack/react-query";
-import { weatherService } from "@/services/weatherService";
 import { useTranslation } from "react-i18next";
 
 export const useWeather = (city: string) => {
