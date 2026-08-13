@@ -4,6 +4,8 @@ import { useGithubRepos } from "@/features/portfolio/hooks/useGithubRepos";
 import { Button } from "@/shared/components/Button/Button";
 import styled from "styled-components";
 
+const excludedRepositoryNames = new Set(["webpink", "wepink"]);
+
 export const RepoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
@@ -111,7 +113,8 @@ export function GithubStats() {
   const { t } = useTranslation();
   const { data, isLoading, isError, refetch } = useGithubRepos("Baldacine");
   const visibleRepositories = data?.filter(
-    (repository) => repository.name.toLowerCase() !== "webpink",
+    (repository) =>
+      !excludedRepositoryNames.has(repository.name.toLowerCase()),
   );
 
   if (isLoading) return <p>{t("common.loading")}</p>;

@@ -25,6 +25,16 @@ vi.mock("@/features/portfolio/hooks/useGithubRepos", () => ({
         language: "JavaScript",
         updated_at: "2026-08-12T00:00:00Z",
       },
+      {
+        id: 3,
+        name: "wepink",
+        description: "Excluded repository with alternate spelling",
+        html_url: "https://github.com/Baldacine/wepink",
+        stargazers_count: 0,
+        forks_count: 0,
+        language: "TypeScript",
+        updated_at: "2026-08-11T00:00:00Z",
+      },
     ],
     isLoading: false,
     isError: false,
@@ -33,7 +43,7 @@ vi.mock("@/features/portfolio/hooks/useGithubRepos", () => ({
 }));
 
 describe("GithubStats", () => {
-  it("renders repository cards as links and omits WebPink", () => {
+  it("renders repository cards as links and omits excluded repositories", () => {
     render(<GithubStats />);
 
     expect(
@@ -43,5 +53,6 @@ describe("GithubStats", () => {
       "https://github.com/Baldacine/react-clean-frontend",
     );
     expect(screen.queryByText("webpink")).not.toBeInTheDocument();
+    expect(screen.queryByText("wepink")).not.toBeInTheDocument();
   });
 });
