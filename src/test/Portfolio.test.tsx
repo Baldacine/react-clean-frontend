@@ -34,6 +34,13 @@ describe("Portfolio Page", () => {
         }),
       ).toBeInTheDocument();
     });
+
+    expect(
+      screen.getByText("portfolio.section_descriptions.Projects"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getAllByText("portfolio.navigation.explore"),
+    ).toHaveLength(sections.length);
   });
 
   it("should open the modal when a section card is clicked", async () => {

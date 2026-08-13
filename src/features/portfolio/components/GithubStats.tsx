@@ -19,6 +19,7 @@ export const RepoCardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: ${({ theme }) => theme.spacing.sm};
   margin-bottom: 8px;
 
   strong {
@@ -27,13 +28,32 @@ export const RepoCardHeader = styled.div`
     font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
   }
 
-  .external-link-icon {
-    color: ${({ theme }) => theme.colors.gray500};
-    transition: color 0.2s;
-    &:hover {
-      color: ${({ theme }) => theme.colors.primary};
-    }
-  }
+`;
+
+export const RepoIdentity = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+`;
+
+export const RepositoryLabel = styled.span`
+  color: ${({ theme }) => theme.colors.gray500};
+  font-size: ${({ theme }) => theme.typography.fontSizes.xs};
+  font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+`;
+
+export const CardLinkHint = styled.span`
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4px;
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: ${({ theme }) => theme.typography.fontSizes.xs};
+  font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
+  white-space: nowrap;
 `;
 
 export const RepoCard = styled.a`
@@ -133,42 +153,72 @@ export function GithubStats() {
 
   return (
     <RepoGrid>
-      {visibleRepositories?.map((repo) => (
-        <RepoCard
-          key={repo.id}
-          href={repo.html_url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div>
-            <RepoCardHeader>
-              <strong>{repo.name}</strong>
-              <span
-                className="external-link-icon"
-                aria-hidden="true"
-              >
-                <ExternalLink size={16} />
-              </span>
-            </RepoCardHeader>
-            <p>
-              {repo.description ||
-                t("portfolio.sections_content.use_cases.no_description")}
-            </p>
-          </div>
+      {visibleRepositories?.map((repo) => {
+        const hasRepositoryStats =
+          repo.stargazers_count > 0 || repo.forks_count > 0;
 
-          <footer>
-            <span className="language">{repo.language || "Code"}</span>
-            <div className="stats">
-              <span>
-                <Star size={14} /> {repo.stargazers_count}
-              </span>
-              <span>
-                <GitFork size={14} /> {repo.forks_count}
-              </span>
+        return (
+          <RepoCard
+            key={repo.id}
+            href={repo.html_url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+              <RepoCardHeader>
+                <RepoIdentity>
+                  <RepositoryLabel>
+                    {t(
+                      "portfolio.sections_content.use_cases.repository_label",
+                    )}
+                  </RepositoryLabel>
+                  <strong>{repo.name}</strong>
+                </RepoIdentity>
+                <CardLinkHint aria-hidden="true">
+                  {t(
+                    "portfolio.sections_content.use_cases.view_repository",
+                  )}
+                  <ExternalLink size={14} />
+                </CardLinkHint>
+              </RepoCardHeader>
+              <p>
+                {repo.description ||
+                  t("portfolio.sections_content.use_cases.no_description")}
+              </p>
             </div>
-          </footer>
-        </RepoCard>
-      ))}
+
+            <footer>
+              <span className="language">{repo.language || "Code"}</span>
+              {hasRepositoryStats && (
+                <div className="stats">
+                  {repo.stargazers_count > 0 && (
+                    <span
+                      aria-label={t(
+                        "portfolio.sections_content.use_cases.stars",
+                        { count: repo.stargazers_count },
+                      )}
+                    >
+                      <Star size={14} aria-hidden="true" />
+                      {repo.stargazers_count}
+                    </span>
+                  )}
+                  {repo.forks_count > 0 && (
+                    <span
+                      aria-label={t(
+                        "portfolio.sections_content.use_cases.forks",
+                        { count: repo.forks_count },
+                      )}
+                    >
+                      <GitFork size={14} aria-hidden="true" />
+                      {repo.forks_count}
+                    </span>
+                  )}
+                </div>
+              )}
+            </footer>
+          </RepoCard>
+        );
+      })}
     </RepoGrid>
   );
 }

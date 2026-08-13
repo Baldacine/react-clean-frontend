@@ -54,5 +54,15 @@ describe("GithubStats", () => {
     );
     expect(screen.queryByText("webpink")).not.toBeInTheDocument();
     expect(screen.queryByText("wepink")).not.toBeInTheDocument();
+    expect(
+      screen.getByText(
+        "portfolio.sections_content.use_cases.repository_label",
+      ),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        "portfolio.sections_content.use_cases.view_repository",
+      ),
+    ).toBeInTheDocument();
   });
 });

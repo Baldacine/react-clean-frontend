@@ -2,12 +2,21 @@ import React, { useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import type { PortfolioSection } from "../types";
 import { Card } from "@/shared/components/Card/Card";
-import { Container, Header, NavButtons, SocialActions } from "./styles";
+import {
+  Container,
+  Header,
+  NavigationAction,
+  NavigationIntro,
+  NavButtons,
+  PortfolioNavigation,
+  SocialActions,
+} from "./styles";
 import profilePhoto from "@/assets/img/profile.jpg";
 import { Modal } from "@/shared/components/Modal/Modal";
 import { SectionContent } from "../components/SectionContent";
 import { Button } from "@/shared/components/Button/Button";
 import {
+  ArrowRight,
   Briefcase,
   Code,
   Github,
@@ -107,23 +116,36 @@ export const Portfolio: React.FC = () => {
         </p>
       </Header>
 
-      <NavButtons>
-        {sections.map((s) => (
-          <Card
-            key={s}
-            variant={section === s ? "primary" : "outline"}
-            icon={sectionIcons[s]}
-            title={t(`portfolio.sections.${s}`)}
-            onClick={() => handleSectionChange(s)}
-            width="100%"
-            minWidth="150px"
-            style={{
-              flex: "1 1 200px",
-              maxWidth: "300px",
-            }}
-          />
-        ))}
-      </NavButtons>
+      <PortfolioNavigation aria-labelledby="portfolio-navigation-title">
+        <NavigationIntro>
+          <h2 id="portfolio-navigation-title">
+            {t("portfolio.navigation.title")}
+          </h2>
+          <p>{t("portfolio.navigation.subtitle")}</p>
+        </NavigationIntro>
+
+        <NavButtons>
+          {sections.map((s) => (
+            <Card
+              key={s}
+              variant={isModalOpen && section === s ? "primary" : "outline"}
+              icon={sectionIcons[s]}
+              title={t(`portfolio.sections.${s}`)}
+              description={t(`portfolio.section_descriptions.${s}`)}
+              footer={
+                <NavigationAction aria-hidden="true">
+                  {t("portfolio.navigation.explore")}
+                  <ArrowRight size={18} />
+                </NavigationAction>
+              }
+              aria-label={t(`portfolio.sections.${s}`)}
+              onClick={() => handleSectionChange(s)}
+              width="100%"
+              minWidth="150px"
+            />
+          ))}
+        </NavButtons>
+      </PortfolioNavigation>
 
       <Modal
         isOpen={isModalOpen}

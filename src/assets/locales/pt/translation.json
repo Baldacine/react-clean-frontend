@@ -24,6 +24,18 @@
             "Projects": "Projetos",
             "Awards": "Prêmios"
         },
+        "section_descriptions": {
+            "TechStack": "Tecnologias organizadas por frontend, backend, testes, dados e delivery.",
+            "Journey": "Experiências, responsabilidades e evolução profissional.",
+            "Certifications": "Formação complementar e aprendizado contínuo.",
+            "Projects": "Cases Full Stack, arquitetura frontend e projetos profissionais.",
+            "Awards": "Reconhecimentos, iniciativas e contribuições relevantes."
+        },
+        "navigation": {
+            "title": "Explore o portfólio",
+            "subtitle": "Acesse cada seção para conhecer experiências, projetos e práticas técnicas.",
+            "explore": "Explorar seção"
+        },
         "modal": {
             "close": "Fechar",
             "closeLabel": "Fechar diálogo"
@@ -146,6 +158,13 @@
                 "title": "Experiência em Projetos Enterprise",
                 "subtitle": "Seleção de projetos relevantes em que colaborei durante a minha carreira.",
                 "view_project": "Ver projeto",
+                "view_repository": "Ver no GitHub",
+                "view_details": "Ver detalhes",
+                "repository_label": "Repositório público",
+                "buu_category": "Produto SaaS · Web e Mobile",
+                "clean_architecture_category": "Projeto técnico · Frontend",
+                "stars": "{{count}} estrelas",
+                "forks": "{{count}} forks",
                 "buu_desc": "SaaS Full Stack de agendamento para Web e Mobile, construído com React, React Native, Node.js, TypeScript, PostgreSQL e REST APIs. A atuação cobriu o ciclo completo do produto: frontend, mobile, backend, banco de dados, infraestrutura, integrações, CI/CD e evolução contínua do produto.",
                 "clean_architecture_desc": "Portfólio de arquitetura frontend desenvolvido com React 19 e TypeScript. Demonstra organização por features, separação clara de responsabilidades, estado de servidor com React Query, estado de cliente com Zustand, internacionalização, componentes acessíveis e testes de comportamento com Vitest e React Testing Library.",
                 "other_desc": "Dashboards estratégicos e KPIs em tempo real.",

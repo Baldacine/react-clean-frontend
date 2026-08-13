@@ -8,6 +8,7 @@ export type PortfolioSection =
 export type Project = {
     name: string;
     link: string;
+    categoryKey: string;
     descKey: string;
     iosLink?: string;
     androidLink?: string;
