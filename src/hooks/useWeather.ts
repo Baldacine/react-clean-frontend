@@ -1,6 +1,7 @@
 import { weatherService } from "@/services/weather/weatherService";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
+import { ENV } from "@/config/env";
 
 export const useWeather = (city: string) => {
     const { i18n } = useTranslation();
@@ -9,7 +10,7 @@ export const useWeather = (city: string) => {
     return useQuery({
         queryKey: ["weather", city, currentLang],
         queryFn: () => weatherService.getWeatherByCity(city, currentLang),
-        enabled: !!city,
+        enabled: Boolean(city && ENV.WEATHER_API_KEY),
         staleTime: 1000 * 60 * 10,
     });
 };

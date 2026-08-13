@@ -137,14 +137,14 @@ Vite prints the local development URL after startup.
 
 ## Environment Variables
 
-| Variable | Purpose | Required for |
+| Variable | Purpose | Used by |
 | --- | --- | --- |
-| `VITE_GITHUB_API_URL` | GitHub REST API base URL | Recent repository activity |
-| `VITE_WEATHER_API_URL` | OpenWeather API base URL | Footer weather widget |
-| `VITE_WEATHER_API_KEY` | OpenWeather API key | Footer weather widget |
-| `VITE_BASE_URL` | Internal API base URL | Internal HTTP client |
+| `VITE_GITHUB_API_URL` | Overrides the default `https://api.github.com` URL | Recent repository activity |
+| `VITE_WEATHER_API_URL` | Overrides the default OpenWeather API URL | Footer weather widget |
+| `VITE_WEATHER_API_KEY` | OpenWeather API key; the widget stays hidden when omitted | Footer weather widget |
+| `VITE_BASE_URL` | Internal API base URL; empty by default | Internal HTTP client |
 
-The portfolio remains usable if the weather request fails; the widget is omitted. Do not commit real API keys.
+Only the weather key is needed for the optional widget. The portfolio remains usable if it is omitted or if the weather request fails. Do not commit real API keys.
 
 ## Available Scripts
 
