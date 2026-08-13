@@ -14,14 +14,13 @@ export const Hero = styled.section`
   grid-template-columns: 176px minmax(0, 1fr);
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xl};
-  max-width: 920px;
+  max-width: 1008px;
   margin: ${({ theme }) => theme.spacing.md} auto
     ${({ theme }) => theme.spacing["2xl"]};
   padding: ${({ theme }) => theme.spacing.xl};
   border: 1px solid ${({ theme }) => theme.colors.gray300}66;
   border-radius: ${({ theme }) => theme.borderRadius.lg};
   background: ${({ theme }) => theme.colors.background};
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
 
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
@@ -38,7 +37,7 @@ export const HeroProfile = styled.div`
   justify-content: center;
 
   > div {
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+    box-shadow: none;
   }
 `;
 
@@ -133,25 +132,6 @@ export const NavButtons = styled.div`
 export const PortfolioNavigation = styled.section`
   max-width: 1040px;
   margin: 0 auto;
-`;
-
-export const NavigationIntro = styled.div`
-  max-width: 640px;
-  margin: 0 auto ${({ theme }) => theme.spacing.sm};
-  text-align: center;
-
-  h2 {
-    margin: 0 0 ${({ theme }) => theme.spacing.xs};
-    font-size: ${({ theme }) => theme.typography.fontSizes.lg};
-  }
-
-  p {
-    margin: 0;
-    color: ${({ theme }) => theme.colors.text};
-    font-size: ${({ theme }) => theme.typography.fontSizes.sm};
-    line-height: ${({ theme }) => theme.typography.lineHeights.relaxed};
-    opacity: 0.75;
-  }
 `;
 
 export const NavigationAction = styled.span`

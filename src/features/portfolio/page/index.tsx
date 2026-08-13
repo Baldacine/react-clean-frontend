@@ -11,7 +11,6 @@ import {
   HeroProfile,
   HeroSummary,
   NavigationAction,
-  NavigationIntro,
   NavButtons,
   PortfolioNavigation,
   UtilityActions,
@@ -138,14 +137,7 @@ export const Portfolio: React.FC = () => {
         </HeroContent>
       </Hero>
 
-      <PortfolioNavigation aria-labelledby="portfolio-navigation-title">
-        <NavigationIntro>
-          <h2 id="portfolio-navigation-title">
-            {t("portfolio.navigation.title")}
-          </h2>
-          <p>{t("portfolio.navigation.subtitle")}</p>
-        </NavigationIntro>
-
+      <PortfolioNavigation aria-label={t("portfolio.navigation.label")}>
         <NavButtons>
           {sections.map((s) => (
             <Card
