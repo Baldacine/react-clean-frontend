@@ -43,7 +43,6 @@
                     "React Query",
                     "Zustand",
                     "Next.js",
-                    "Jquery",
                     "HTML",
                     "CSS",
                     "Styled Components",
@@ -75,7 +74,8 @@
                     "CI/CD",
                     "Azure DevOps",
                     "Scrum",
-                    "Kanban"
+                    "Kanban",
+                    "jQuery (legado)"
                 ],
                 "ai": [
                     "IA Generativa",
