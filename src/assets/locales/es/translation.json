@@ -15,8 +15,8 @@
         "loading": "Cargando..."
     },
     "portfolio": {
-        "headline": "Ingeniero Full Stack Senior | Líder Técnico",
-        "description": "Ingeniero Full Stack Senior y Líder Técnico con más de 7 años de experiencia construyendo productos Web y Mobile escalables con React, React Native, Node.js y TypeScript. Sólida experiencia en arquitectura de software, liderazgo técnico, calidad de código, integraciones y software delivery.",
+        "headline": "Desarrollador Full Stack Senior | Líder Técnico",
+        "description": "Desarrollador Full Stack Senior y Líder Técnico con más de 7 años de experiencia construyendo productos Web y Mobile escalables con React, React Native, Node.js y TypeScript. Sólida experiencia en liderazgo técnico, calidad de código, integraciones y software delivery.",
         "sections": {
             "TechStack": "Tech Stack",
             "Journey": "Trayectoria",
@@ -91,8 +91,8 @@
             "journey": [
                 {
                     "date": "2022 - Presente",
-                    "title": "Líder Técnico | Ingeniería de Software & Delivery",
-                    "description": "Liderazgo técnico de equipos Frontend, Backend, Mobile y QA, apoyando entregas con React, React Native, Node.js y TypeScript. Responsable de arquitectura, code reviews, APIs, backlog técnico, integraciones entre sistemas, soporte técnico al equipo, indicadores de entrega y previsibilidad."
+                    "title": "Líder Técnico | Desarrollo de Software & Delivery",
+                    "description": "Liderazgo técnico de equipos Frontend, Backend, Mobile y QA, apoyando entregas con React, React Native, Node.js y TypeScript. Responsable de dirección técnica, code reviews, APIs, backlog técnico, integraciones entre sistemas, soporte técnico al equipo, indicadores de entrega y previsibilidad."
                 },
                 {
                     "date": "2021 - 2022",
@@ -159,7 +159,7 @@
                 "subtitle": "Selección de proyectos relevantes en los que he colaborado durante mi carrera.",
                 "medsempre_desc": "Aplicación móvil de salud para agendar citas y telemedicina, desarrollada con React Native e integrada con API RESTful.",
                 "ppc_desc": "Sistema de gestión de operaciones de astilleros con monitorización en tiempo real, desarrollado con React y .Net Core.",
-                "superesp_dec": "O SuperEsp es una solución diseñada para la ingeniería en espiral para gestión de actividades operativas, montaje y desmontaje de andaimes y seguridad en el campo.",
+                "superesp_dec": "SuperEsp es una solución desarrollada por Espiral Engenharia para la gestión de actividades operativas, montaje y desmontaje de andamios y seguridad en campo.",
                 "other_dec": "Una selección de proyectos profesionales desarrollados durante mi carrera y compartidos en LinkedIn. Estos trabajos demuestran mi experiencia con React, React Native y TypeScript, creando aplicaciones web y móviles escalables y de alta calidad para entornos de producción reales."
             },
             "awards": [

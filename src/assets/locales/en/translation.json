@@ -15,8 +15,8 @@
         "loading": "Loading..."
     },
     "portfolio": {
-        "headline": "Senior Full Stack Engineer | Tech Lead",
-        "description": "Senior Full Stack Engineer and Technical Leader with 7+ years of experience building scalable Web and Mobile products using React, React Native, Node.js, and TypeScript. Strong background in software architecture, technical leadership, code quality, integrations, and software delivery.",
+        "headline": "Senior Full Stack Developer | Tech Lead",
+        "description": "Senior Full Stack Developer and Tech Lead with 7+ years of experience building scalable Web and Mobile products using React, React Native, Node.js, and TypeScript. Strong background in technical leadership, code quality, integrations, and software delivery.",
         "sections": {
             "TechStack": "Tech Stack",
             "Journey": "Journey",
@@ -91,8 +91,8 @@
             "journey": [
                 {
                     "date": "2022 - Present",
-                    "title": "Technical Lead | Software Engineering & Delivery",
-                    "description": "Technical leadership across Frontend, Backend, Mobile, and QA teams, supporting delivery with React, React Native, Node.js, and TypeScript. Responsible for architecture guidance, code reviews, APIs, the technical backlog, system integrations, hands-on team support, delivery indicators, and predictability."
+                    "title": "Technical Lead | Software Development & Delivery",
+                    "description": "Technical leadership across Frontend, Backend, Mobile, and QA teams, supporting delivery with React, React Native, Node.js, and TypeScript. Responsible for technical direction, code reviews, APIs, the technical backlog, system integrations, hands-on team support, delivery indicators, and predictability."
                 },
                 {
                     "date": "2021 - 2022",

@@ -119,7 +119,7 @@ export const SkillsSection = () => {
       TechStack: getSkills("portfolio.sections_content.TechStack.others"),
     },
     {
-      title: "AI-assisted Engineering",
+      title: "AI-assisted Development",
       icon: <Sparkles size={18} />,
       TechStack: getSkills("portfolio.sections_content.TechStack.ai"),
     },

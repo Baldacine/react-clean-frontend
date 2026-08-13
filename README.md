@@ -42,7 +42,7 @@ src/
 └── utils/               # Internationalization bootstrap
 ```
 
-## Engineering Principles
+## Development Principles
 
 - Strict TypeScript configuration and no `any`.
 - Dependencies point toward framework-independent types.
@@ -51,7 +51,7 @@ src/
 - Components favor semantic HTML, keyboard access, visible focus, and accessible names.
 - Abstractions are introduced only when they remove duplication or enforce a real boundary.
 - External links use safe new-tab behavior.
-- Generative AI tools such as Codex and Claude are treated as engineering assistants for code analysis, refactoring, testing, documentation, and productivity. Technical decisions remain subject to review and automated checks.
+- Generative AI tools such as Codex and Claude are treated as development assistants for code analysis, refactoring, testing, documentation, and productivity. Technical decisions remain subject to review and automated checks.
 
 ## Tech Stack
 

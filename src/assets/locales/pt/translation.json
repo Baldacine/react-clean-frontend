@@ -15,8 +15,8 @@
         "loading": "Carregando..."
     },
     "portfolio": {
-        "headline": "Engenheiro de Software Full Stack Sênior | Líder Técnico",
-        "description": "Engenheiro de Software Full Stack Sênior e Líder Técnico com mais de 7 anos de experiência na construção de produtos Web e Mobile escaláveis com React, React Native, Node.js e TypeScript. Sólida experiência em arquitetura de software, liderança técnica, qualidade de código, integrações e software delivery.",
+        "headline": "Desenvolvedor Full Stack Sênior | Líder Técnico",
+        "description": "Desenvolvedor Full Stack Sênior e Líder Técnico com mais de 7 anos de experiência na construção de produtos Web e Mobile escaláveis com React, React Native, Node.js e TypeScript. Sólida experiência em liderança técnica, qualidade de código, integrações e software delivery.",
         "sections": {
             "TechStack": "Tech Stack",
             "Journey": "Trajetória",
@@ -91,8 +91,8 @@
             "journey": [
                 {
                     "date": "2022 - Presente",
-                    "title": "Líder Técnico | Engenharia de Software & Delivery",
-                    "description": "Liderança técnica de times Frontend, Backend, Mobile e QA, apoiando entregas com React, React Native, Node.js e TypeScript. Responsável por direcionamento de arquitetura, code reviews, APIs, backlog técnico, integrações entre sistemas, suporte técnico ao time, indicadores de entrega e previsibilidade."
+                    "title": "Líder Técnico | Desenvolvimento de Software & Delivery",
+                    "description": "Liderança técnica de times Frontend, Backend, Mobile e QA, apoiando entregas com React, React Native, Node.js e TypeScript. Responsável por direcionamento técnico, code reviews, APIs, backlog técnico, integrações entre sistemas, suporte técnico ao time, indicadores de entrega e previsibilidade."
                 },
                 {
                     "date": "2021 - 2022",
