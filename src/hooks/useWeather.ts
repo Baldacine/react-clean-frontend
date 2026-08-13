@@ -1,4 +1,4 @@
-import { weatherService } from "@/domain/services/weatherService";
+import { weatherService } from "@/services/weather/weatherService";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 

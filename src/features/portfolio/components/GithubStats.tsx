@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Star, GitFork, ExternalLink } from "lucide-react";
-import { useGithubRepos } from "@/hooks/useGithubRepos";
+import { useGithubRepos } from "@/features/portfolio/hooks/useGithubRepos";
 import { Button } from "@/shared/components/Button/Button";
 import styled from "styled-components";
 

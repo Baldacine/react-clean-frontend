@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { render, screen } from "../test/test-utils";
 import { GithubStats } from "@/features/portfolio/components/GithubStats";
 
-vi.mock("@/hooks/useGithubRepos", () => ({
+vi.mock("@/features/portfolio/hooks/useGithubRepos", () => ({
   useGithubRepos: () => ({
     data: [
       {
