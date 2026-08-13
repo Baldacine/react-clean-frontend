@@ -91,8 +91,8 @@ export const AwardsSection = () => {
 
   return (
     <Grid>
-      {awards.map((award, index) => (
-        <Card key={index}>
+      {awards.map((award) => (
+        <Card key={award.title}>
           <ImageWrapper>
             <Image src={award.image} alt={award.title} />
 
@@ -113,7 +113,9 @@ export const AwardsSection = () => {
             <Button
               variant="outline"
               size="small"
-              onClick={() => window.open(award.link, "_blank")}
+              onClick={() =>
+                window.open(award.link, "_blank", "noopener,noreferrer")
+              }
               style={{ width: "100%", gap: "8px" }}
             >
               <ExternalLink size={14} />

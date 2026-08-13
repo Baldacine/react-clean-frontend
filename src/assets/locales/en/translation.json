@@ -2,6 +2,8 @@
     "header": {
         "title": "My Portfolio",
         "toggleTheme": "Toggle Theme",
+        "lightTheme": "Switch to light theme",
+        "darkTheme": "Switch to dark theme",
         "changeLanguage": "Change Language",
         "visitor": "Visitor",
         "hello": "Hello"
@@ -23,7 +25,13 @@
             "Awards": "Awards"
         },
         "modal": {
-            "close": "Close"
+            "close": "Close",
+            "closeLabel": "Close dialog"
+        },
+        "social": {
+            "linkedin": "Open Wanderson Baldacine's LinkedIn profile",
+            "email": "Send an email to Wanderson Baldacine",
+            "github": "Open the React Clean Architecture repository on GitHub"
         },
         "sections_content": {
             "TechStack": {

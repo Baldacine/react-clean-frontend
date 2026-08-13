@@ -9,5 +9,6 @@ export interface DropdownItem {
 
 export interface DropdownProps {
     trigger: ReactNode;
+    label: string;
     items: DropdownItem[];
 }

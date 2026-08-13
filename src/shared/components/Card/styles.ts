@@ -45,7 +45,7 @@ export const CardImage = styled.img`
 `;
 
 
-export const StyledCard = styled.div<StyledCardProps>`
+export const StyledCard = styled.button<StyledCardProps>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -56,6 +56,8 @@ export const StyledCard = styled.div<StyledCardProps>`
   min-width: ${({ $minWidth }) => (typeof $minWidth === 'number' ? `${$minWidth}px` : $minWidth || 'auto')};
   height: ${({ $height }) => (typeof $height === 'number' ? `${$height}px` : $height || 'auto')};
   min-height: 120px; 
+  padding: 0;
+  text-align: left;
   
   border-radius: ${({ theme }) => theme.borderRadius.lg};
   font-family: ${({ theme }) => theme.typography.fontFamily};

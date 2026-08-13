@@ -2,6 +2,8 @@
     "header": {
         "title": "Mi Portafolio",
         "toggleTheme": "Cambiar Tema",
+        "lightTheme": "Cambiar al tema claro",
+        "darkTheme": "Cambiar al tema oscuro",
         "changeLanguage": "Cambiar Idioma",
         "visitor": "Visitante",
         "hello": "Hola"
@@ -23,7 +25,13 @@
             "Awards": "Premios"
         },
         "modal": {
-            "close": "Cerrar"
+            "close": "Cerrar",
+            "closeLabel": "Cerrar diálogo"
+        },
+        "social": {
+            "linkedin": "Abrir el perfil de Wanderson Baldacine en LinkedIn",
+            "email": "Enviar un correo a Wanderson Baldacine",
+            "github": "Abrir el repositorio React Clean Architecture en GitHub"
         },
         "sections_content": {
             "TechStack": {

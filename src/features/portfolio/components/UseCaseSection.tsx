@@ -311,16 +311,16 @@ export const UseCaseSection = () => {
           {professionalExperience.map((project) => (
             <RepoCard
               key={project.name}
-              onClick={() => {
-                window.open(project.androidLink, "target_");
-              }}
+              href={project.androidLink}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <RepoCardHeader>
                 <strong>{getProjectName(project.name, t)}</strong>
                 {project.androidLink && (
-                  <a rel="noopener noreferrer">
+                  <span className="external-link-icon" aria-hidden="true">
                     <ExternalLink size={16} />
-                  </a>
+                  </span>
                 )}
               </RepoCardHeader>
 

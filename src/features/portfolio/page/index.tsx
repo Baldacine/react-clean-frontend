@@ -22,9 +22,6 @@ import { Avatar } from "@/shared/components/Avatar/Avatar";
 export const Portfolio: React.FC = () => {
   const { t } = useTranslation();
   const [section, setSection] = useState<PortfolioSection | null>(null);
-  const [loadingSection, setLoadingSection] = useState<PortfolioSection | null>(
-    null,
-  );
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const sections: PortfolioSection[] = [
@@ -44,12 +41,8 @@ export const Portfolio: React.FC = () => {
   };
 
   const handleSectionChange = (s: PortfolioSection) => {
-    setLoadingSection(s);
-    setTimeout(() => {
-      setSection(s);
-      setLoadingSection(null);
-      setIsModalOpen(true);
-    }, 2);
+    setSection(s);
+    setIsModalOpen(true);
   };
 
   return (
@@ -68,10 +61,12 @@ export const Portfolio: React.FC = () => {
           <Button
             variant="circle"
             size="small"
+            aria-label={t("portfolio.social.linkedin")}
             onClick={() =>
               window.open(
                 "https://www.linkedin.com/in/wandersonbaldacine",
                 "_blank",
+                "noopener,noreferrer",
               )
             }
           >
@@ -81,6 +76,7 @@ export const Portfolio: React.FC = () => {
           <Button
             variant="circle"
             size="small"
+            aria-label={t("portfolio.social.email")}
             onClick={() =>
               (window.location.href = "mailto:wandersonse0@gmail.com")
             }
@@ -91,10 +87,12 @@ export const Portfolio: React.FC = () => {
           <Button
             variant="circle"
             size="small"
+            aria-label={t("portfolio.social.github")}
             onClick={() =>
               window.open(
                 "https://github.com/Baldacine/react-clean-frontend",
                 "_blank",
+                "noopener,noreferrer",
               )
             }
           >
@@ -114,8 +112,6 @@ export const Portfolio: React.FC = () => {
           <Card
             key={s}
             variant={section === s ? "primary" : "outline"}
-            isLoading={loadingSection === s}
-            disabled={!!loadingSection}
             icon={sectionIcons[s]}
             title={t(`portfolio.sections.${s}`)}
             onClick={() => handleSectionChange(s)}
@@ -132,6 +128,7 @@ export const Portfolio: React.FC = () => {
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
+        closeLabel={t("portfolio.modal.closeLabel")}
         title={section ? t(`portfolio.sections.${section}`) : ""}
         width="90vw"
         maxWidth={800}

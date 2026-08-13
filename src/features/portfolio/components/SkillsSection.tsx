@@ -47,7 +47,6 @@ const SkillTag = styled.span`
   font-weight: ${({ theme }) => theme.typography?.fontWeights.medium};
   white-space: nowrap;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
 
   &:hover {
     background: ${({ theme }) => theme.colors?.gray500};
@@ -131,15 +130,15 @@ export const SkillsSection = () => {
 
   return (
     <Grid>
-      {skillGroups.map((group, i) => (
-        <GroupContainer key={i}>
+      {skillGroups.map((group) => (
+        <GroupContainer key={group.title}>
           <Header>
             {group.icon}
             <span>{group.title}</span>
           </Header>
           <TagContainer>
-            {group.TechStack.map((skill, j) => (
-              <SkillTag key={j}>{skill}</SkillTag>
+            {group.TechStack.map((skill) => (
+              <SkillTag key={skill}>{skill}</SkillTag>
             ))}
           </TagContainer>
         </GroupContainer>

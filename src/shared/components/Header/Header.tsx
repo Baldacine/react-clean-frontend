@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Sun, Moon, Languages } from "lucide-react";
 import { Button } from "../Button/Button";
-import { Dropdown } from "../Dropdown/Dropdown"; // Import o novo componente
+import { Dropdown } from "../Dropdown/Dropdown";
 import { StyledHeader, HeaderActions } from "./styles";
 import type { HeaderProps } from "./types";
 import { useContext, useEffect, useState } from "react";
@@ -20,7 +20,6 @@ export function Header({ themeMode, toggleTheme }: HeaderProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Ativa o shadow se scroll for maior que 10px
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -36,14 +35,22 @@ export function Header({ themeMode, toggleTheme }: HeaderProps) {
       <HeaderActions>
         <Dropdown
           items={languageOptions}
+          label={t("header.changeLanguage")}
           trigger={
-            <Button variant="outline" size="small" style={{ gap: "8px" }}>
+            <>
               <Languages size={18} />
               {i18n.language.split("-")[0].toUpperCase()}
-            </Button>
+            </>
           }
         />
-        <Button variant="circle" size="small" onClick={toggleTheme}>
+        <Button
+          variant="circle"
+          size="small"
+          aria-label={t(
+            themeMode === "light" ? "header.darkTheme" : "header.lightTheme",
+          )}
+          onClick={toggleTheme}
+        >
           {themeMode === "light" ? <Moon size={20} /> : <Sun size={20} />}
         </Button>
       </HeaderActions>
