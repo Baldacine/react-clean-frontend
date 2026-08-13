@@ -6,7 +6,7 @@ import ptTranslation from '../assets/locales/pt/translation.json';
 import enTranslation from '../assets/locales/en/translation.json';
 import esTranslation from '../assets/locales/es/translation.json';
 
-i18n
+const initialization = i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
@@ -24,5 +24,15 @@ i18n
             caches: ['localStorage'],
         },
     });
+
+const updateDocumentLanguage = (language: string) => {
+    if (typeof document === 'undefined') return;
+    document.documentElement.lang = language.split('-')[0];
+};
+
+i18n.on('languageChanged', updateDocumentLanguage);
+void initialization.then(() => {
+    updateDocumentLanguage(i18n.resolvedLanguage ?? i18n.language);
+});
 
 export default i18n;
