@@ -27,6 +27,20 @@ const projects: Project[] = [
       "WhatsApp API",
     ],
   },
+  {
+    name: "React Clean Architecture",
+    link: "https://github.com/Baldacine/react-clean-frontend",
+    descKey: "portfolio.sections_content.use_cases.clean_architecture_desc",
+    stacks: [
+      "React 19",
+      "TypeScript",
+      "React Query",
+      "Zustand",
+      "Styled Components",
+      "Vitest",
+      "React Testing Library",
+    ],
+  },
 ];
 
 const professionalExperience: ProfessionalExperience[] = [
@@ -297,16 +311,16 @@ export const UseCaseSection = () => {
           {professionalExperience.map((project) => (
             <RepoCard
               key={project.name}
-              onClick={() => {
-                window.open(project.androidLink, "target_");
-              }}
+              href={project.androidLink}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <RepoCardHeader>
                 <strong>{getProjectName(project.name, t)}</strong>
                 {project.androidLink && (
-                  <a rel="noopener noreferrer">
+                  <span className="external-link-icon" aria-hidden="true">
                     <ExternalLink size={16} />
-                  </a>
+                  </span>
                 )}
               </RepoCardHeader>
 

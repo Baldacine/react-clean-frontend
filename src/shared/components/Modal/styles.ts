@@ -95,4 +95,9 @@ export const CloseButton = styled.button`
   &:hover {
     color: ${({ theme }) => theme.colors.danger};
   }
+
+  &:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.colors.primary};
+    outline-offset: 2px;
+  }
 `;

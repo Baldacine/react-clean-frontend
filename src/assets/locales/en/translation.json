@@ -2,6 +2,8 @@
     "header": {
         "title": "My Portfolio",
         "toggleTheme": "Toggle Theme",
+        "lightTheme": "Switch to light theme",
+        "darkTheme": "Switch to dark theme",
         "changeLanguage": "Change Language",
         "visitor": "Visitor",
         "hello": "Hello"
@@ -13,7 +15,8 @@
         "loading": "Loading..."
     },
     "portfolio": {
-        "description": "Senior Frontend Developer with 7+ years of experience building scalable web and mobile applications using React, React Native, and TypeScript. Strong background in frontend architecture, performance optimization, and API integrations, with experience in enterprise, fintech, and international MVP projects.",
+        "headline": "Senior Full Stack Developer | Tech Lead",
+        "description": "Senior Full Stack Developer and Tech Lead with 7+ years of experience building scalable Web and Mobile products using React, React Native, Node.js, and TypeScript. Strong background in technical leadership, code quality, integrations, and software delivery.",
         "sections": {
             "TechStack": "Tech Stack",
             "Journey": "Journey",
@@ -22,7 +25,13 @@
             "Awards": "Awards"
         },
         "modal": {
-            "close": "Close"
+            "close": "Close",
+            "closeLabel": "Close dialog"
+        },
+        "social": {
+            "linkedin": "Open Wanderson Baldacine's LinkedIn profile",
+            "email": "Send an email to Wanderson Baldacine",
+            "github": "Open the React Clean Architecture repository on GitHub"
         },
         "sections_content": {
             "TechStack": {
@@ -34,42 +43,56 @@
                     "React Query",
                     "Zustand",
                     "Next.js",
-                    "Jquery",
                     "HTML",
                     "CSS",
                     "Styled Components",
                     "Tailwind"
                 ],
                 "backend": [
-                    ".NET",
                     "Node.js",
+                    "REST APIs",
+                    ".NET",
                     "C#"
                 ],
                 "test": [
                     "Jest",
-                    "React Testing Library"
+                    "React Testing Library",
+                    "Vitest"
                 ],
                 "database": [
+                    "PostgreSQL",
                     "SQL Server",
                     "MySQL",
-                    "PostgreSQL",
                     "MongoDB"
                 ],
                 "data_analytics": [
                     "Power BI"
                 ],
                 "others": [
+                    "Git",
+                    "Docker",
+                    "CI/CD",
+                    "Azure DevOps",
                     "Scrum",
                     "Kanban",
-                    "Git",
-                    "Docker"
+                    "jQuery (legacy)"
+                ],
+                "ai": [
+                    "Generative AI",
+                    "Codex",
+                    "Claude",
+                    "Code Analysis",
+                    "Refactoring",
+                    "Testing",
+                    "Documentation",
+                    "Productivity"
                 ]
             },
             "journey": [
                 {
                     "date": "2022 - Present",
-                    "title": "Senior Frontend Engineer",
-                    "description": "Delivering frontend solutions using React, TypeScript, and Clean Architecture. Focused on maintainable code."
+                    "title": "Technical Lead | Software Development & Delivery",
+                    "description": "Technical leadership across Frontend, Backend, Mobile, and QA teams, supporting delivery with React, React Native, Node.js, and TypeScript. Responsible for technical direction, code reviews, APIs, the technical backlog, system integrations, hands-on team support, delivery indicators, and predictability."
                 },
                 {
                     "date": "2021 - 2022",
@@ -120,14 +143,15 @@
                 }
             ],
             "use_cases": {
-                "view_project": "Live Demo",
-                "buu_desc": "Full-stack scheduling platform built from scratch (Web and Mobile) focused on online appointments with WhatsApp integration. Developed using React, React Native, Node.js, and PostgreSQL. Responsible for the entire product lifecycle, including frontend, backend, infrastructure setup, and CI/CD automation with GitHub Actions, ensuring high availability and reliability.",
+                "view_project": "View project",
+                "buu_desc": "Full Stack SaaS scheduling platform for Web and Mobile, built with React, React Native, Node.js, TypeScript, PostgreSQL, and REST APIs. Work covered the complete product cycle: frontend, mobile, backend, database, infrastructure, integrations, CI/CD, and continuous product evolution.",
+                "clean_architecture_desc": "Frontend architecture portfolio built with React 19 and TypeScript. It demonstrates feature-based organization, clear boundaries, server-state management with React Query, client-state management with Zustand, internationalization, accessible components, and behavior-focused tests with Vitest and React Testing Library.",
                 "other_desc": "Strategic dashboards and real-time KPIs.",
                 "featured_title": "Featured Projects",
                 "github_activity": "Recent GitHub Activity",
                 "error": "Could not load repositories.",
                 "retry": "Try again",
-                "no_description": "Frontend project built with React and TypeScript, using Styled Components and automated tests with Jest and React Testing Library, focused on clean code and reusable components."
+                "no_description": "Project built with React and TypeScript, focused on clean code, maintainability, and reusable components."
             },
             "career": {
                 "title": "Enterprise Project Experience",

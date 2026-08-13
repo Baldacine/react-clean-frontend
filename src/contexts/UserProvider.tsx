@@ -1,4 +1,4 @@
-import { useCallback, type ReactNode, type Dispatch } from "react";
+import { useCallback, useEffect, type ReactNode, type Dispatch } from "react";
 import { UserContext } from "./UserContext";
 import { initialState } from "../reducers/UserReducer";
 import type { UserAction } from "@/@types/user";
@@ -11,6 +11,11 @@ interface UserProviderProps {
 export function UserProvider({ children }: UserProviderProps) {
   const user = useUserStore((state) => state.user);
   const dispatchFromStore = useUserStore((state) => state.dispatch);
+  const hydrate = useUserStore((state) => state.hydrate);
+
+  useEffect(() => {
+    hydrate();
+  }, [hydrate]);
 
   const dispatch: Dispatch<UserAction> = useCallback(
     (action) => {

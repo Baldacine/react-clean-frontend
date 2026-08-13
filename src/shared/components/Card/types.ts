@@ -1,4 +1,4 @@
-import type { HTMLAttributes, ReactNode } from 'react';
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
 export type CardVariant = 'primary' | 'secondary' | 'outline';
 
@@ -10,7 +10,7 @@ export interface StyledCardProps {
     $height?: string | number;
 }
 
-export interface CardProps extends HTMLAttributes<HTMLDivElement> {
+export interface CardProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: CardVariant;
     disabled?: boolean;
     isLoading?: boolean;

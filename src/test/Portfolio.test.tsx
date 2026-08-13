@@ -16,7 +16,7 @@ describe("Portfolio Page", () => {
     expect(avatar).toBeInTheDocument();
   });
 
-  it("should render all six navigation cards", () => {
+  it("should render all navigation cards as accessible buttons", () => {
     render(<Portfolio />);
 
     const sections = [
@@ -29,7 +29,9 @@ describe("Portfolio Page", () => {
 
     sections.forEach((section) => {
       expect(
-        screen.getByText(`portfolio.sections.${section}`),
+        screen.getByRole("button", {
+          name: `portfolio.sections.${section}`,
+        }),
       ).toBeInTheDocument();
     });
   });
@@ -37,48 +39,75 @@ describe("Portfolio Page", () => {
   it("should open the modal when a section card is clicked", async () => {
     render(<Portfolio />);
 
-    const TechStackCard = screen.getByText("portfolio.sections.TechStack");
+    const TechStackCard = screen.getByRole("button", {
+      name: "portfolio.sections.TechStack",
+    });
     fireEvent.click(TechStackCard);
 
     await waitFor(() => {
-      const modalTitles = screen.getAllByText("portfolio.sections.TechStack");
-      expect(modalTitles.length).toBeGreaterThan(1);
+      expect(
+        screen.getByRole("dialog", {
+          name: "portfolio.sections.TechStack",
+        }),
+      ).toBeInTheDocument();
       expect(screen.getByText("portfolio.modal.close")).toBeInTheDocument();
     });
   });
 
-  it("should call window.open when social buttons are clicked", () => {
+  it("should expose accessible social actions and open external profiles safely", () => {
     const windowSpy = vi.spyOn(window, "open").mockImplementation(() => null);
     render(<Portfolio />);
-    const buttons = screen.getAllByRole("button");
 
-    fireEvent.click(buttons[0]);
-    expect(windowSpy).toHaveBeenCalledWith(
+    fireEvent.click(
+      screen.getByRole("button", { name: "portfolio.social.linkedin" }),
+    );
+    expect(windowSpy).toHaveBeenNthCalledWith(
+      1,
       "https://www.linkedin.com/in/wandersonbaldacine",
       "_blank",
+      "noopener,noreferrer",
     );
 
-    fireEvent.click(buttons[2]);
-    expect(windowSpy).toHaveBeenCalledWith(
-      "https://www.linkedin.com/in/wandersonbaldacine",
+    expect(
+      screen.getByRole("button", { name: "portfolio.social.email" }),
+    ).toBeInTheDocument();
+
+    fireEvent.click(
+      screen.getByRole("button", { name: "portfolio.social.github" }),
+    );
+    expect(windowSpy).toHaveBeenNthCalledWith(
+      2,
+      "https://github.com/Baldacine/react-clean-frontend",
       "_blank",
+      "noopener,noreferrer",
     );
   });
 
-  it("should close the modal when the close button is clicked", async () => {
+  it("should close the modal with Escape and restore focus", async () => {
     render(<Portfolio />);
 
-    fireEvent.click(screen.getByText("portfolio.sections.Awards"));
-
-    await waitFor(() => {
-      const closeBtn = screen.getByText("portfolio.modal.close");
-      fireEvent.click(closeBtn);
+    const awardsButton = screen.getByRole("button", {
+      name: "portfolio.sections.Awards",
     });
+    awardsButton.focus();
+    fireEvent.click(awardsButton);
 
     await waitFor(() => {
       expect(
-        screen.queryByText("portfolio.modal.close"),
+        screen.getByRole("button", { name: "portfolio.modal.closeLabel" }),
+      ).toHaveFocus();
+    });
+
+    fireEvent.keyDown(
+      screen.getByRole("dialog", { name: "portfolio.sections.Awards" }),
+      { key: "Escape" },
+    );
+
+    await waitFor(() => {
+      expect(
+        screen.queryByRole("dialog", { name: "portfolio.sections.Awards" }),
       ).not.toBeInTheDocument();
+      expect(awardsButton).toHaveFocus();
     });
   });
 });

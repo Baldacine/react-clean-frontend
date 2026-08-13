@@ -5,8 +5,8 @@ import type { TimelineProps } from "./types";
 export const Timeline: React.FC<TimelineProps> = ({ items }) => {
   return (
     <TimelineContainer>
-      {items.map((item, index) => (
-        <TimelineStep key={index}>
+      {items.map((item) => (
+        <TimelineStep key={`${item.date}-${item.title}`}>
           <Circle />
           <Content>
             <span style={{ fontSize: "1rem" }}>{item.date}</span>

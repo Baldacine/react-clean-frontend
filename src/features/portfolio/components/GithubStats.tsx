@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Star, GitFork, ExternalLink } from "lucide-react";
-import { useGithubRepos } from "@/hooks/useGithubRepos";
+import { useGithubRepos } from "@/features/portfolio/hooks/useGithubRepos";
 import { Button } from "@/shared/components/Button/Button";
 import styled from "styled-components";
 
@@ -25,7 +25,7 @@ export const RepoCardHeader = styled.div`
     font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
   }
 
-  a {
+  .external-link-icon {
     color: ${({ theme }) => theme.colors.gray500};
     transition: color 0.2s;
     &:hover {
@@ -34,7 +34,7 @@ export const RepoCardHeader = styled.div`
   }
 `;
 
-export const RepoCard = styled.div`
+export const RepoCard = styled.a`
   background: ${({ theme }) => theme.colors.background};
   border: 1px solid ${({ theme }) => theme.colors.gray300}44;
   border-radius: ${({ theme }) => theme.borderRadius.md};
@@ -42,6 +42,8 @@ export const RepoCard = styled.div`
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
   justify-content: space-between;
   gap: ${({ theme }) => theme.spacing.sm};
   transition: transform 0.2s ease, border-color 0.2s ease;
@@ -50,6 +52,12 @@ export const RepoCard = styled.div`
     transform: translateY(-4px);
     border-color: ${({ theme }) => theme.colors.primary};
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus-visible {
+    border-color: ${({ theme }) => theme.colors.primary};
+    outline: 2px solid ${({ theme }) => theme.colors.primary};
+    outline-offset: 2px;
   }
 
   p {
@@ -102,6 +110,9 @@ export const RepoCard = styled.div`
 export function GithubStats() {
   const { t } = useTranslation();
   const { data, isLoading, isError, refetch } = useGithubRepos("Baldacine");
+  const visibleRepositories = data?.filter(
+    (repository) => repository.name.toLowerCase() !== "webpink",
+  );
 
   if (isLoading) return <p>{t("common.loading")}</p>;
 
@@ -119,24 +130,22 @@ export function GithubStats() {
 
   return (
     <RepoGrid>
-      {data?.map((repo) => (
+      {visibleRepositories?.map((repo) => (
         <RepoCard
           key={repo.id}
-          onClick={() =>
-            window.open(repo.html_url, "_blank", "noopener,noreferrer")
-          }
+          href={repo.html_url}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div>
             <RepoCardHeader>
               <strong>{repo.name}</strong>
-              <a
-                href={repo.html_url}
-                target="_blank"
-                rel="noreferrer"
-                title={t("portfolio.sections_content.use_cases.view_project")}
+              <span
+                className="external-link-icon"
+                aria-hidden="true"
               >
                 <ExternalLink size={16} />
-              </a>
+              </span>
             </RepoCardHeader>
             <p>
               {repo.description ||

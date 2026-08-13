@@ -2,6 +2,8 @@
     "header": {
         "title": "Meu Portfólio",
         "toggleTheme": "Alternar Tema",
+        "lightTheme": "Mudar para o tema claro",
+        "darkTheme": "Mudar para o tema escuro",
         "changeLanguage": "Mudar Idioma",
         "visitor": "Visitante",
         "hello": "Olá"
@@ -13,7 +15,8 @@
         "loading": "Carregando..."
     },
     "portfolio": {
-        "description": "Desenvolvedor Frontend Sênior com mais de 7 anos de experiência na criação de aplicações web e mobile escaláveis ​​utilizando React, React Native e TypeScript. Sólida experiência em arquitetura frontend, otimização de performance e integração de APIs, com atuação em projetos corporativos, fintech e MVPs internacionais.",
+        "headline": "Desenvolvedor Full Stack Sênior | Líder Técnico",
+        "description": "Desenvolvedor Full Stack Sênior e Líder Técnico com mais de 7 anos de experiência na construção de produtos Web e Mobile escaláveis com React, React Native, Node.js e TypeScript. Sólida experiência em liderança técnica, qualidade de código, integrações e software delivery.",
         "sections": {
             "TechStack": "Tech Stack",
             "Journey": "Trajetória",
@@ -22,7 +25,13 @@
             "Awards": "Prêmios"
         },
         "modal": {
-            "close": "Fechar"
+            "close": "Fechar",
+            "closeLabel": "Fechar diálogo"
+        },
+        "social": {
+            "linkedin": "Abrir o perfil de Wanderson Baldacine no LinkedIn",
+            "email": "Enviar um e-mail para Wanderson Baldacine",
+            "github": "Abrir o repositório React Clean Architecture no GitHub"
         },
         "sections_content": {
             "TechStack": {
@@ -34,42 +43,56 @@
                     "React Query",
                     "Zustand",
                     "Next.js",
-                    "Jquery",
                     "HTML",
                     "CSS",
                     "Styled Components",
                     "Tailwind"
                 ],
                 "backend": [
-                    ".NET",
                     "Node.js",
+                    "REST APIs",
+                    ".NET",
                     "C#"
                 ],
                 "test": [
                     "Jest",
-                    "React Testing Library"
+                    "React Testing Library",
+                    "Vitest"
                 ],
                 "database": [
+                    "PostgreSQL",
                     "SQL Server",
                     "MySQL",
-                    "PostgreSQL",
                     "MongoDB"
                 ],
                 "data_analytics": [
                     "Power BI"
                 ],
                 "others": [
+                    "Git",
+                    "Docker",
+                    "CI/CD",
+                    "Azure DevOps",
                     "Scrum",
                     "Kanban",
-                    "Git",
-                    "Docker"
+                    "jQuery (legado)"
+                ],
+                "ai": [
+                    "IA Generativa",
+                    "Codex",
+                    "Claude",
+                    "Análise de Código",
+                    "Refatoração",
+                    "Testes",
+                    "Documentação",
+                    "Produtividade"
                 ]
             },
             "journey": [
                 {
                     "date": "2022 - Presente",
-                    "title": "Desenvolvedor Frontend Sênior",
-                    "description": "Entrega de soluções frontend utilizando React, TypeScript e Clean Architecture. Focado em código de fácil manutenção."
+                    "title": "Líder Técnico | Desenvolvimento de Software & Delivery",
+                    "description": "Liderança técnica de times Frontend, Backend, Mobile e QA, apoiando entregas com React, React Native, Node.js e TypeScript. Responsável por direcionamento técnico, code reviews, APIs, backlog técnico, integrações entre sistemas, suporte técnico ao time, indicadores de entrega e previsibilidade."
                 },
                 {
                     "date": "2021 - 2022",
@@ -122,14 +145,15 @@
             "use_cases": {
                 "title": "Experiência em Projetos Enterprise",
                 "subtitle": "Seleção de projetos relevantes em que colaborei durante a minha carreira.",
-                "view_project": "Ver site",
-                "buu_desc": "Plataforma de agendamento completa, construída do zero (Web e Mobile), focada em agendamentos online com integração ao WhatsApp. Desenvolvida usando React, React Native, Node.js e PostgreSQL. Responsável por todo o ciclo de vida do produto, incluindo frontend, backend, configuração de infraestrutura e automação de CI/CD com GitHub Actions, garantindo alta disponibilidade e confiabilidade.",
+                "view_project": "Ver projeto",
+                "buu_desc": "SaaS Full Stack de agendamento para Web e Mobile, construído com React, React Native, Node.js, TypeScript, PostgreSQL e REST APIs. A atuação cobriu o ciclo completo do produto: frontend, mobile, backend, banco de dados, infraestrutura, integrações, CI/CD e evolução contínua do produto.",
+                "clean_architecture_desc": "Portfólio de arquitetura frontend desenvolvido com React 19 e TypeScript. Demonstra organização por features, separação clara de responsabilidades, estado de servidor com React Query, estado de cliente com Zustand, internacionalização, componentes acessíveis e testes de comportamento com Vitest e React Testing Library.",
                 "other_desc": "Dashboards estratégicos e KPIs em tempo real.",
                 "featured_title": "Projetos em Destaque",
                 "github_activity": "Atividade Recente no GitHub",
                 "error": "Não foi possível carregar os repositórios.",
                 "retry": "Tentar novamente",
-                "no_description": "Projeto de front-end desenvolvido com React e TypeScript, utilizando Styled Components e testes automatizados com Jest e React Testing Library, com foco em código limpo e componentes reutilizáveis."
+                "no_description": "Projeto desenvolvido com React e TypeScript, com foco em código limpo, manutenção e componentes reutilizáveis."
             },
             "career": {
                 "title": "Experiência em Projetos Enterprise",

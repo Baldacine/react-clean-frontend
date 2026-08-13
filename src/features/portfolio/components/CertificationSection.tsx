@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { Award, Calendar } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import {
+  getTranslationArray,
+  isCertification,
+} from "../utils/translation";
 
 const Grid = styled.div`
   display: grid;
@@ -8,7 +12,7 @@ const Grid = styled.div`
   gap: 10px;
 `;
 
-const CertCard = styled.div`
+const CertCard = styled.article<{ $interactive: boolean }>`
   border: 1px solid
     ${({ theme }) => theme.colors.gray100};
   border-radius: 12px;
@@ -17,13 +21,27 @@ const CertCard = styled.div`
   align-items: flex-start;
   gap: 10px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
+  color: inherit;
+  cursor: ${({ $interactive }) => ($interactive ? "pointer" : "default")};
   height: 100%;
+  text-decoration: none;
 
-  &:hover {
-    border-color: ${({ theme }) => theme.colors.primary};
+  ${({ $interactive, theme }) =>
+    $interactive &&
+    `
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border-color: ${theme.colors.primary};
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px "rgba(0, 0, 0, 0.12)"};
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+  `}
+
+  &:focus-visible {
+    border-color: ${({ theme }) => theme.colors.primary};
+    outline: 2px solid ${({ theme }) => theme.colors.primary};
+    outline-offset: 2px;
   }
 `;
 
@@ -80,30 +98,23 @@ const IssuerBadge = styled.span`
 export const CertificationSection = () => {
   const { t } = useTranslation();
 
-  const certs = (t("portfolio.sections_content.certifications", {
-    returnObjects: true,
-  }) || []) as {
-    title: string;
-    issuer: string;
-    date: string;
-    image: string;
-    link: string;
-  }[];
-
-  const handleOpenLink = (link: string) => {
-    if (!link) return;
-    window.open(link, "_blank", "noopener,noreferrer");
-  };
+  const certs = getTranslationArray(
+    t("portfolio.sections_content.certifications", {
+      returnObjects: true,
+    }),
+    isCertification,
+  );
 
   return (
     <Grid>
-      {certs.map((cert, index) => (
+      {certs.map((cert) => (
         <CertCard
-          key={index}
-          onClick={() => handleOpenLink(cert.link)}
-          role="button"
-          tabIndex={0}
-          aria-label={`${t("portfolio.view_certification")}: ${cert.title}`}
+          key={`${cert.issuer}-${cert.title}`}
+          as={cert.link ? "a" : "article"}
+          href={cert.link || undefined}
+          target={cert.link ? "_blank" : undefined}
+          rel={cert.link ? "noopener noreferrer" : undefined}
+          $interactive={Boolean(cert.link)}
         >
           <ImageContainer>
             {cert.image ? (

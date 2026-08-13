@@ -1,16 +1,42 @@
 import { create } from "zustand";
 import type { User, UserAction } from "@/@types/user";
-import { initialState } from "@/reducers/UserReducer";
+import { initialState, UserReducer } from "@/reducers/UserReducer";
 
 type UserState = {
     user: User;
     setUser: (payload: Partial<User>) => void;
     logout: () => void;
+    hydrate: () => void;
     dispatch: (action: UserAction) => void;
 };
 
+const isUser = (value: unknown): value is User => {
+    if (typeof value !== "object" || value === null) return false;
+
+    return (
+        "name" in value &&
+        typeof value.name === "string" &&
+        "token" in value &&
+        typeof value.token === "string"
+    );
+};
+
+const readStoredUser = (): User => {
+    if (typeof window === "undefined") return initialState;
+
+    try {
+        const storedUser = localStorage.getItem("user");
+        if (!storedUser) return initialState;
+
+        const parsedUser: unknown = JSON.parse(storedUser);
+        return isUser(parsedUser) ? parsedUser : initialState;
+    } catch {
+        return initialState;
+    }
+};
+
 export const useUserStore = create<UserState>((set) => ({
-    user: initialState,
+    user: readStoredUser(),
 
     setUser: (payload) =>
         set((state) => ({
@@ -19,41 +45,13 @@ export const useUserStore = create<UserState>((set) => ({
 
     logout: () => set({ user: initialState }),
 
-    dispatch: (action) => {
-        switch (action.type) {
-            case "setUser":
-                set((state) => ({
-                    user: { ...state.user, ...action.payload },
-                }));
-                return;
+    hydrate: () => set({ user: readStoredUser() }),
 
-            case "logout":
-                set({ user: initialState });
-                return;
-
-            default: {
-                const _exhaustiveCheck: never = action;
-                return _exhaustiveCheck;
-            }
-        }
-    },
+    dispatch: (action) =>
+        set((state) => ({ user: UserReducer(state.user, action) })),
 }));
 
 if (typeof window !== "undefined") {
-    try {
-        const storedUser = localStorage.getItem("user");
-
-        if (storedUser) {
-            const parsed: unknown = JSON.parse(storedUser);
-
-            if (typeof parsed === "object" && parsed !== null) {
-                useUserStore.setState({ user: parsed as User });
-            }
-        }
-    } catch (error) {
-        console.error("Failed to restore user from localStorage", error);
-    }
-
     useUserStore.subscribe((state) => {
         try {
             if (state.user?.token) {
@@ -62,7 +60,7 @@ if (typeof window !== "undefined") {
                 localStorage.removeItem("user");
             }
         } catch {
-            // Erros de storage (ex: quota excedida)
+            // Storage can be unavailable or exceed its quota.
         }
     });
 }

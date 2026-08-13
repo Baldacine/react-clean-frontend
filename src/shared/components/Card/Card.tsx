@@ -28,8 +28,10 @@ export function Card({
 
   return (
     <StyledCard
+      type="button"
       $variant={variant}
       $disabled={isDisabled}
+      disabled={isDisabled}
       $width={width}
       $minWidth={minWidth}
       $height={height}
