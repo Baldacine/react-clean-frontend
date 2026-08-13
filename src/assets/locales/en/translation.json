@@ -24,6 +24,18 @@
             "Projects": "Projects",
             "Awards": "Awards"
         },
+        "section_descriptions": {
+            "TechStack": "Technologies organized across frontend, backend, testing, data, and delivery.",
+            "Journey": "Experience, responsibilities, and professional growth.",
+            "Certifications": "Additional training and continuous learning.",
+            "Projects": "Full Stack cases, frontend architecture, and professional projects.",
+            "Awards": "Recognition, initiatives, and relevant contributions."
+        },
+        "navigation": {
+            "title": "Explore the portfolio",
+            "subtitle": "Open each section to learn about experience, projects, and technical practices.",
+            "explore": "Explore section"
+        },
         "modal": {
             "close": "Close",
             "closeLabel": "Close dialog"
@@ -144,6 +156,13 @@
             ],
             "use_cases": {
                 "view_project": "View project",
+                "view_repository": "View on GitHub",
+                "view_details": "View details",
+                "repository_label": "Public repository",
+                "buu_category": "SaaS product · Web and Mobile",
+                "clean_architecture_category": "Technical project · Frontend",
+                "stars": "{{count}} stars",
+                "forks": "{{count}} forks",
                 "buu_desc": "Full Stack SaaS scheduling platform for Web and Mobile, built with React, React Native, Node.js, TypeScript, PostgreSQL, and REST APIs. Work covered the complete product cycle: frontend, mobile, backend, database, infrastructure, integrations, CI/CD, and continuous product evolution.",
                 "clean_architecture_desc": "Frontend architecture portfolio built with React 19 and TypeScript. It demonstrates feature-based organization, clear boundaries, server-state management with React Query, client-state management with Zustand, internationalization, accessible components, and behavior-focused tests with Vitest and React Testing Library.",
                 "other_desc": "Strategic dashboards and real-time KPIs.",

@@ -3,12 +3,18 @@ import { Apple, ExternalLink, Github, PlayCircle } from "lucide-react";
 import { Button } from "@/shared/components/Button/Button";
 import { useTranslation } from "react-i18next";
 import type { ProfessionalExperience, Project } from "../types";
-import { GithubStats, RepoCard, RepoCardHeader } from "./GithubStats";
+import {
+  CardLinkHint,
+  GithubStats,
+  RepoCard,
+  RepoCardHeader,
+} from "./GithubStats";
 
 const projects: Project[] = [
   {
     name: "Buu Agenda",
     link: "https://buuapp.com.br/",
+    categoryKey: "portfolio.sections_content.use_cases.buu_category",
     descKey: "portfolio.sections_content.use_cases.buu_desc",
     iosLink: "https://apps.apple.com/br/app/buu/id6749398692",
     androidLink:
@@ -30,6 +36,8 @@ const projects: Project[] = [
   {
     name: "React Clean Architecture",
     link: "https://github.com/Baldacine/react-clean-frontend",
+    categoryKey:
+      "portfolio.sections_content.use_cases.clean_architecture_category",
     descKey: "portfolio.sections_content.use_cases.clean_architecture_desc",
     stacks: [
       "React 19",
@@ -134,27 +142,56 @@ const SectionTitle = styled.h3`
 const ProjectList = styled.ul`
   list-style: none;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: ${({ theme }) => theme.spacing.md};
 `;
 
 const ProjectItem = styled.li`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: ${({ theme }) => theme.spacing.sm};
+  padding: ${({ theme }) => theme.spacing.md};
+  border: 1px solid ${({ theme }) => theme.colors.gray300}66;
+  border-radius: ${({ theme }) => theme.borderRadius.lg};
+  background: ${({ theme }) => theme.colors.background};
 `;
 
 const ProjectHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: ${({ theme }) => theme.spacing.sm};
+
+  button {
+    flex-shrink: 0;
+  }
+`;
+
+const ProjectIdentity = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  strong {
+    color: ${({ theme }) => theme.colors.primary};
+    font-size: ${({ theme }) => theme.typography.fontSizes.md};
+  }
+`;
+
+const ProjectCategory = styled.span`
+  color: ${({ theme }) => theme.colors.gray500};
+  font-size: ${({ theme }) => theme.typography.fontSizes.xs};
+  font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 `;
 
 const ProjectDescription = styled.p`
   font-size: ${({ theme }) => theme.typography.fontSizes.sm};
   opacity: 0.8;
   margin: 0;
+  line-height: ${({ theme }) => theme.typography.lineHeights.relaxed};
 `;
 
 const StoreButtons = styled.div`
@@ -235,7 +272,10 @@ export const UseCaseSection = () => {
           {projects.map((project) => (
             <ProjectItem key={project.name}>
               <ProjectHeader>
-                <strong>{project.name}</strong>
+                <ProjectIdentity>
+                  <ProjectCategory>{t(project.categoryKey)}</ProjectCategory>
+                  <strong>{project.name}</strong>
+                </ProjectIdentity>
                 <Button
                   variant="outline"
                   size="small"
@@ -243,7 +283,7 @@ export const UseCaseSection = () => {
                     window.open(project.link, "_blank", "noopener,noreferrer")
                   }
                 >
-                  <ExternalLink size={14} />
+                  <ExternalLink size={14} aria-hidden="true" />
                   {t("portfolio.sections_content.use_cases.view_project")}
                 </Button>
               </ProjectHeader>
@@ -260,7 +300,7 @@ export const UseCaseSection = () => {
                       size="small"
                       onClick={() => window.open(project.iosLink, "_blank")}
                     >
-                      <Apple size={14} />
+                      <Apple size={14} aria-hidden="true" />
                       App Store
                     </Button>
                   )}
@@ -271,7 +311,7 @@ export const UseCaseSection = () => {
                       size="small"
                       onClick={() => window.open(project.androidLink, "_blank")}
                     >
-                      <PlayCircle size={14} />
+                      <PlayCircle size={14} aria-hidden="true" />
                       Google Play
                     </Button>
                   )}
@@ -318,9 +358,10 @@ export const UseCaseSection = () => {
               <RepoCardHeader>
                 <strong>{getProjectName(project.name, t)}</strong>
                 {project.androidLink && (
-                  <span className="external-link-icon" aria-hidden="true">
-                    <ExternalLink size={16} />
-                  </span>
+                  <CardLinkHint aria-hidden="true">
+                    {t("portfolio.sections_content.use_cases.view_details")}
+                    <ExternalLink size={14} />
+                  </CardLinkHint>
                 )}
               </RepoCardHeader>
 

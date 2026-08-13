@@ -33,19 +33,51 @@ export const Header = styled.header`
 `;
 
 export const NavButtons = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: ${({ theme }) => theme.spacing.md};
   width: 100%;
   padding: ${({ theme }) => theme.spacing.md};
   overflow: visible;
 
   @media (max-width: 480px) {
+    grid-template-columns: 1fr;
     gap: ${({ theme }) => theme.spacing.sm};
     padding: ${({ theme }) => theme.spacing.sm};
   }
+`;
+
+export const PortfolioNavigation = styled.section`
+  max-width: 1040px;
+  margin: 0 auto;
+`;
+
+export const NavigationIntro = styled.div`
+  max-width: 640px;
+  margin: 0 auto ${({ theme }) => theme.spacing.sm};
+  text-align: center;
+
+  h2 {
+    margin: 0 0 ${({ theme }) => theme.spacing.xs};
+    font-size: ${({ theme }) => theme.typography.fontSizes.lg};
+  }
+
+  p {
+    margin: 0;
+    color: ${({ theme }) => theme.colors.text};
+    font-size: ${({ theme }) => theme.typography.fontSizes.sm};
+    line-height: ${({ theme }) => theme.typography.lineHeights.relaxed};
+    opacity: 0.75;
+  }
+`;
+
+export const NavigationAction = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: ${({ theme }) => theme.typography.fontSizes.sm};
+  font-weight: ${({ theme }) => theme.typography.fontWeights.bold};
 `;
 
 export const Section = styled.section`
