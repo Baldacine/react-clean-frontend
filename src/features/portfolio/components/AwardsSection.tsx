@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Trophy, ExternalLink } from "lucide-react";
 import { Button } from "@/shared/components/Button/Button";
 import { useTranslation } from "react-i18next";
+import { getTranslationArray, isAward } from "../utils/translation";
 
 const Grid = styled.div`
   display: grid;
@@ -80,14 +81,12 @@ const Description = styled.p`
 export const AwardsSection = () => {
   const { t } = useTranslation();
 
-  const awards = t("portfolio.sections_content.awards", {
-    returnObjects: true,
-  }) as {
-    title: string;
-    description: string;
-    image: string;
-    link: string;
-  }[];
+  const awards = getTranslationArray(
+    t("portfolio.sections_content.awards", {
+      returnObjects: true,
+    }),
+    isAward,
+  );
 
   return (
     <Grid>

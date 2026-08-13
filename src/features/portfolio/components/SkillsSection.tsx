@@ -9,6 +9,10 @@ import {
   TestTube,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import {
+  getTranslationArray,
+  isString,
+} from "../utils/translation";
 
 const Grid = styled.div`
   display: grid;
@@ -75,56 +79,49 @@ const TagContainer = styled.div`
 
 export const SkillsSection = () => {
   const { t } = useTranslation();
+  const getSkills = (translationKey: string) =>
+    getTranslationArray(
+      t(translationKey, { returnObjects: true }),
+      isString,
+    );
 
   const skillGroups = [
     {
       title: "Frontend",
       icon: <Layout size={18} />,
-      TechStack: t("portfolio.sections_content.TechStack.frontend", {
-        returnObjects: true,
-      }) as string[],
+      TechStack: getSkills("portfolio.sections_content.TechStack.frontend"),
     },
     {
       title: "Backend",
       icon: <Code2 size={18} />,
-      TechStack: t("portfolio.sections_content.TechStack.backend", {
-        returnObjects: true,
-      }) as string[],
+      TechStack: getSkills("portfolio.sections_content.TechStack.backend"),
     },
     {
       title: "Testing",
       icon: <TestTube size={18} />,
-      TechStack: t("portfolio.sections_content.TechStack.test", {
-        returnObjects: true,
-      }) as string[],
+      TechStack: getSkills("portfolio.sections_content.TechStack.test"),
     },
     {
       title: "Databases",
       icon: <Database size={18} />,
-      TechStack: t("portfolio.sections_content.TechStack.database", {
-        returnObjects: true,
-      }) as string[],
+      TechStack: getSkills("portfolio.sections_content.TechStack.database"),
     },
     {
       title: "Data & BI",
       icon: <BarChart3 size={18} />,
-      TechStack: t("portfolio.sections_content.TechStack.data_analytics", {
-        returnObjects: true,
-      }) as string[],
+      TechStack: getSkills(
+        "portfolio.sections_content.TechStack.data_analytics",
+      ),
     },
     {
       title: "Others",
       icon: <MoreHorizontal size={18} />,
-      TechStack: t("portfolio.sections_content.TechStack.others", {
-        returnObjects: true,
-      }) as string[],
+      TechStack: getSkills("portfolio.sections_content.TechStack.others"),
     },
     {
       title: "AI-assisted Engineering",
       icon: <Sparkles size={18} />,
-      TechStack: t("portfolio.sections_content.TechStack.ai", {
-        returnObjects: true,
-      }) as string[],
+      TechStack: getSkills("portfolio.sections_content.TechStack.ai"),
     },
   ];
 

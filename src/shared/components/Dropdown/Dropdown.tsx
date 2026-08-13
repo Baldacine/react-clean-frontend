@@ -15,7 +15,8 @@ export function Dropdown({ trigger, label, items }: DropdownProps) {
     function handleClickOutside(event: MouseEvent) {
       if (
         containerRef.current &&
-        !containerRef.current.contains(event.target as Node)
+        event.target instanceof Node &&
+        !containerRef.current.contains(event.target)
       ) {
         setIsOpen(false);
       }

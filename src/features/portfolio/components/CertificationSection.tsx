@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { Award, Calendar } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import {
+  getTranslationArray,
+  isCertification,
+} from "../utils/translation";
 
 const Grid = styled.div`
   display: grid;
@@ -94,15 +98,12 @@ const IssuerBadge = styled.span`
 export const CertificationSection = () => {
   const { t } = useTranslation();
 
-  const certs = (t("portfolio.sections_content.certifications", {
-    returnObjects: true,
-  }) || []) as {
-    title: string;
-    issuer: string;
-    date: string;
-    image: string;
-    link: string;
-  }[];
+  const certs = getTranslationArray(
+    t("portfolio.sections_content.certifications", {
+      returnObjects: true,
+    }),
+    isCertification,
+  );
 
   return (
     <Grid>

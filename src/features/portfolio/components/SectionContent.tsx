@@ -6,15 +6,13 @@ import { AwardsSection } from "./AwardsSection";
 import { UseCaseSection } from "./UseCaseSection";
 import { SkillsSection } from "./SkillsSection";
 import { CertificationSection } from "./CertificationSection";
+import {
+  getTranslationArray,
+  isTimelineItem,
+} from "../utils/translation";
 
 interface Props {
   section: PortfolioSection | null;
-}
-
-export interface TimelineItem {
-  date: string;
-  title: string;
-  description: string;
 }
 
 export const SectionContent: React.FC<Props> = ({ section }) => {
@@ -26,11 +24,12 @@ export const SectionContent: React.FC<Props> = ({ section }) => {
     case "Journey":
       return (
         <Timeline
-          items={
+          items={getTranslationArray(
             t("portfolio.sections_content.journey", {
               returnObjects: true,
-            }) as TimelineItem[]
-          }
+            }),
+            isTimelineItem,
+          )}
         />
       );
 
