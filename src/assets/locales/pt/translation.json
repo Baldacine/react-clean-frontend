@@ -37,8 +37,7 @@
             "Awards": "Reconhecimentos, iniciativas e contribuições relevantes."
         },
         "navigation": {
-            "title": "Explore o portfólio",
-            "subtitle": "Acesse cada seção para conhecer experiências, projetos e práticas técnicas.",
+            "label": "Seções do portfólio",
             "explore": "Explorar seção"
         },
         "modal": {

@@ -37,8 +37,7 @@
             "Awards": "Recognition, initiatives, and relevant contributions."
         },
         "navigation": {
-            "title": "Explore the portfolio",
-            "subtitle": "Open each section to learn about experience, projects, and technical practices.",
+            "label": "Portfolio sections",
             "explore": "Explore section"
         },
         "modal": {

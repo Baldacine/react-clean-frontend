@@ -29,6 +29,16 @@ describe("Portfolio Page", () => {
   it("should render all navigation cards as accessible buttons", () => {
     render(<Portfolio />);
 
+    expect(
+      screen.getByRole("region", { name: "portfolio.navigation.label" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByText("portfolio.navigation.title"),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByText("portfolio.navigation.subtitle"),
+    ).not.toBeInTheDocument();
+
     const sections = [
       "TechStack",
       "Journey",
