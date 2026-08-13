@@ -2,6 +2,15 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent, waitFor } from "../test/test-utils";
 import { Portfolio } from "@/features/portfolio/page";
 
+vi.mock("@/features/portfolio/hooks/useGithubRepos", () => ({
+  useGithubRepos: () => ({
+    data: [],
+    isLoading: false,
+    isError: false,
+    refetch: vi.fn(),
+  }),
+}));
+
 describe("Portfolio Page", () => {
   beforeEach(() => {
     vi.restoreAllMocks();
@@ -12,6 +21,7 @@ describe("Portfolio Page", () => {
 
     expect(screen.getByText("Wanderson Baldacine")).toBeInTheDocument();
     expect(screen.getByText("portfolio.description")).toBeInTheDocument();
+    expect(screen.getByText("portfolio.description_focus")).toBeInTheDocument();
     const avatar = screen.getByAltText("Wanderson Baldacine");
     expect(avatar).toBeInTheDocument();
   });
@@ -61,12 +71,28 @@ describe("Portfolio Page", () => {
     });
   });
 
+  it("should open projects from the primary hero action", async () => {
+    render(<Portfolio />);
+
+    fireEvent.click(
+      screen.getByRole("button", { name: "portfolio.hero.view_projects" }),
+    );
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole("dialog", {
+          name: "portfolio.sections.Projects",
+        }),
+      ).toBeInTheDocument();
+    });
+  });
+
   it("should expose accessible social actions and open external profiles safely", () => {
     const windowSpy = vi.spyOn(window, "open").mockImplementation(() => null);
     render(<Portfolio />);
 
     fireEvent.click(
-      screen.getByRole("button", { name: "portfolio.social.linkedin" }),
+      screen.getByRole("button", { name: "portfolio.hero.linkedin" }),
     );
     expect(windowSpy).toHaveBeenNthCalledWith(
       1,

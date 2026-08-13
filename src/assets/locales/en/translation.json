@@ -16,7 +16,12 @@
     },
     "portfolio": {
         "headline": "Senior Full Stack Developer | Tech Lead",
-        "description": "Senior Full Stack Developer and Tech Lead with 7+ years of experience building scalable Web and Mobile products using React, React Native, Node.js, and TypeScript. Strong background in technical leadership, code quality, integrations, and software delivery.",
+        "description": "7+ years of experience building scalable Web and Mobile products using React, React Native, Node.js, and TypeScript.",
+        "description_focus": "Focused on technical leadership, code quality, integrations, and software delivery.",
+        "hero": {
+            "view_projects": "View projects",
+            "linkedin": "LinkedIn"
+        },
         "sections": {
             "TechStack": "Tech Stack",
             "Journey": "Journey",
@@ -90,14 +95,9 @@
                     "jQuery (legacy)"
                 ],
                 "ai": [
-                    "Generative AI",
+                    "IA Generativa",
                     "Codex",
-                    "Claude",
-                    "Code Analysis",
-                    "Refactoring",
-                    "Testing",
-                    "Documentation",
-                    "Productivity"
+                    "Claude"
                 ]
             },
             "journey": [

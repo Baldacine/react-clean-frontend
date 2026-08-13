@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import type { PortfolioSection } from "../types";
 import { Card } from "@/shared/components/Card/Card";
 import {
   Container,
-  Header,
+  Hero,
+  HeroActions,
+  HeroContent,
+  HeroDescription,
+  HeroProfile,
+  HeroSummary,
   NavigationAction,
   NavigationIntro,
   NavButtons,
   PortfolioNavigation,
-  SocialActions,
+  UtilityActions,
 } from "./styles";
 import profilePhoto from "@/assets/img/profile.jpg";
 import { Modal } from "@/shared/components/Modal/Modal";
@@ -56,65 +61,82 @@ export const Portfolio: React.FC = () => {
 
   return (
     <Container>
-      <Header>
-        <Avatar
-          src={profilePhoto}
-          alt="Wanderson Baldacine"
-          size={120}
-          shape="circle"
-        />
-        <h1>Wanderson Baldacine</h1>
-        <h2>{t("portfolio.headline")}</h2>
-
-        <SocialActions>
-          <Button
-            variant="circle"
-            size="small"
-            aria-label={t("portfolio.social.linkedin")}
-            onClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/wandersonbaldacine",
-                "_blank",
-                "noopener,noreferrer",
-              )
-            }
-          >
-            <Linkedin size={15} />
-          </Button>
-
-          <Button
-            variant="circle"
-            size="small"
-            aria-label={t("portfolio.social.email")}
-            onClick={() =>
-              (window.location.href = "mailto:wandersonse0@gmail.com")
-            }
-          >
-            <Mail size={15} />
-          </Button>
-
-          <Button
-            variant="circle"
-            size="small"
-            aria-label={t("portfolio.social.github")}
-            onClick={() =>
-              window.open(
-                "https://github.com/Baldacine/react-clean-frontend",
-                "_blank",
-                "noopener,noreferrer",
-              )
-            }
-          >
-            <Github size={15} />
-          </Button>
-        </SocialActions>
-        <p>
-          <Trans
-            i18nKey="portfolio.description"
-            components={{ bold: <strong /> }}
+      <Hero aria-labelledby="portfolio-title">
+        <HeroProfile>
+          <Avatar
+            src={profilePhoto}
+            alt="Wanderson Baldacine"
+            size={176}
+            shape="circle"
           />
-        </p>
-      </Header>
+        </HeroProfile>
+
+        <HeroContent>
+          <h1 id="portfolio-title">Wanderson Baldacine</h1>
+          <h2>{t("portfolio.headline")}</h2>
+
+          <HeroSummary>
+            <HeroDescription>{t("portfolio.description")}</HeroDescription>
+            <HeroDescription>
+              {t("portfolio.description_focus")}
+            </HeroDescription>
+          </HeroSummary>
+
+          <HeroActions>
+            <Button
+              variant="primary"
+              size="medium"
+              onClick={() => handleSectionChange("Projects")}
+            >
+              <Code size={18} aria-hidden="true" />
+              {t("portfolio.hero.view_projects")}
+            </Button>
+
+            <Button
+              variant="outline"
+              size="medium"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/wandersonbaldacine",
+                  "_blank",
+                  "noopener,noreferrer",
+                )
+              }
+            >
+              <Linkedin size={18} aria-hidden="true" />
+              {t("portfolio.hero.linkedin")}
+            </Button>
+
+            <UtilityActions>
+              <Button
+                variant="circle"
+                size="medium"
+                aria-label={t("portfolio.social.email")}
+                onClick={() =>
+                  (window.location.href = "mailto:wandersonse0@gmail.com")
+                }
+              >
+                <Mail size={17} aria-hidden="true" />
+              </Button>
+
+              <Button
+                variant="circle"
+                size="medium"
+                aria-label={t("portfolio.social.github")}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/Baldacine/react-clean-frontend",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )
+                }
+              >
+                <Github size={17} aria-hidden="true" />
+              </Button>
+            </UtilityActions>
+          </HeroActions>
+        </HeroContent>
+      </Hero>
 
       <PortfolioNavigation aria-labelledby="portfolio-navigation-title">
         <NavigationIntro>

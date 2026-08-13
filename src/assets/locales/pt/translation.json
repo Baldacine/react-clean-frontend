@@ -16,7 +16,12 @@
     },
     "portfolio": {
         "headline": "Desenvolvedor Full Stack Sênior | Líder Técnico",
-        "description": "Desenvolvedor Full Stack Sênior e Líder Técnico com mais de 7 anos de experiência na construção de produtos Web e Mobile escaláveis com React, React Native, Node.js e TypeScript. Sólida experiência em liderança técnica, qualidade de código, integrações e software delivery.",
+        "description": "Mais de 7 anos de experiência na construção de produtos Web e Mobile escaláveis com React, React Native, Node.js e TypeScript.",
+        "description_focus": "Atuação focada em liderança técnica, qualidade de código, integrações e software delivery.",
+        "hero": {
+            "view_projects": "Ver projetos",
+            "linkedin": "LinkedIn"
+        },
         "sections": {
             "TechStack": "Tech Stack",
             "Journey": "Trajetória",
@@ -92,12 +97,7 @@
                 "ai": [
                     "IA Generativa",
                     "Codex",
-                    "Claude",
-                    "Análise de Código",
-                    "Refatoração",
-                    "Testes",
-                    "Documentação",
-                    "Produtividade"
+                    "Claude"
                 ]
             },
             "journey": [
