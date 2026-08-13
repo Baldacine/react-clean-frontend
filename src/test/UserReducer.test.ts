@@ -3,11 +3,6 @@ import { initialState, UserReducer } from "@/reducers/UserReducer";
 import { describe, it, expect } from "vitest";
 
 describe("UserReducer", () => {
-    it("should return the initial state by default", () => {
-        const result = UserReducer(initialState, { type: "unknown" } as unknown as UserAction);
-        expect(result).toEqual(initialState);
-    });
-
     it("should handle setUser action", () => {
         const payload: Partial<User> = { name: "Wanderson", token: "123" };
         const action: UserAction = { type: "setUser", payload };

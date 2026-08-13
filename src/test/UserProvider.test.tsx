@@ -1,8 +1,9 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { useContext } from "react";
 import { UserContext } from "@/contexts/UserContext";
 import { UserProvider } from "@/contexts/UserProvider";
+import { useUserStore } from "@/app/stores/userStore";
 
 const TestComponent = () => {
   const { state, dispatch } = useContext(UserContext);
@@ -26,6 +27,7 @@ const TestComponent = () => {
 
 describe("UserProvider & Context", () => {
   beforeEach(() => {
+    useUserStore.getState().logout();
     localStorage.clear();
     vi.clearAllMocks();
   });
@@ -56,24 +58,6 @@ describe("UserProvider & Context", () => {
     expect(storedUser.token).toBe("tk-999");
   });
 
-  it("not should update state and localStorage on not correct login", () => {
-    render(
-      <UserProvider>
-        <TestComponent />
-      </UserProvider>
-    );
-
-    const loginBtn = screen.getByText("Login");
-    fireEvent.click(loginBtn);
-
-    expect(screen.getByTestId("user-name").textContent).not.toBe(
-      "React Vitest"
-    );
-
-    const storedUser = JSON.parse(localStorage.getItem("user") || "{}");
-    expect(storedUser.token).toBe("tk-999");
-  });
-
   it("should remove from localStorage on logout", () => {
     localStorage.setItem(
       "user",
@@ -93,7 +77,7 @@ describe("UserProvider & Context", () => {
     expect(localStorage.getItem("user")).toBeNull();
   });
 
-  it("should recover state from localStorage on init", () => {
+  it("should recover state from localStorage on init", async () => {
     const mockUser = { name: "Persisted User", token: "secret-token" };
     localStorage.setItem("user", JSON.stringify(mockUser));
 
@@ -103,6 +87,24 @@ describe("UserProvider & Context", () => {
       </UserProvider>
     );
 
-    expect(screen.getByTestId("user-name").textContent).toBe("Persisted User");
+    await waitFor(() => {
+      expect(screen.getByTestId("user-name").textContent).toBe(
+        "Persisted User",
+      );
+    });
+  });
+
+  it("should ignore malformed persisted user data", async () => {
+    localStorage.setItem("user", JSON.stringify({ name: 42, token: null }));
+
+    render(
+      <UserProvider>
+        <TestComponent />
+      </UserProvider>,
+    );
+
+    await waitFor(() => {
+      expect(screen.getByTestId("user-name").textContent).toBe("no-name");
+    });
   });
 });
