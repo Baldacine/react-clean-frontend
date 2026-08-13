@@ -16,7 +16,7 @@ export const useThemeStore = create<ThemeState>((set) => {
     const storedTheme = typeof window !== "undefined"
         ? localStorage.getItem(THEME_STORAGE_KEY)
         : null;
-    const savedTheme = isThemeMode(storedTheme) ? storedTheme : "light";
+    const savedTheme = isThemeMode(storedTheme) ? storedTheme : "dark";
 
     return {
         themeMode: savedTheme,
