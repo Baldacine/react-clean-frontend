@@ -3,32 +3,115 @@ import styled from "styled-components";
 export const Container = styled.div`
   color: ${(props) => props.theme.colors.text};
   padding: 2rem;
+
+  @media (max-width: 600px) {
+    padding: ${({ theme }) => theme.spacing.md};
+  }
 `;
 
-export const Header = styled.header`
-  text-align: center;
-  margin-bottom: 2rem;
+export const Hero = styled.section`
+  display: grid;
+  grid-template-columns: 176px minmax(0, 1fr);
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.xl};
+  max-width: 920px;
+  margin: ${({ theme }) => theme.spacing.md} auto
+    ${({ theme }) => theme.spacing["2xl"]};
+  padding: ${({ theme }) => theme.spacing.xl};
+  border: 1px solid ${({ theme }) => theme.colors.gray300}66;
+  border-radius: ${({ theme }) => theme.borderRadius.lg};
+  background: ${({ theme }) => theme.colors.background};
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
 
-  img {
-    width: 150px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    gap: ${({ theme }) => theme.spacing.lg};
+    margin-top: ${({ theme }) => theme.spacing.sm};
+    padding: ${({ theme }) => theme.spacing.lg};
+    text-align: center;
   }
+`;
+
+export const HeroProfile = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > div {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  }
+`;
+
+export const HeroContent = styled.div`
+  min-width: 0;
 
   h1 {
-    margin: 0.5rem 0;
+    margin: 0;
+    font-size: ${({ theme }) => theme.typography.fontSizes["3xl"]};
+    line-height: ${({ theme }) => theme.typography.lineHeights.tight};
   }
 
   h2 {
     color: ${({ theme }) => theme.colors.primary};
     font-size: ${({ theme }) => theme.typography.fontSizes.xl};
-    margin: 0.25rem 0 0.75rem;
+    margin: ${({ theme }) => theme.spacing.xs} 0
+      ${({ theme }) => theme.spacing.md};
+    line-height: ${({ theme }) => theme.typography.lineHeights.normal};
   }
 
-  p {
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: ${(props) => props.theme.typography.lineHeights.relaxed};
+  @media (max-width: 700px) {
+    h1 {
+      font-size: ${({ theme }) => theme.typography.fontSizes["2xl"]};
+    }
+
+    h2 {
+      font-size: ${({ theme }) => theme.typography.fontSizes.lg};
+    }
+  }
+`;
+
+export const HeroSummary = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.xs};
+  max-width: 660px;
+`;
+
+export const HeroDescription = styled.p`
+  margin: 0;
+  color: ${({ theme }) => theme.colors.text};
+  font-size: ${({ theme }) => theme.typography.fontSizes.md};
+  line-height: ${({ theme }) => theme.typography.lineHeights.relaxed};
+  opacity: 0.86;
+`;
+
+export const HeroActions = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.sm};
+  margin-top: ${({ theme }) => theme.spacing.lg};
+
+  @media (max-width: 700px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 420px) {
+    > button:not([aria-label]) {
+      flex: 1 1 130px;
+    }
+  }
+`;
+
+export const UtilityActions = styled.div`
+  display: flex;
+  gap: ${({ theme }) => theme.spacing.sm};
+  margin-left: ${({ theme }) => theme.spacing.xs};
+
+  @media (max-width: 420px) {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
   }
 `;
 
@@ -84,11 +167,4 @@ export const Section = styled.section`
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem;
-`;
-
-export const SocialActions = styled.div`
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin: 10px 0;
 `;
