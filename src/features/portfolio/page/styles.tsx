@@ -19,6 +19,12 @@ export const Header = styled.header`
     margin: 0.5rem 0;
   }
 
+  h2 {
+    color: ${({ theme }) => theme.colors.primary};
+    font-size: ${({ theme }) => theme.typography.fontSizes.xl};
+    margin: 0.25rem 0 0.75rem;
+  }
+
   p {
     max-width: 600px;
     margin: 0 auto;

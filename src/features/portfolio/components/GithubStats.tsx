@@ -102,6 +102,9 @@ export const RepoCard = styled.div`
 export function GithubStats() {
   const { t } = useTranslation();
   const { data, isLoading, isError, refetch } = useGithubRepos("Baldacine");
+  const visibleRepositories = data?.filter(
+    (repository) => repository.name.toLowerCase() !== "webpink",
+  );
 
   if (isLoading) return <p>{t("common.loading")}</p>;
 
@@ -119,7 +122,7 @@ export function GithubStats() {
 
   return (
     <RepoGrid>
-      {data?.map((repo) => (
+      {visibleRepositories?.map((repo) => (
         <RepoCard
           key={repo.id}
           onClick={() =>

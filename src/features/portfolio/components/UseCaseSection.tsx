@@ -27,6 +27,20 @@ const projects: Project[] = [
       "WhatsApp API",
     ],
   },
+  {
+    name: "React Clean Architecture",
+    link: "https://github.com/Baldacine/react-clean-frontend",
+    descKey: "portfolio.sections_content.use_cases.clean_architecture_desc",
+    stacks: [
+      "React 19",
+      "TypeScript",
+      "React Query",
+      "Zustand",
+      "Styled Components",
+      "Vitest",
+      "React Testing Library",
+    ],
+  },
 ];
 
 const professionalExperience: ProfessionalExperience[] = [

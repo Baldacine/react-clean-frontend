@@ -13,7 +13,8 @@
         "loading": "Cargando..."
     },
     "portfolio": {
-        "description": "Desarrollador Frontend Senior con más de 7 años de experiencia en la creación de aplicaciones web y móviles escalables con React, React Native y TypeScript. Sólida experiencia en arquitectura frontend, optimización del rendimiento e integraciones de API, con experiencia en proyectos empresariales, fintech e internacionales de MVP.",
+        "headline": "Ingeniero Full Stack Senior | Líder Técnico",
+        "description": "Ingeniero Full Stack Senior y Líder Técnico con más de 7 años de experiencia construyendo productos Web y Mobile escalables con React, React Native, Node.js y TypeScript. Sólida experiencia en arquitectura de software, liderazgo técnico, calidad de código, integraciones y software delivery.",
         "sections": {
             "TechStack": "Tech Stack",
             "Journey": "Trayectoria",
@@ -41,35 +42,49 @@
                     "Tailwind"
                 ],
                 "backend": [
-                    ".NET",
                     "Node.js",
+                    "REST APIs",
+                    ".NET",
                     "C#"
                 ],
                 "test": [
                     "Jest",
-                    "React Testing Library"
+                    "React Testing Library",
+                    "Vitest"
                 ],
                 "database": [
+                    "PostgreSQL",
                     "SQL Server",
                     "MySQL",
-                    "PostgreSQL",
                     "MongoDB"
                 ],
                 "data_analytics": [
                     "Power BI"
                 ],
                 "others": [
-                    "Scrum",
-                    "Kanban",
                     "Git",
-                    "Docker"
+                    "Docker",
+                    "CI/CD",
+                    "Azure DevOps",
+                    "Scrum",
+                    "Kanban"
+                ],
+                "ai": [
+                    "IA Generativa",
+                    "Codex",
+                    "Claude",
+                    "Análisis de Código",
+                    "Refactorización",
+                    "Pruebas",
+                    "Documentación",
+                    "Productividad"
                 ]
             },
             "journey": [
                 {
                     "date": "2022 - Presente",
-                    "title": "Ingeniera frontend senior",
-                    "description": "Entrega de soluciones frontend utilizando React, TypeScript y Clean Architecture. Enfocado en código mantenible."
+                    "title": "Líder Técnico | Ingeniería de Software & Delivery",
+                    "description": "Liderazgo técnico de equipos Frontend, Backend, Mobile y QA, apoyando entregas con React, React Native, Node.js y TypeScript. Responsable de arquitectura, code reviews, APIs, backlog técnico, integraciones entre sistemas, soporte técnico al equipo, indicadores de entrega y previsibilidad."
                 },
                 {
                     "date": "2021 - 2022",
@@ -120,14 +135,15 @@
                 }
             ],
             "use_cases": {
-                "view_project": "Ver Proyecto",
-                "buu_desc": "Plataforma de programación integral (web y móvil) diseñada desde cero, enfocada en citas en línea e integración con WhatsApp. Desarrollada con React, React Native, Node.js y PostgreSQL. Responsable de todo el ciclo de vida del producto, incluyendo frontend, backend, configuración de infraestructura y automatización de CI/CD con GitHub Actions, garantizando alta disponibilidad y confiabilidad.",
+                "view_project": "Ver proyecto",
+                "buu_desc": "SaaS Full Stack de agendamiento para Web y Mobile, construido con React, React Native, Node.js, TypeScript, PostgreSQL y REST APIs. El trabajo cubrió el ciclo completo del producto: frontend, mobile, backend, base de datos, infraestructura, integraciones, CI/CD y evolución continua del producto.",
+                "clean_architecture_desc": "Portafolio de arquitectura frontend desarrollado con React 19 y TypeScript. Demuestra organización por features, separación clara de responsabilidades, estado del servidor con React Query, estado del cliente con Zustand, internacionalización, componentes accesibles y pruebas de comportamiento con Vitest y React Testing Library.",
                 "other_desc": "Dashboards estratégicos y KPIs en tiempo real.",
                 "featured_title": "Proyectos Destacados",
                 "github_activity": "Actividad Reciente en GitHub",
                 "error": "No se pudieron cargar los repositorios.",
                 "retry": "Reintentar",
-                "no_description": "Proyecto frontend construido con React y TypeScript, utilizando Styled Components y pruebas automatizadas con Jest y React Testing Library, enfocado en código limpio y componentes reutilizables."
+                "no_description": "Proyecto desarrollado con React y TypeScript, enfocado en código limpio, mantenibilidad y componentes reutilizables."
             },
             "career": {
                 "title": "Experiencia en Proyectos Enterprise",

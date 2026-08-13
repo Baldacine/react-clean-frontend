@@ -5,6 +5,7 @@ import {
   Layout,
   BarChart3,
   MoreHorizontal,
+  Sparkles,
   TestTube,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -116,6 +117,13 @@ export const SkillsSection = () => {
       title: "Others",
       icon: <MoreHorizontal size={18} />,
       TechStack: t("portfolio.sections_content.TechStack.others", {
+        returnObjects: true,
+      }) as string[],
+    },
+    {
+      title: "AI-assisted Engineering",
+      icon: <Sparkles size={18} />,
+      TechStack: t("portfolio.sections_content.TechStack.ai", {
         returnObjects: true,
       }) as string[],
     },

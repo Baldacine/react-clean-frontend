@@ -3,7 +3,7 @@ import { useTranslation, Trans } from "react-i18next";
 import type { PortfolioSection } from "../types";
 import { Card } from "@/shared/components/Card/Card";
 import { Container, Header, NavButtons, SocialActions } from "./styles";
-import fotoPerfil from "@/assets/img/foto.jpeg";
+import profilePhoto from "@/assets/img/profile.jpg";
 import { Modal } from "@/shared/components/Modal/Modal";
 import { SectionContent } from "../components/SectionContent";
 import { Button } from "@/shared/components/Button/Button";
@@ -56,12 +56,13 @@ export const Portfolio: React.FC = () => {
     <Container>
       <Header>
         <Avatar
-          src={fotoPerfil}
+          src={profilePhoto}
           alt="Wanderson Baldacine"
           size={120}
           shape="circle"
         />
         <h1>Wanderson Baldacine</h1>
+        <h2>{t("portfolio.headline")}</h2>
 
         <SocialActions>
           <Button
